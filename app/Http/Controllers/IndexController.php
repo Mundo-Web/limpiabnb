@@ -18,6 +18,24 @@ class IndexController extends Controller
         return view('public.index');
     }
 
+    public function blog()
+    {
+        //
+        return view('public.blog');
+    }
+
+    public function mobile()
+    {
+        //
+        return view('public.mobile');
+    }
+
+    public function post()
+    {
+        //
+        return view('public.post');
+    }
+
     /**
      * Show the form for creating a new resource.
      */
