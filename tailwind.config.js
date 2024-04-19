@@ -44,7 +44,10 @@ export default {
                 blue: "2px solid rgba(0, 112, 244, 0.5)",
             },
             fontFamily: {
-                inter: ["Inter", "sans-serif"],
+                airbnb_700: ["airbnb-700", "sans-serif"],
+                airbnb_500: ["airbnb-500", "sans-serif"],
+                airbnb_400: ["airbnb-400", "sans-serif"],
+                airbnb_300: ["airbnb-300", "sans-serif"],
             },
             fontSize: {
                 xs: ["0.75rem", { lineHeight: "1.5" }],

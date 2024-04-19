@@ -15,22 +15,22 @@
                     <div class="w-full lg:w-5/6">
                         <div class="flex flex-col gap-5">
                             <p class="before__underline">
-                                <span class="text-text16 md:text-text20 font-semibold">¡Bienvenido a LimpiaBnB!</span>
+                                <span class="text-text16 md:text-text20  font-airbnb_500">¡Bienvenido a LimpiaBnB!</span>
                             </p>
 
-                            <h1 class="font-bold text-text48 md:text-text60 leading-none md:leading-tight">
+                            <h1 class="font-airbnb_700 text-text40 md:text-text60 leading-none md:leading-tight">
                                 Transformamos tu espacio en un lugar impecable y acogedor para
                                 tus huéspedes
                             </h1>
 
-                            <p class="font-normal text-text20 md:text-text24">
+                            <p class="text-text18 md:text-text24 font-airbnb_400 ">
                                 Completa nuestro formulario rápido a continuación y descubre
                                 el valor de nuestros servicios. ¡Comencemos juntos a crear un
                                 espacio inolvidable!
                             </p>
                             <div class="flex flex-col md:flex-row items-center ">
                                 <a href="#servicios"
-                                    class="cursor-pointer gap-2  basis-6/12 lg:basis-5/12  button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full lg:w-auto hidden lg:flex">
+                                    class="cursor-pointer gap-2  basis-6/12 lg:basis-5/12  button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full lg:w-auto hidden lg:flex font-airbnb_500">
                                     Ver servicios
                                 </a>
 
@@ -63,12 +63,12 @@
                                     <div class="page slide-page">
                                         <div class="px-10 h-full flex flex-col justify-center">
                                             <div class="text-textAzul flex flex-col gap-10">
-                                                <p class="text__cotizar leading-none md:leading-tight">
+                                                <p class="text__cotizar leading-none md:leading-tight font-airbnb_700">
                                                     Calcula el precio de limpieza de tu Airbnb
                                                 </p>
-                                                <div class="flex flex-col gap-5">
+                                                <div class="flex flex-col gap-5 font-airbnb_500">
                                                     <div class="flex justify-between gap-10 items-center">
-                                                        <label for="habitaciones" class="text__label max-w-[50%]">
+                                                        <label for="habitaciones" class="text__label max-w-[50%] ">
                                                             ¿Cuántas habitaciones tienes?
                                                         </label>
                                                         <input type="number" id="habitaciones"
@@ -120,17 +120,17 @@
                                     </div>
                                     <div class="page">
                                         <div class="px-10 h-full flex flex-col justify-center">
-                                            <div class="text-textAzul flex flex-col gap-10">
+                                            <div class="text-textAzul flex flex-col gap-10 ">
                                                 <div>
                                                     <button class="prev-1 prev">
                                                         <span class="button-previo"></span>
                                                     </button>
                                                 </div>
 
-                                                <p class="text__cotizar leading-none md:leading-tight">
+                                                <p class="text__cotizar leading-none md:leading-tight font-airbnb_700">
                                                     Calcula el precio de limpieza de tu Airbnb
                                                 </p>
-                                                <div class="flex flex-col gap-5">
+                                                <div class="flex flex-col gap-5 font-airbnb_500">
                                                     <div class="flex flex-col justify-between gap-10">
                                                         <label for="habitaciones" class="text__label">
                                                             ¿Cuántas m2 tiene tu departamento?
@@ -172,20 +172,20 @@
                                                         <span class="button-previo"></span>
                                                     </button>
                                                 </div>
-                                                <p class="text__cotizar leading-none md:leading-tight">
+                                                <p class="text__cotizar leading-none md:leading-tight font-airbnb_700">
                                                     Calcula el precio de limpieza de tu Airbnb
                                                 </p>
                                                 <div class="flex flex-col gap-10">
-                                                    <div class="flex flex-col justify-between gap-5">
+                                                    <div class="flex flex-col justify-between gap-5 font-airbnb_500">
                                                         <label for="habitaciones" class="text__label">
                                                             Déjanos tu dirección
                                                         </label>
-                                                        <input type="text" id="habitaciones" class="text__input"
+                                                        <input type="text" id="habitaciones" class="text__input font-airbnb_500"
                                                             placeholder="Avenida, Calle, Jiron, Pasaje..." />
                                                     </div>
 
                                                     <div class="flex flex-col justify-between gap-5">
-                                                        <label class="text__label">
+                                                        <label class="text__label font-airbnb_500">
                                                             ¿Prefieres que nos comuniquemos por Teléfono o
                                                             Correo Electrónico?
                                                         </label>
@@ -196,7 +196,7 @@
                                                                     value="opcion1"
                                                                     class="w-5 h-5 accent-[#BFDE8E] cursor-pointer">
                                                                 <label for="opcion1"
-                                                                    class="text__label leading-none">WhatsApp</label>
+                                                                    class="text__label leading-none font-airbnb_500">WhatsApp</label>
                                                             </div>
 
                                                             <div class="flex items-center gap-2">
@@ -204,7 +204,7 @@
                                                                     value="opcion2"
                                                                     class="w-5 h-5 accent-[#BFDE8E] cursor-pointer">
                                                                 <label for="opcion2"
-                                                                    class="text__label leading-none">Correo
+                                                                    class="text__label leading-none font-airbnb_500">Correo
                                                                     electrónico</label>
                                                             </div>
 
@@ -250,7 +250,7 @@
                                                             class="w-24 h-24 md:w-36 md:h-36">
 
                                                     </div>
-                                                    <p class="font-bold text-text32 md:text-text40">
+                                                    <p class=" text-text32 md:text-text40 font-airbnb_700">
                                                         ¡Éxito! Hemos recibido tu información
                                                     </p>
                                                     <p class="font-normal text-text16 md:text-text24">
@@ -328,7 +328,7 @@
 
 
                                     </div>
-                                    <h2 class="font-medium text-text16">
+                                    <h2 class="font-airbnb_500 text-text16">
                                         Limpieza profunda y exhaustiva
                                     </h2>
                                 </div>
@@ -354,7 +354,7 @@
 
 
                                     </div>
-                                    <h2 class="font-medium text-text16">
+                                    <h2 class="font-airbnb_500 text-text16">
                                         Lavado de ropa de cama y toallas
                                     </h2>
                                 </div>
@@ -370,7 +370,7 @@
                                         </svg>
 
                                     </div>
-                                    <h2 class="font-medium text-text16">
+                                    <h2 class="font-airbnb_500 text-text16">
                                         Servicio de "turnover" rápido y eficiente
                                     </h2>
                                 </div>
@@ -403,11 +403,11 @@
 
                                 <div class="text-textAzul flex flex-col gap-5 md:w-5/6 mx-auto" data-aos="fade-up"
                                     data-aos-offset="150">
-                                    <h2 class="font-bold text-text40 2md:text-text52 leading-none md:leading-tight">
+                                    <h2 class="font-airbnb_700 text-text40 2md:text-text52 leading-none md:leading-tight">
                                         Limpieza y lavandería de airbnbs con reposición de
                                         ammenities hoteleros
                                     </h2>
-                                    <p class="font-normal text-text16 2md:text-text20">
+                                    <p class="font-airbnb_400 text-text16 2md:text-text20">
                                         No te preocupes por la logística, nos encargamos del
                                         lavado y reposición de la ropa de cama y toallas.
                                     </p>
@@ -415,10 +415,10 @@
                                     <div class="flex flex-col gap-5">
                                         <div class="flex flex-col gap-3">
                                             <h3
-                                                class="font-medium text-text18 2md:text-text24 leading-none md:leading-tight">
+                                                class="font-airbnb_500 text-text18 2md:text-text24 leading-none md:leading-tight">
                                                 Limpieza del AirBnB
                                             </h3>
-                                            <p class="font-normal text-text16 2md:text-text20">
+                                            <p class="font-airbnb_400 text-text16 2md:text-text20">
                                                 Limpieza del airbnb, con cambio de ropa de cama y
                                                 toallas. reponemos jabón, shampoo, PH premium, esponja
                                                 y trapo de cocina. Podemos añadir otras cosas de ser
@@ -428,10 +428,10 @@
 
                                         <div class="flex flex-col gap-3">
                                             <h3
-                                                class="font-medium text-text18 2md:text-text24 leading-none md:leading-tight">
+                                                class="font-airbnb_500 text-text18 2md:text-text24 leading-none md:leading-tight">
                                                 Inventario
                                             </h3>
-                                            <p class="font-normal text-text16 2md:text-text20">
+                                            <p class="font-airbnb_400 text-text16 2md:text-text20">
                                                 Hacemos un inventario del departamento y reportamos si
                                                 algo falta o está roto.
                                             </p>
@@ -439,7 +439,7 @@
 
                                         <div class="flex flex-col gap-3">
                                             <h3
-                                                class="font-medium text-text18 2md:text-text24 leading-none md:leading-tight">
+                                                class="font-airbnb_500 text-text18 2md:text-text24 leading-none md:leading-tight">
                                                 Reporte
                                             </h3>
                                             <p class="font-normal text-text16 2md:text-text20">
@@ -451,7 +451,7 @@
 
                                     <div class="flex flex-col md:flex-row items-center">
                                         <a
-                                            class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto">
+                                            class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto font-airbnb_500">
                                             Solicitar servicio
                                         </a>
                                     </div>
@@ -478,17 +478,17 @@
 
                                 <div class="text-textAzul flex flex-col gap-5 md:w-5/6 mx-auto" data-aos="fade-up"
                                     data-aos-offset="150">
-                                    <h2 class="font-bold text-text40 2md:text-text52 leading-none md:leading-tight">
+                                    <h2 class="font-airbnb_700 text-text40 2md:text-text52 leading-none md:leading-tight">
                                         Solo limpieza
                                     </h2>
-                                    <p class="font-normal text-text16 2md:text-text20">
+                                    <p class="font-airbnb_400 text-text16 2md:text-text20">
                                         Ponemos al personal y tú nos entregas la ropa de cama
                                         limpia, productos de limpieza y ammenities hoteleros
                                     </p>
 
                                     <div class="flex flex-col md:flex-row items-center">
                                         <a
-                                            class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto">
+                                            class="cursor-pointer flex gap-2 button__base font-airbnb_500 bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto">
                                             Solicitar servicio
                                         </a>
                                     </div>
@@ -515,10 +515,10 @@
 
                                 <div class="text-textAzul flex flex-col gap-5 md:w-5/6 mx-auto" data-aos="fade-up"
                                     data-aos-offset="150">
-                                    <h2 class="font-bold text-text40 2md:text-text52 leading-none md:leading-tight">
+                                    <h2 class="font-airbnb_700 text-text40 2md:text-text52 leading-none md:leading-tight">
                                         Solo lavandería
                                     </h2>
-                                    <p class="font-normal text-text16 2md:text-text20">
+                                    <p class="font-airbnb_400 text-text16 2md:text-text20">
                                         Nos dejas tu ropa de cama y te la entregamos al día
                                         siguiente!
                                     </p>
@@ -526,10 +526,10 @@
                                     <div class="flex flex-col gap-5">
                                         <div class="flex flex-col gap-3">
                                             <h3
-                                                class="font-medium text-text18 2md:text-text24 leading-none md:leading-tight">
+                                                class="font-airbnb_500 text-text18 2md:text-text24 leading-none md:leading-tight">
                                                 Entrega
                                             </h3>
-                                            <p class="font-normal text-text16 2md:text-text20">
+                                            <p class="font-airbnb_400 text-text16 2md:text-text20">
                                                 Se recoje y deja en miraflores y por un costo extra
                                                 podemos hacer delivery tambien.
                                             </p>
@@ -537,10 +537,10 @@
 
                                         <div class="flex flex-col gap-3">
                                             <h3
-                                                class="font-medium text-text18 2md:text-text24 leading-none md:leading-tight">
+                                                class="font-airbnb_500 text-text18 2md:text-text24 leading-none md:leading-tight">
                                                 Lavado
                                             </h3>
-                                            <p class="font-normal text-text16 2md:text-text20">
+                                            <p class="font-airbnb_400 text-text16 2md:text-text20">
                                                 Lavada secada y planchada. Contamos estandar de
                                                 hotelería 5 estrellas.
                                             </p>
@@ -549,7 +549,7 @@
 
                                     <div class="flex flex-col md:flex-row items-center">
                                         <a
-                                            class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto">
+                                            class="cursor-pointer flex gap-2 button__base font-airbnb_500 bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto">
                                             Solicitar servicio
                                         </a>
                                     </div>
@@ -576,17 +576,17 @@
 
                                 <div class="text-textAzul flex flex-col gap-5 md:w-5/6 mx-auto" data-aos="fade-up"
                                     data-aos-offset="150">
-                                    <h2 class="font-bold text-text40 2md:text-text52 leading-none md:leading-tight">
+                                    <h2 class="font-airbnb_700 text-text40 2md:text-text52 leading-none md:leading-tight">
                                         Limpieza y desinfección de sofás y colchones
                                     </h2>
-                                    <p class="font-normal text-text16 2md:text-text20">
-                                        lavamos y desinfectamos tus colchones con aspiradoras
+                                    <p class="font-airbnb_400 text-text16 2md:text-text20">
+                                        Lavamos y desinfectamos tus colchones con aspiradoras
                                         Karcher, dejamos tu colchon limio en tiempo record.
                                     </p>
 
                                     <div class="flex flex-col md:flex-row items-center">
                                         <a
-                                            class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto">
+                                            class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto font-airbnb_500">
                                             Solicitar servicio
                                         </a>
                                     </div>
@@ -602,14 +602,14 @@
             <div class="flex flex-col lg:flex-row gap-10 md:gap-0 my-12 md:my-0">
                 <div class="basis-1/2 flex flex-col justify-center gap-10 md:py-16 md:pl-24 w-11/12 md:w-full mx-auto">
                     <div class="before__underline before__underline-step">
-                        <p class="text-[#BFDE8E] text-text18 2md:text-text24 font-medium">
+                        <p class="text-[#BFDE8E] text-text18 2md:text-text24 font-airbnb_500">
                             Paso a Paso
                         </p>
                     </div>
-                    <h2 class="font-bold text-text32 2md:text-text48 text-textAzul leading-none md:leading-tight">
+                    <h2 class="font-airbnb_700 text-text32 2md:text-text48 text-textAzul leading-none md:leading-tight">
                         Tu camino hacia un Airbnb Impecable
                     </h2>
-                    <p class="font-medium text-text16 2md:text-text20 text-textAzul">
+                    <p class="font-airbnb_400 text-text16 2md:text-text20 text-textAzul">
                         Descubre lo fácil que es obtener un espacio impecable para tus
                         huéspedes. Sigue nuestro sencillo proceso paso a paso y disfruta
                         de servicios personalizados para tu propiedad en Airbnb. ¡La
@@ -619,7 +619,7 @@
                     <ul class="text-textAzul deslizante">
                         <li class="flex items-center py-5" data-aos="fade-up" data-aos-offset="150">
                             <div class="progress one">
-                                <div class="flex gap-5 items-center">
+                                <div class="flex gap-5 items-start">
                                     <div class="cursor-pointer">
                                         <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                                             xmlns="http://www.w3.org/2000/svg" class="group">
@@ -633,11 +633,10 @@
                                         </svg>
                                     </div>
                                     <div data-aos="fade-up" data-aos-offset="150">
-                                        <h3 class="font-bold text-text24 2md:text-text32">
+                                        <h6 class="font-airbnb_700 text-text24 2md:text-text32">
                                             Comienza el Cálculo
-                                        </h3>
-
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        </h6>
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             Haz clic en el botón "¡Obtener una Cotización
                                             Personalizada!" para iniciar el proceso.
                                         </p>
@@ -647,7 +646,7 @@
                         </li>
                         <li class="flex items-center py-5">
                             <div class="progress two">
-                                <div class="flex gap-5 items-center">
+                                <div class="flex gap-5 items-start">
                                     <div class="cursor-pointer" data-aos="fade-up" data-aos-offset="150">
                                         <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                                             xmlns="http://www.w3.org/2000/svg" class="group">
@@ -662,11 +661,11 @@
                                     </div>
 
                                     <div data-aos="fade-up" data-aos-offset="150">
-                                        <h3 class="font-bold text-text24 2md:text-text32">
+                                        <h6 class="font-airbnb_700 text-text24 2md:text-text32">
                                             Responder Preguntas
-                                        </h3>
+                                        </h6>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             Responde algunas preguntas rápidas sobre tu propiedad y
                                             necesidades.
                                         </p>
@@ -676,7 +675,7 @@
                         </li>
                         <li class="flex items-center py-5">
                             <div class="progress three">
-                                <div class="flex gap-5 items-center">
+                                <div class="flex gap-5 items-start">
                                     <div class="cursor-pointer" data-aos="fade-up" data-aos-offset="150">
                                         <svg width="52" height="52" viewBox="0 0 52 52" fill="none"
                                             xmlns="http://www.w3.org/2000/svg" class="group">
@@ -691,11 +690,11 @@
                                     </div>
 
                                     <div data-aos="fade-up" data-aos-offset="150">
-                                        <h3 class="font-bold text-text24 2md:text-text32">
+                                        <h6 class="font-airbnb_700 text-text24 2md:text-text32">
                                             Recibe tu Cotización
-                                        </h3>
+                                        </h6>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             En minutos, recibirás una cotización personalizada
                                             basada en tus respuestas.
                                         </p>
@@ -707,7 +706,7 @@
 
                     <div class="flex items-center justify-start w-full h-full">
                         <a
-                            class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center">
+                            class="cursor-pointer flex gap-2 button__base font-airbnb_500 bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center">
                             Obtener una Cotización
                         </a>
                     </div>
@@ -727,14 +726,14 @@
                 <div class="col-span-1 md:col-span-3 order-1 flex flex-col justify-center">
                     <div class="flex flex-col gap-5">
                         <div class="before__underline before__underline-step">
-                            <p class="text-[#BFDE8E] text-text18 2md:text-text24 font-medium">
+                            <p class="text-[#BFDE8E] text-text18 2md:text-text24 font-airbnb_500">
                                 Testimonios
                             </p>
                         </div>
-                        <h2 class="text-text48 2md:text-text68 font-bold leading-none md:leading-tight">
+                        <h3 class="text-text48 2md:text-text68 font-airbnb_700 leading-none md:leading-tight">
                             Experiencias Inolvidables
-                        </h2>
-                        <p class="font-normal text-text16 2md:text-text24">
+                        </h3>
+                        <p class="font-airbnb_400 text-text16 2md:text-text24">
                             Descubre lo que dicen nuestros clientes satisfechos sobre la
                             transformación de sus espacios y la calidad de nuestros
                             servicios.
@@ -745,7 +744,7 @@
                 <div class="col-span-1 md:col-span-1 order-3 md:order-2">
                     <div class="flex items-center justify-end w-full h-full">
                         <a
-                            class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center">
+                            class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center font-airbnb_500">
                             Obtener una Cotización
                         </a>
                     </div>
@@ -757,7 +756,7 @@
                             <div class="swiper-wrapper pt-24 md:pt-0">
                                 <div class="swiper-slide">
                                     <div class="flex flex-col gap-5 bg-[#F8FBFD] p-5 rounded-lg">
-                                        <p class="font-bold text-[20px] 2md:text-text32">
+                                        <p class="font-airbnb_700 text-[20px] 2md:text-text32 leading-none">
                                             Ademir Neyra.
                                         </p>
 
@@ -770,13 +769,13 @@
 
                                         </div>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             "Gracias a LimpiaBnB, mi Airbnb siempre está impecable.
                                             Los huéspedes siempre elogian la limpieza y la frescura
                                             de mi lugar."
                                         </p>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             26 de noviembre, 2023
                                         </p>
                                     </div>
@@ -784,7 +783,7 @@
 
                                 <div class="swiper-slide">
                                     <div class="flex flex-col gap-5 bg-[#F8FBFD] p-5 rounded-lg">
-                                        <p class="font-bold text-[20px] 2md:text-text32">
+                                        <p class="font-airbnb_700 text-[20px] 2md:text-text32 leading-none">
                                             Ademir Neyra.
                                         </p>
 
@@ -797,13 +796,13 @@
 
                                         </div>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             "Gracias a LimpiaBnB, mi Airbnb siempre está impecable.
                                             Los huéspedes siempre elogian la limpieza y la frescura
                                             de mi lugar."
                                         </p>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             26 de noviembre, 2023
                                         </p>
                                     </div>
@@ -811,7 +810,7 @@
 
                                 <div class="swiper-slide">
                                     <div class="flex flex-col gap-5 bg-[#F8FBFD] p-5 rounded-lg">
-                                        <p class="font-bold text-[20px] 2md:text-text32">
+                                        <p class="font-airbnb_700 text-[20px] 2md:text-text32 leading-none">
                                             Ademir Neyra.
                                         </p>
 
@@ -824,13 +823,13 @@
 
                                         </div>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             "Gracias a LimpiaBnB, mi Airbnb siempre está impecable.
                                             Los huéspedes siempre elogian la limpieza y la frescura
                                             de mi lugar."
                                         </p>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             26 de noviembre, 2023
                                         </p>
                                     </div>
@@ -838,7 +837,7 @@
 
                                 <div class="swiper-slide">
                                     <div class="flex flex-col gap-5 bg-[#F8FBFD] p-5 rounded-lg">
-                                        <p class="font-bold text-[20px] 2md:text-text32">
+                                        <p class="font-airbnb_700 text-[20px] 2md:text-text32 leading-none">
                                             Ademir Neyra.
                                         </p>
 
@@ -851,13 +850,13 @@
 
                                         </div>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             "Gracias a LimpiaBnB, mi Airbnb siempre está impecable.
                                             Los huéspedes siempre elogian la limpieza y la frescura
                                             de mi lugar."
                                         </p>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             26 de noviembre, 2023
                                         </p>
                                     </div>
@@ -865,7 +864,7 @@
 
                                 <div class="swiper-slide">
                                     <div class="flex flex-col gap-5 bg-[#F8FBFD] p-5 rounded-lg">
-                                        <p class="font-bold text-[20px] 2md:text-text32">
+                                        <p class="font-airbnb_700 text-[20px] 2md:text-text32 leading-none">
                                             Ademir Neyra.
                                         </p>
 
@@ -878,13 +877,13 @@
 
                                         </div>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             "Gracias a LimpiaBnB, mi Airbnb siempre está impecable.
                                             Los huéspedes siempre elogian la limpieza y la frescura
                                             de mi lugar."
                                         </p>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             26 de noviembre, 2023
                                         </p>
                                     </div>
@@ -892,7 +891,7 @@
 
                                 <div class="swiper-slide">
                                     <div class="flex flex-col gap-5 bg-[#F8FBFD] p-5 rounded-lg">
-                                        <p class="font-bold text-[20px] 2md:text-text32">
+                                        <p class="font-airbnb_700 text-[20px] 2md:text-text32 leading-none">
                                             Ademir Neyra.
                                         </p>
 
@@ -905,13 +904,13 @@
 
                                         </div>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             "Gracias a LimpiaBnB, mi Airbnb siempre está impecable.
                                             Los huéspedes siempre elogian la limpieza y la frescura
                                             de mi lugar."
                                         </p>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             26 de noviembre, 2023
                                         </p>
                                     </div>
@@ -919,7 +918,7 @@
 
                                 <div class="swiper-slide">
                                     <div class="flex flex-col gap-5 bg-[#F8FBFD] p-5 rounded-lg">
-                                        <p class="font-bold text-[20px] 2md:text-text32">
+                                        <p class="font-airbnb_700 text-[20px] 2md:text-text32 leading-none">
                                             Ademir Neyra.
                                         </p>
 
@@ -932,13 +931,13 @@
 
                                         </div>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             "Gracias a LimpiaBnB, mi Airbnb siempre está impecable.
                                             Los huéspedes siempre elogian la limpieza y la frescura
                                             de mi lugar."
                                         </p>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             26 de noviembre, 2023
                                         </p>
                                     </div>
@@ -946,7 +945,7 @@
 
                                 <div class="swiper-slide">
                                     <div class="flex flex-col gap-5 bg-[#F8FBFD] p-5 rounded-lg">
-                                        <p class="font-bold text-[20px] 2md:text-text32">
+                                        <p class="font-airbnb_700 text-[20px] 2md:text-text32 leading-none">
                                             Ademir Neyra.
                                         </p>
 
@@ -959,13 +958,41 @@
 
                                         </div>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             "Gracias a LimpiaBnB, mi Airbnb siempre está impecable.
                                             Los huéspedes siempre elogian la limpieza y la frescura
                                             de mi lugar."
                                         </p>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
+                                            26 de noviembre, 2023
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="swiper-slide">
+                                    <div class="flex flex-col gap-5 bg-[#F8FBFD] p-5 rounded-lg">
+                                        <p class="font-airbnb_700 text-[20px] 2md:text-text32 leading-none">
+                                            Ademir Neyra.
+                                        </p>
+
+                                        <div class="flex gap-2 py-2">
+                                            <img src="{{ asset('images/svg/start.svg') }}" alt="estrella">
+                                            <img src="{{ asset('images/svg/start.svg') }}" alt="estrella">
+                                            <img src="{{ asset('images/svg/start.svg') }}" alt="estrella">
+                                            <img src="{{ asset('images/svg/start_sin_color.svg') }}" alt="estrella">
+                                            <img src="{{ asset('images/svg/start_sin_color.svg') }}" alt="estrella">
+
+                                        </div>
+
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
+                                            "Gracias a LimpiaBnB, mi Airbnb siempre está impecable.
+                                            Los huéspedes siempre elogian la limpieza y la frescura
+                                            de mi lugar."
+                                        </p>
+
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             26 de noviembre, 2023
                                         </p>
                                     </div>
@@ -973,7 +1000,7 @@
 
                                 <div class="swiper-slide">
                                     <div class="flex flex-col gap-5 bg-[#F8FBFD] p-5 rounded-lg">
-                                        <p class="font-bold text-[20px] 2md:text-text32">
+                                        <p class="font-airbnb_700 text-[20px] 2md:text-text32 leading-none">
                                             Ademir Neyra.
                                         </p>
 
@@ -986,44 +1013,22 @@
 
                                         </div>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             "Gracias a LimpiaBnB, mi Airbnb siempre está impecable.
                                             Los huéspedes siempre elogian la limpieza y la frescura
                                             de mi lugar."
                                         </p>
 
-                                        <p class="font-normal text-[16px] 2md:text-text20">
+                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                                             26 de noviembre, 2023
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="swiper-slide">
-                                    <div class="flex flex-col gap-5 bg-[#F8FBFD] p-5 rounded-lg">
-                                        <p class="font-bold text-[20px] 2md:text-text32">
-                                            Ademir Neyra.
-                                        </p>
 
-                                        <div class="flex gap-2 py-2">
-                                            <img src="{{ asset('images/svg/start.svg') }}" alt="estrella">
-                                            <img src="{{ asset('images/svg/start.svg') }}" alt="estrella">
-                                            <img src="{{ asset('images/svg/start.svg') }}" alt="estrella">
-                                            <img src="{{ asset('images/svg/start_sin_color.svg') }}" alt="estrella">
-                                            <img src="{{ asset('images/svg/start_sin_color.svg') }}" alt="estrella">
+                                
 
-                                        </div>
-
-                                        <p class="font-normal text-[16px] 2md:text-text20">
-                                            "Gracias a LimpiaBnB, mi Airbnb siempre está impecable.
-                                            Los huéspedes siempre elogian la limpieza y la frescura
-                                            de mi lugar."
-                                        </p>
-
-                                        <p class="font-normal text-[16px] 2md:text-text20">
-                                            26 de noviembre, 2023
-                                        </p>
-                                    </div>
-                                </div>
+                                
                             </div>
 
                             <div class="flex justify-end items-center buttonSliderTestimonios">
@@ -1042,16 +1047,16 @@
                     class="lg:col-span-1 relative bg-bgAzul text-textWhite flex justify-center items-center py-24 md:py-0">
                     <div class="z-10 relative w-5/6 flex flex-col gap-10 py-5">
                         <div class="before__underline">
-                            <p class="text-text18 2md:text-text24 font-medium">
+                            <p class="text-text18 2md:text-text24 font-airbnb_500">
                                 Nuestra historia
                             </p>
                         </div>
-                        <h2 class="font-bold text-text40 2md:text-text52 leading-none md:leading-tight">
+                        <h2 class="font-airbnb_700 text-text40 2md:text-text52 leading-none md:leading-tight">
                             De Servicio de Administración a Líder en Limpieza: El
                             Surgimiento de Limpia BnB
                         </h2>
 
-                        <p class="font-normal text-text16 2md:text-text20">
+                        <p class="font-airbnb_400 text-text16 2md:text-text20">
                             Limpia BnB nace de Ventura BnB, una empresa de administración de
                             departamentos a corto plazo, la cual creó y calibró un equipo de
                             limpieza con tan buenos resultados, que en cuestión de poco
@@ -1084,24 +1089,24 @@
                 <div class="flex flex-col lg:flex-row gap-12 lg:gap-32">
                     <div class="basis-1/2 flex flex-col gap-8">
                         <div class="before__underline before__underline-contacto">
-                            <p class="text-text18 2md:text-text24 font-medium text-textCeleste">
+                            <p class="text-text18 2md:text-text24 font-airbnb_500 text-textCeleste">
                                 Contacto
                             </p>
                         </div>
-                        <h3 class="font-bold text-text32 2md:text-text40 leading-none 2md:leading-tight">
+                        <h3 class="font-airbnb_700 text-text32 2md:text-text40 leading-none 2md:leading-tight">
                             ¿Listo para brindar a tus huéspedes una experiencia inolvidable
                         </h3>
 
-                        <p class="font-normal text-text16 2md:text-text20">
+                        <p class="font-airbnb_400 text-text16 2md:text-text20">
                             Comienza ahora y descubre el valor de nuestros servicios.
                         </p>
 
-                        <p class="font-bold text-text32 2md:text-text40 leading-none 2md:leading-tight">
+                        <p class="font-airbnb_700 text-text32 2md:text-text40 leading-none 2md:leading-tight">
                             Déjanos tus datos y consulta
                         </p>
 
                         <form action="#">
-                            <div class="flex flex-col gap-5">
+                            <div class="flex flex-col gap-5 font-airbnb_400">
                                 <div class="flex flex-col md:flex-row gap-5">
                                     <input type="text" placeholder="Nombres"
                                         class="outline-none py-3 2md:py-4 basis-1/2 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 font-normal text-text16 2md:text-text20" />
@@ -1123,7 +1128,7 @@
                                 </div>
 
                                 <div class="flex flex-col justify-between gap-5">
-                                    <label class="text__label">
+                                    <label class="text__label font-airbnb_500">
                                         ¿Prefieres que nos comuniquemos por Teléfono o
                                         Correo Electrónico?
                                     </label>
@@ -1132,13 +1137,13 @@
                                         <div class="flex items-center gap-2">
                                             <input type="radio" id="opcion1" name="opcion" value="opcion1"
                                                 class="w-5 h-5 accent-[#BFDE8E] cursor-pointer">
-                                            <label for="opcion1" class="text__label leading-none">WhatsApp</label>
+                                            <label for="opcion1" class="text__label leading-none font-airbnb_500">WhatsApp</label>
                                         </div>
 
                                         <div class="flex items-center gap-2">
                                             <input type="radio" id="opcion2" name="opcion" value="opcion2"
                                                 class="w-5 h-5 accent-[#BFDE8E] cursor-pointer">
-                                            <label for="opcion2" class="text__label leading-none">Correo
+                                            <label for="opcion2" class="text__label leading-none font-airbnb_500">Correo
                                                 electrónico</label>
                                         </div>
                                     </div>
@@ -1150,7 +1155,7 @@
 
                                 <div class="mt-10">
                                     <button type="submit"
-                                        class="firstNext next cursor-pointer flex gap-2 lg:basis-4/12 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center button__base-padding w-full md:w-auto">
+                                        class="firstNext next cursor-pointer flex gap-2 lg:basis-4/12 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center button__base-padding w-full md:w-auto font-airbnb_500">
                                         <span>Enviar</span>
                                         <div>
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -1168,10 +1173,10 @@
 
                     <div class="basis-1/2">
                         <div class="flex flex-col h-full justify-center gap-10">
-                            <h2 class="font-bold text-text40 2md:text-text48 leading-none 2md:leading-tight">
+                            <h4 class="font-airbnb_700 text-text40 2md:text-text48 leading-none 2md:leading-tight">
                                 Conéctate con Nosotros
-                            </h2>
-                            <p class="text-text16 font-normal 2md:text-text20">
+                            </h4>
+                            <p class="text-text16 font-airbnb_400 2md:text-text20">
                                 Estamos aquí para responder a tus preguntas y personalizar
                                 nuestros servicios según tus necesidades. ¡Contáctanos hoy
                                 para llevar tu experiencia Airbnb al siguiente nivel!
@@ -1183,10 +1188,10 @@
                                         class="h-7 w-7 2md:h-10 2md:w-10">
 
                                     <div>
-                                        <p class="font-medium text-text18 2md:text-text24 leading-none">
+                                        <p class="font-airbnb_500 text-text18 2md:text-text24 leading-none">
                                             Dirección
                                         </p>
-                                        <p class="font-normal text-text16 2md:text-text20">
+                                        <p class="font-airbnb_400 text-text16 2md:text-text20">
                                             Calle Independencia 360 Miraflores
                                         </p>
                                     </div>
@@ -1197,11 +1202,11 @@
                                         class="h-7 w-7 2md:h-10 2md:w-10">
 
                                     <div>
-                                        <p class="font-medium text-text18 2md:text-text24 leading-none">
+                                        <p class="font-airbnb_500 text-text18 2md:text-text24 leading-none">
                                             Número de Teléfono
                                         </p>
 
-                                        <a href="#" class="font-normal text-text16 2md:text-text20">+51 931 359
+                                        <a href="#" class="font-airbnb_400 text-text16 2md:text-text20">+51 931 359
                                             996</a>
                                     </div>
                                 </div>
@@ -1211,11 +1216,11 @@
                                         class="h-7 w-7 2md:h-10 2md:w-10 ">
 
                                     <div>
-                                        <p class="font-medium text-text18 2md:text-text24 leading-none">
+                                        <p class="font-airbnb_500 text-text18 2md:text-text24 leading-none">
                                             Correo Electrónico
                                         </p>
                                         <a href="#"
-                                            class="font-normal text-text16 2md:text-text20">info@limpiabnb.pe</a>
+                                            class="font-airbnb_400 text-text16 2md:text-text20">info@limpiabnb.pe</a>
                                     </div>
                                 </div>
 
@@ -1224,13 +1229,13 @@
                                         class="h-7 w-7 2md:h-10 2md:w-10">
 
                                     <div>
-                                        <p class="font-medium text-text18 2md:text-text24 leading-none">
+                                        <p class="font-airbnb_500 text-text18 2md:text-text24 leading-none">
                                             Horario de Atención
                                         </p>
-                                        <p class="font-normal text-text16 2md:text-text20">
+                                        <p class="font-airbnb_400 text-text16 2md:text-text20">
                                             Lunes a Viernes: 9:00 AM - 6:00 PM
                                         </p>
-                                        <p class="font-normal text-text16 2md:text-text20">
+                                        <p class="font-airbnb_400 text-text16 2md:text-text20">
                                             Domingo: 10:00 AM - 5:00 PM
                                         </p>
                                     </div>

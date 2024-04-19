@@ -5,7 +5,7 @@
             <path d="M18 2L2 18M18 18L2 2" stroke="white" stroke-width="2.66667" stroke-linecap="round" />
         </svg>
     </button>
-    <nav class="menu-list">
+    <nav class="menu-list ">
         <ul>
             <li>
                 <a href="index.html">Inicio</a>
@@ -38,7 +38,7 @@
                     <img src="./images/img/image_2.png" alt="Limpia BnB" />
                 </a>
             </div>
-            <nav class="font-medium text-text20 2md:text-text24 hidden md:flex gap-10 items-center text__blog-header">
+            <nav class="font-airbnb_500 text-text20 2md:text-text24 hidden md:flex gap-10 items-center text__blog-header">
                 <a href="{{route('index')}}">Inicio</a>
                 <a href="#servicios">Servicios</a>
                 <a href="#pasos">Paso a paso</a>

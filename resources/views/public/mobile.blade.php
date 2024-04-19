@@ -14,7 +14,7 @@
 @section('content')
     <main>
         <div>
-            <div class="text-textCeleste font-bold text-text16 pt-10 w-[90%] mx-auto">
+            <div class="text-textCeleste font-airbnb_700 text-text16 pt-10 w-[90%] mx-auto">
                 <a href="{{ route('index') }}" class="flex gap-2 items-center justify-end ">
                     <div>
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,26 +47,26 @@
                         <div class="page slide-page">
                             <div class="px-5 h-full flex flex-col justify-center">
                                 <div class="text-textAzul flex flex-col gap-10">
-                                    <p class="text__cotizar leading-none md:leading-tight">
+                                    <h4 class="text__cotizar font-airbnb_700 leading-none md:leading-tight">
                                         Calcula el precio de limpieza de tu Airbnb
-                                    </p>
+                                    </h4>
                                     <div class="flex flex-col gap-5">
                                         <div class="flex justify-between gap-10 items-center">
-                                            <label for="habitaciones" class="text__label max-w-[50%]">
+                                            <label for="habitaciones" class="text__label font-airbnb_500 max-w-[50%]">
                                                 ¿Cuántas habitaciones tienes?
                                             </label>
                                             <input type="number" id="habitaciones" class="text__input max-w-[50%]" />
                                         </div>
 
                                         <div class="flex justify-between gap-10 items-center">
-                                            <label for="camas" class="text__label basis-1/2">
+                                            <label for="camas" class="text__label basis-1/2 font-airbnb_500">
                                                 ¿Cuántas camas tienes?
                                             </label>
                                             <input type="number" id="camas" class="text__input max-w-[50%]" />
                                         </div>
 
                                         <div class="flex justify-between gap-10 items-center">
-                                            <label for="banios" class="text__label max-w-[50%]">
+                                            <label for="banios" class="text__label max-w-[50%] font-airbnb_500">
                                                 ¿Cuántas baños tienes?
                                             </label>
                                             <input type="number" id="banios" class="text__input max-w-[50%]" />
@@ -75,13 +75,13 @@
 
                                     <div class="flex gap-5 flex-col 2lg:flex-row justify-between items-center text-center">
                                         <button href="#asesoria"
-                                            class="w-full lg:basis-8/12 button__base bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
+                                            class="w-full lg:basis-8/12 button__base font-airbnb_500 bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
                                             Asesoría en WhatsApp
                                         </button>
 
                                         <div class="w-full 2lg:w-auto">
                                             <button
-                                                class="firstNext next cursor-pointer flex gap-2 lg:basis-4/12 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
+                                                class="firstNext next cursor-pointer font-airbnb_500 flex gap-2 lg:basis-4/12 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
                                                 <span>Siguiente</span>
                                                 <div>
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -106,12 +106,12 @@
                                         </button>
                                     </div>
 
-                                    <p class="text__cotizar leading-none md:leading-tight">
+                                    <h4 class="text__cotizar font-airbnb_700 leading-none md:leading-tight">
                                         Calcula el precio de limpieza de tu Airbnb
-                                    </p>
+                                    </h4>
                                     <div class="flex flex-col gap-5">
                                         <div class="flex flex-col justify-between gap-5">
-                                            <label for="habitaciones" class="text__label">
+                                            <label for="habitaciones" class="text__label font-airbnb_500">
                                                 ¿Cuántas m2 tiene tu departamento?
                                             </label>
                                             <input type="number" id="habitaciones" class="text__input" />
@@ -120,12 +120,12 @@
 
                                     <div class="flex gap-5 flex-col 2lg:flex-row justify-between items-center text-center">
                                         <a href="#asesoria"
-                                            class="w-full lg:basis-8/12 button__base bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
+                                            class="w-full lg:basis-8/12 font-airbnb_500 button__base bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
                                             Asesoría en WhatsApp
                                         </a>
                                         <div class="w-full 2lg:w-auto">
                                             <button
-                                                class="next-1 next cursor-pointer flex gap-2 lg:basis-4/12 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
+                                                class="next-1 next cursor-pointer font-airbnb_500 flex gap-2 lg:basis-4/12 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
                                                 <span>Siguiente</span>
                                                 <div>
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -149,12 +149,12 @@
                                             <span class="button-previo"></span>
                                         </button>
                                     </div>
-                                    <p class="text__cotizar leading-none md:leading-tight">
+                                    <h4 class="text__cotizar  font-airbnb_700 leading-none md:leading-tight">
                                         Calcula el precio de limpieza de tu Airbnb
-                                    </p>
+                                    </h4>
                                     <div class="flex flex-col gap-10">
                                         <div class="flex flex-col justify-between gap-5">
-                                            <label for="habitaciones" class="text__label">
+                                            <label for="habitaciones" class="text__label font-airbnb_500">
                                                 Déjanos tu dirección
                                             </label>
                                             <input type="text" id="habitaciones" class="text__input"
@@ -162,7 +162,7 @@
                                         </div>
 
                                         <div class="flex flex-col justify-between gap-5">
-                                            <label class="text__label">
+                                            <label class="text__label font-airbnb_500">
                                                 ¿Prefieres que nos comuniquemos por Teléfono o Correo
                                                 Electrónico?
                                             </label>
@@ -172,13 +172,13 @@
                                                     <input type="radio" id="opcion1" name="opcion" value="opcion1"
                                                         class="w-5 h-5 accent-[#BFDE8E] cursor-pointer">
                                                     <label for="opcion1"
-                                                        class="text__label leading-none">WhatsApp</label>
+                                                        class="text__label leading-none font-airbnb_500">WhatsApp</label>
                                                 </div>
 
                                                 <div class="flex items-center gap-2">
                                                     <input type="radio" id="opcion2" name="opcion" value="opcion2"
                                                         class="w-5 h-5 accent-[#BFDE8E] cursor-pointer">
-                                                    <label for="opcion2" class="text__label leading-none">Correo
+                                                    <label for="opcion2" class="text__label leading-none font-airbnb_500">Correo
                                                         electrónico</label>
                                                 </div>
                                             </div>
@@ -221,14 +221,14 @@
 
 
                                         </div>
-                                        <p class="font-bold text-text28 md:text-text32 2md:text-text40">
+                                        <p class="font-airbnb_700 text-text28 md:text-text32 2md:text-text40">
                                             ¡Éxito! Hemos recibido tu información
                                         </p>
-                                        <p class="font-normal text-text16 md:text-text24">
+                                        <p class="font-airbnb_700 text-text16 md:text-text24">
                                             Basándonos en la información proporcionada, tu
                                             estimación de precio inicial es...
                                         </p>
-                                        <p class="font-bold text-text48 md:text-text52">s/ 150</p>
+                                        <p class="font-airbnb_700 text-text48 md:text-text52">s/ 150</p>
 
                                         <div>
                                             <button

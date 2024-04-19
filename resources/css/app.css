@@ -29,7 +29,7 @@
 }
 
 .button__base {
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 20px;
     padding: 0.8rem;
     border-radius: 6px;
@@ -46,7 +46,7 @@
 }
 
 .text__cotizar {
-    font-weight: 700;
+    /* font-weight: 700; */
     font-size: 40px;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .text__label {
-    font-weight: 500;
+    /* font-weight: 500; */
     font-size: 16px;
 }
 
@@ -331,21 +331,21 @@ li .active::after {
 
 @media (min-width: 890px) {
     .progress::after {
-        height: 225px;
-        top: -160px;
+        height: 240px;
+        top: -190px;
     }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 1133px) {
     .progress::after {
         height: 225px;
-        top: -165px;
+        top: -195px;
     }
 }
 
 @media (min-width: 1340px) {
     .progress::after {
-        top: -175px;
+        top: -195px;
     }
 }
 
@@ -579,4 +579,26 @@ button {
 
 .button-previo:hover::before {
     background-color: rgb(59 130 246);
+}
+
+/* ---- */
+
+@font-face {
+    font-family: "airbnb-500";
+    src: url("../fonts/airbnbcerealmedium-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "airbnb-700";
+    src: url("../fonts/airbnbcerealbold-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "airbnb-400";
+    src: url("../fonts/airbnbcerealbook-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "airbnb-300";
+    src: url("../fonts/airbnbcereallight-webfont.woff") format("woff");
 }

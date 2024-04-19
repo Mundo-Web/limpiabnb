@@ -24,31 +24,31 @@
                 <div class="w-11/12 mx-auto">
                     <div class="w-full xl:w-3/6 flex flex-col gap-10">
                         <div class="before__underline before__underline-step">
-                            <p class="text-[#BFDE8E] text-text18 2md:text-text24 font-medium">
+                            <p class="text-[#BFDE8E] text-text18 2md:text-text24 font-airbnb_500">
                                 Blog
                             </p>
                         </div>
 
                         <div class="flex flex-col gap-5">
-                            <h2 class="font-bold text-text48 2md:text-text64 leading-none md:leading-tight">
+                            <h2 class="font-airbnb_700 text-text48 2md:text-text64 leading-none md:leading-tight">
                                 Neque porro quisquam est, qui dolorem ipsum quia dolor sit
                             </h2>
 
-                            <p class="font-normal text-text16 2md:text-text20 text-textAzulStrong">
+                            <p class="font-airbnb_400 text-text16 2md:text-text20 text-textAzulStrong">
                                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
                                 laboris nisi ut aliquip ex ea commodo con
                             </p>
                             <form action="#" class="flex gap-5 items-center flex-col md:flex-row">
                                 <div class="w-full md:basis-1/2">
                                     <button type="submit"
-                                        class="firstNext next cursor-pointer flex gap-2 py-4 bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center px-2 rounded-lg text-white font-normal text-text16 2md:text-text20 w-full">
+                                        class="firstNext next cursor-pointer flex gap-2 py-4 bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center px-2 rounded-lg text-white  text-text16 2md:text-text20 w-full font-airbnb_500">
                                         <span>Suscribirme</span>
                                     </button>
                                 </div>
 
                                 <div class="w-full md:basis-1/2">
                                     <input type="text" placeholder="Suscribirme"
-                                        class="py-4 px-2 w-full border-[1px] border-[#0071BE] outline-none rounded-lg text-text16 2md:text-text20" />
+                                        class="font-airbnb_500 py-4 px-2 w-full border-[1px] border-[#0071BE] outline-none rounded-lg text-text16 2md:text-text20" />
                                 </div>
                             </form>
                         </div>
@@ -75,17 +75,17 @@
                     <div>
                         <img src="{{ asset('images/img/imagen_15.png') }}" alt="limpieza" class="w-full">
                     </div>
-                    <h2 class="font-bold text-text24 md:text-text32">
+                    <h2 class="font-airbnb_700 text-text24 md:text-text32">
                         Neque porro quisquam est, qui dolorem
                     </h2>
-                    <p class="font-normal text-text14 md:text-text20 text-textAzulStrong">
+                    <p class="font-airbnb_400 text-text14 md:text-text20 text-textAzulStrong">
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                         nisi ut aliquip ex ea commodo connostrud exercitation ullamco
                         laboris nisi
                     </p>
 
                     <a href="{{ route('post') }}"
-                        class="gap-2 font-medium text-text16 md:text-text24 text-textCeleste flex items-center">
+                        class="gap-2 font-airbnb_500 text-text16 md:text-text24 text-textCeleste flex items-center">
                         <div>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -104,17 +104,17 @@
                         <img src="{{ asset('images/img/imagen_16.png') }}" alt="limpieza" class="w-full">
 
                     </div>
-                    <h2 class="font-bold text-text24 md:text-text32">
+                    <h2 class="font-airbnb_700 text-text24 md:text-text32">
                         Neque porro quisquam est, qui dolorem
                     </h2>
-                    <p class="font-normal text-text14 md:text-text20 text-textAzulStrong">
+                    <p class="font-airbnb_400 text-text14 md:text-text20 text-textAzulStrong">
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                         nisi ut aliquip ex ea commodo connostrud exercitation ullamco
                         laboris nisi
                     </p>
 
                     <a href="{{ route('post') }}"
-                        class="gap-2 font-medium text-text16 md:text-text24 text-textCeleste flex items-center">
+                        class="gap-2 font-airbnb_500 text-text16 md:text-text24 text-textCeleste flex items-center">
                         <div>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -133,17 +133,17 @@
                         <img src="{{ asset('images/img/imagen_17.png') }}" alt="limpieza" class="w-full">
 
                     </div>
-                    <h2 class="font-bold text-text24 md:text-text32">
+                    <h2 class="font-airbnb_700 text-text24 md:text-text32">
                         Neque porro quisquam est, qui dolorem
                     </h2>
-                    <p class="font-normal text-text14 md:text-text20 text-textAzulStrong">
+                    <p class="font-airbnb_400 text-text14 md:text-text20 text-textAzulStrong">
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                         nisi ut aliquip ex ea commodo connostrud exercitation ullamco
                         laboris nisi
                     </p>
 
                     <a href="{{ route('post') }}"
-                        class="gap-2 font-medium text-text16 md:text-text24 text-textCeleste flex items-center">
+                        class="gap-2 font-airbnb_500 text-text16 md:text-text24 text-textCeleste flex items-center">
                         <div>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -163,17 +163,17 @@
 
 
                     </div>
-                    <h2 class="font-bold text-text24 md:text-text32">
+                    <h2 class="font-airbnb_700 text-text24 md:text-text32">
                         Neque porro quisquam est, qui dolorem
                     </h2>
-                    <p class="font-normal text-text14 md:text-text20 text-textAzulStrong">
+                    <p class="font-airbnb_400 text-text14 md:text-text20 text-textAzulStrong">
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                         nisi ut aliquip ex ea commodo connostrud exercitation ullamco
                         laboris nisi
                     </p>
 
                     <a href="{{ route('post') }}"
-                        class="gap-2 font-medium text-text16 md:text-text24 text-textCeleste flex items-center">
+                        class="gap-2 font-airbnb_500 text-text16 md:text-text24 text-textCeleste flex items-center">
                         <div>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -192,17 +192,17 @@
                         <img src="{{ asset('images/img/imagen_19.png') }}" alt="limpieza" class="w-full">
 
                     </div>
-                    <h2 class="font-bold text-text24 md:text-text32">
+                    <h2 class="font-airbnb_700 text-text24 md:text-text32">
                         Neque porro quisquam est, qui dolorem
                     </h2>
-                    <p class="font-normal text-text14 md:text-text20 text-textAzulStrong">
+                    <p class="font-airbnb_400 text-text14 md:text-text20 text-textAzulStrong">
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                         nisi ut aliquip ex ea commodo connostrud exercitation ullamco
                         laboris nisi
                     </p>
 
                     <a href="{{ route('post') }}"
-                        class="gap-2 font-medium text-text16 md:text-text24 text-textCeleste flex items-center">
+                        class="gap-2 font-airbnb_500 text-text16 md:text-text24 text-textCeleste flex items-center">
                         <div>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -221,17 +221,17 @@
                         <img src="{{ asset('images/img/imagen_20.png') }}" alt="limpieza" class="w-full">
 
                     </div>
-                    <h2 class="font-bold text-text24 md:text-text32">
+                    <h2 class="font-airbnb_700 text-text24 md:text-text32">
                         Neque porro quisquam est, qui dolorem
                     </h2>
-                    <p class="font-normal text-text14 md:text-text20 text-textAzulStrong">
+                    <p class="font-airbnb_400 text-text14 md:text-text20 text-textAzulStrong">
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                         nisi ut aliquip ex ea commodo connostrud exercitation ullamco
                         laboris nisi
                     </p>
 
                     <a href="{{ route('post') }}"
-                        class="gap-2 font-medium text-text16 md:text-text24 text-textCeleste flex items-center">
+                        class="gap-2 font-airbnb_500 text-text16 md:text-text24 text-textCeleste flex items-center">
                         <div>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -247,7 +247,7 @@
             </div>
 
             <div class="flex justify-center items-center" data-aos="fade-up" data-aos-offset="150">
-                <div class="list-style-none flex">
+                <div class="list-style-none flex font-airbnb_500">
                     <div>
                         <a class="relative block bg-transparent px-4 text-text20 transition duration-300 text-[#0071BE] border-pagination border-b-2 pagination__blog"
                             href="#">

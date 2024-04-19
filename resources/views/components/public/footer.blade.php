@@ -4,7 +4,7 @@
         <div class="flex flex-col gap-10">
             <p class="font-bold text-text28 2md:text-text36">LimpiaBnB</p>
 
-            <p class="font-normal text-text16 2md:text-text20">
+            <p class="font-normal text-text16 2md:text-text20 font-airbnb_400">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, to
             </p>
@@ -24,10 +24,10 @@
 
         <div class="flex flex-col md:flex-row gap-10">
             <div class="flex flex-col gap-10">
-                <p class="font-medium text-text16 2md:text-text20">
+                <p class="font-medium font-airbnb_500 text-text16 2md:text-text20">
                     Enlaces rapido
                 </p>
-                <div class="flex flex-col gap-5">
+                <div class="flex flex-col gap-5 font-airbnb_400">
                     <a href="#inicio" class="font-normal text-text14 2md:text-text18">Inicio</a>
 
                     <a href="#servicios" class="font-normal text-text14 2md:text-text18">Servicios</a>
@@ -41,10 +41,10 @@
             </div>
 
             <div class="flex flex-col gap-10">
-                <p class="font-medium text-text16 2md:text-text20">
+                <p class="font-medium text-text16 2md:text-text20 font-airbnb_500">
                     Datos de contacto
                 </p>
-                <div class="flex flex-col gap-5">
+                <div class="flex flex-col gap-5 font-airbnb_400">
                     <p class="font-normal text-text14 2md:text-text18">
                         123 Calle Principal, Ciudad Perfecta
                     </p>
@@ -64,8 +64,8 @@
             </div>
 
             <div class="flex flex-col gap-10">
-                <p class="font-medium text-text16 2md:text-text20">Aviso Legal</p>
-                <div class="flex flex-col gap-5">
+                <p class="font-medium text-text16 2md:text-text20 font-airbnb_500">Aviso Legal</p>
+                <div class="flex flex-col gap-5 font-airbnb_400">
                     <a href="#">Política de Privacidad</a>
                     <a href="#">Términos y Condiciones</a>
                 </div>
@@ -73,7 +73,7 @@
         </div>
     </div>
 
-    <div class="text-center py-16">
+    <div class="text-center py-16 font-airbnb_400">
         <a href="#">&copy; 2024 LimpiaBnB. Todos los derechos reservados</a>
     </div>
 </footer>
