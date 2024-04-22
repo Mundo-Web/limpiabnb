@@ -48,7 +48,7 @@
 
                                 <div class="w-full md:basis-1/2">
                                     <input type="text" placeholder="Suscribirme"
-                                        class="font-airbnb_500 py-4 px-2 w-full border-[1px] border-[#0071BE] outline-none rounded-lg text-text16 2md:text-text20" />
+                                        class="font-airbnb_500 py-4 px-2 w-full border-[1px] border-[#0071BE] outline-none rounded-lg text-text16 2md:text-text20 placeholder:text-[#E3E3E3]" />
                                 </div>
                             </form>
                         </div>

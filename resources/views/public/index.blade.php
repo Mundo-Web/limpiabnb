@@ -304,7 +304,7 @@
                     </div>
                 </div>
 
-                <div class="py-10" data-aos="fade-up" data-aos-offset="150">
+                <div class="pb-10 pt-44" data-aos="fade-up" data-aos-offset="150">
                     <div class="swiper servicios__header">
                         <div class="swiper-wrapper ">
                             <div class="swiper-slide ">
@@ -1109,22 +1109,22 @@
                             <div class="flex flex-col gap-5 font-airbnb_400">
                                 <div class="flex flex-col md:flex-row gap-5">
                                     <input type="text" placeholder="Nombres"
-                                        class="outline-none py-3 2md:py-4 basis-1/2 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 font-normal text-text16 2md:text-text20" />
+                                        class="outline-none py-3 2md:py-4 basis-1/2 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 font-normal text-text16 2md:text-text20 placeholder:text-[#8D979C] text-[#004472]" />
 
                                     <input type="text" placeholder="Apellidos"
-                                        class="outline-none py-3 2md:py-4 basis-1/2 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 font-normal text-text16 2md:text-text20" />
+                                        class="outline-none py-3 2md:py-4 basis-1/2 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 font-normal text-text16 2md:text-text20 placeholder:text-[#8D979C] text-[#004472]" />
                                 </div>
                                 <div class="flex flex-col md:flex-row gap-5">
                                     <input type="email" placeholder="Correo Electrónico"
-                                        class="outline-none py-3 2md:py-4 basis-1/2 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 font-normal text-text16 2md:text-text20" />
+                                        class="outline-none py-3 2md:py-4 basis-1/2 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 font-normal text-text16 2md:text-text20 placeholder:text-[#8D979C] text-[#004472]" />
 
                                     <input type="text" placeholder="Número de Teléfono"
-                                        class="outline-none py-3 2md:py-4 basis-1/2 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 font-normal text-text16 2md:text-text20" />
+                                        class="outline-none py-3 2md:py-4 basis-1/2 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 font-normal text-text16 2md:text-text20 placeholder:text-[#8D979C] text-[#004472]" />
                                 </div>
 
                                 <div>
                                     <textarea name="comentario" id="" cols="30" rows="5" placeholder="comentario"
-                                        class="outline-none py-3 2md:py-4 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 w-full font-normal text-text16 2md:text-text20"></textarea>
+                                        class="outline-none py-3 2md:py-4 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 w-full font-normal text-text16 2md:text-text20 placeholder:text-[#8D979C] text-[#004472]"></textarea>
                                 </div>
 
                                 <div class="flex flex-col justify-between gap-5">
@@ -1135,15 +1135,15 @@
 
                                     <div class="flex gap-5 items-center">
                                         <div class="flex items-center gap-2">
-                                            <input type="radio" id="opcion1" name="opcion" value="opcion1"
+                                            <input type="radio" id="opcion3" name="opcion" value="opcion3"
                                                 class="w-5 h-5 accent-[#BFDE8E] cursor-pointer">
-                                            <label for="opcion1" class="text__label leading-none font-airbnb_500">WhatsApp</label>
+                                            <label for="opcion3" class="text__label leading-none font-airbnb_500">WhatsApp</label>
                                         </div>
 
                                         <div class="flex items-center gap-2">
-                                            <input type="radio" id="opcion2" name="opcion" value="opcion2"
+                                            <input type="radio" id="opcion4" name="opcion" value="opcion4"
                                                 class="w-5 h-5 accent-[#BFDE8E] cursor-pointer">
-                                            <label for="opcion2" class="text__label leading-none font-airbnb_500">Correo
+                                            <label for="opcion4" class="text__label leading-none font-airbnb_500">Correo
                                                 electrónico</label>
                                         </div>
                                     </div>
