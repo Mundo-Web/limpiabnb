@@ -14,26 +14,24 @@
 
 @stop
 
-
-
-
 @section('content')
     <main>
         <section class="text-textAzul w-11/12 mx-auto flex flex-col gap-10 pt-44 pb-24" data-aos="fade-up"
             data-aos-offset="150">
             <div class="flex flex-col gap-5">
                 <h1 class="text-text48 2md:text-text52 font-airbnb_700 leading-none md:leading-tight">
-                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                    {{$blog->title}}
                 </h1>
                 <p class="font-airbnb_500 text-text18 2md:text-text22 text-textCeleste">
-                    12 de Abril, 2024
+                    {{ \Carbon\Carbon::parse($blog->created_at)->locale('es')->isoFormat('DD [de] MMMM, YYYY') }}
                 </p>
                 <p class="after__underline"></p>
             </div>
 
-            <div class="flex flex-col gap-5">
+             <div class="flex flex-col gap-5">
                 <div class="flex flex-col gap-3 font-airbnb_400 text-text16 2md:text-text22">
-                    <p>
+                    {!!$blog->description!!}
+                    {{-- <p>
                         Nam a lorem ut dui ultrices efficitur vitae et metus. Mauris quis
                         vulputate orci, ac hendrerit purus. Nunc sagittis lacus sem. Nam
                         varius purus et urna vehicula, eget dictum magna efficitur.
@@ -52,10 +50,10 @@
                         Nam a lorem ut dui ultrices efficitur vitae et metus. Mauris quis
                         vulputate orci, ac hendrerit purus. Nunc sagittis lacus sem. Nam
                         varius purus et urna vehicula.
-                    </p>
+                    </p> --}}
                 </div>
 
-                <div class="flex flex-col gap-5">
+                {{-- <div class="flex flex-col gap-5">
                     <h2 class="font-airbnb_700 text-text22 2md:text-text26">
                         Vestibulum vehicula urna arcu
                     </h2>
@@ -79,10 +77,10 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
-            <div>
+            {{--  <div>
                 <div class="flex flex-col gap-5">
                     <h2 class="font-airbnb_700 text-text22 2md:text-text26">
                         Nunc tincidunt sollicitudin lectus a ornare
@@ -121,7 +119,7 @@
                         tortor et sapien hendrerit, vel luctus ex feugiat.
                     </p>
                 </div>
-            </div>
+            </div> --}}
 
             <div data-aos="fade-up" data-aos-offset="150">
 
@@ -131,7 +129,7 @@
 
             </div>
 
-            <div data-aos="fade-up" data-aos-offset="150">
+            {{-- <div data-aos="fade-up" data-aos-offset="150">
                 <div class="flex flex-col gap-5">
                     <h2 class="font-airbnb_700 text-text22 2md:text-text26">
                         Mauris leo nibh, consequat pulvinar auctor
@@ -159,36 +157,50 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
-            <div class="flex justify-between items-center">
-                <a class="flex items-center gap-2" href="#">
-                    <div>
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M14.8892 10.167L9.33366 16.0003M9.33366 16.0003L14.8892 21.8337M9.33366 16.0003L22.667 16.0003"
-                                stroke="#3F76BB" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <p class="font-airbnb_700 text-text16 2md:text-text22 text-textCeleste">
-                        Previous
-                    </p>
-                </a>
+            <div class="flex justify-between items-center border-t-[1.5px] border-[#DDDDDD] py-10">
+                <div class="flex flex-col gap-2">
+                    @if ($postAnterior)
+                        <a class="flex items-center gap-2" href="{{ route('post', $postAnterior) }}">
+                            <div>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.8892 10.167L9.33366 16.0003M9.33366 16.0003L14.8892 21.8337M9.33366 16.0003L22.667 16.0003"
+                                        stroke="#3F76BB" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <p class="font-airbnb_700 text-text16 2md:text-text22 text-textCeleste">
+                                Previous
+                            </p>
+                        </a>
+                        {{-- <p class="font-corbel_400 text-text16 xl:text-text20 hidden md:block text-textGray">
+                            {{ $postAnterior->title }}
+                        </p> --}}
+                    @endif
+                </div>  
 
-                <a class="flex items-center gap-2" href="#">
-                    <p class="font-airbnb_700 text-text16 2md:text-text22 text-textCeleste">
-                        Next
-                    </p>
-                    <div>
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17.1108 10.167L22.6663 16.0003M22.6663 16.0003L17.1108 21.8337M22.6663 16.0003L9.33301 16.0003"
-                                stroke="#3F76BB" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                </a>
+                <div class="flex flex-col gap-2">
+                    @if ($postSiguiente)
+                        <a class="flex items-center gap-2" href="{{ route('post', $postSiguiente) }}">
+                            <p class="font-airbnb_700 text-text16 2md:text-text22 text-textCeleste">
+                                Next
+                            </p>
+                            <div>
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.1108 10.167L22.6663 16.0003M22.6663 16.0003L17.1108 21.8337M22.6663 16.0003L9.33301 16.0003"
+                                        stroke="#3F76BB" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </a>
+                        {{-- <p class="font-corbel_400 text-text16 xl:text-text20 hidden md:block text-textGray">
+                            {{ $postSiguiente->title }}
+                        </p> --}}
+                    @endif      
+                </div>        
             </div>
         </section>
     </main>

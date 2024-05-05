@@ -33,7 +33,7 @@
                                 <tr>
                                     <td>{{$item->title}}</td>
                                     <td>{{$item->categories->name}}</td>
-                                    <td class="px-3 py-2"><img class="w-20" src="{{ asset('storage/images/posts/'.$item->name_image) }}" alt=""></td>
+                                    <td class="px-3 py-2"><img class="w-20" src="{{ asset($item->url_image) }}" alt=""></td>
                                     <td>
                                         <form method="POST" action="">
                                           @csrf
@@ -92,8 +92,8 @@
                 responsive: true
             });
 
-            $( ".btn_delete" ).on( "click", function(e) {
-                
+            /* $( ".btn_delete" ).on( "click", function(e) { */
+            $('#tabladatos').on('click', '.btn_delete', function(e) {
                 var id = $(this).attr('data-idService');
 
                 Swal.fire({
@@ -136,7 +136,8 @@
             });
 
 
-            $( ".btn_swithc" ).on( "change", function() {
+            /* $( ".btn_swithc" ).on( "change", function() { */
+            $('#tabladatos').on('change', '.btn_swithc', function(e) {
                 
                 var status = 0;
                 var id = $(this).attr('data-idService');

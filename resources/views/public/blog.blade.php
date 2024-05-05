@@ -10,11 +10,17 @@
         .menu__blog-azul {
             stroke: #0071BE
         }
+
+        .border-pagination_gris {
+            border-bottom: 4px solid #D1ECF8;
+        }
+
+        .border-pagination {
+            border-bottom: 4px solid #0071be;
+        }
     </style>
 
 @stop
-
-
 
 @section('content')
     <main>
@@ -68,240 +74,91 @@
         </section>
 
 
-
         <section class="pb-12 flex flex-col gap-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-11/12 mx-auto text-textAzul">
-                <div class="flex flex-col gap-5" data-aos="fade-up" data-aos-offset="150">
-                    <div>
-                        <img src="{{ asset('images/img/imagen_15.png') }}" alt="limpieza" class="w-full">
-                    </div>
-                    <h2 class="font-airbnb_700 text-text24 md:text-text32">
-                        Neque porro quisquam est, qui dolorem
-                    </h2>
-                    <p class="font-airbnb_400 text-text14 md:text-text20 text-textAzulStrong">
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo connostrud exercitation ullamco
-                        laboris nisi
-                    </p>
+            <div class="hidden md:flex justify-start items-center w-11/12 mx-auto" data-aos="fade-up" data-aos-offset="150">
+                <div class="list-style-none flex font-airbnb_500">
+                    {{-- @foreach ($categorias as $item)
+                        @if ($item->blogs->where('visible', 1)->count() != 0)
+                            <a href="/blog/{{ $item->id }}"
+                                class="relative block bg-transparent px-4 text-text20 transition duration-300 text-[#0071BE] border-pagination_gris pagination__blog
+                                @if ($id == 1) {{ in_array($item->id, [1]) ? ' border-pagination' : '' }} @else 
+                                {{ $item->id == $categoria->id ? 'border-pagination' : '' }} @endif
+                                ">
+                                {{ $item->name }}
+                            </a>
+                        @endif
+                    @endforeach --}}
 
-                    <a href="{{ route('post') }}"
-                        class="gap-2 font-airbnb_500 text-text16 md:text-text24 text-textCeleste flex items-center">
-                        <div>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.37056 6.30093L17.7008 6.30078M17.7008 6.30078V16.4841M17.7008 6.30078L6.30078 17.7008"
-                                    stroke="#0071BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-
-                        <span>Leer artículo</span>
-                    </a>
-                </div>
-
-                <div class="flex flex-col gap-5" data-aos="fade-up" data-aos-offset="150">
-                    <div>
-                        <img src="{{ asset('images/img/imagen_16.png') }}" alt="limpieza" class="w-full">
-
-                    </div>
-                    <h2 class="font-airbnb_700 text-text24 md:text-text32">
-                        Neque porro quisquam est, qui dolorem
-                    </h2>
-                    <p class="font-airbnb_400 text-text14 md:text-text20 text-textAzulStrong">
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo connostrud exercitation ullamco
-                        laboris nisi
-                    </p>
-
-                    <a href="{{ route('post') }}"
-                        class="gap-2 font-airbnb_500 text-text16 md:text-text24 text-textCeleste flex items-center">
-                        <div>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.37056 6.30093L17.7008 6.30078M17.7008 6.30078V16.4841M17.7008 6.30078L6.30078 17.7008"
-                                    stroke="#0071BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-
-                        <span>Leer artículo</span>
-                    </a>
-                </div>
-
-                <div class="flex flex-col gap-5" data-aos="fade-up" data-aos-offset="150">
-                    <div>
-                        <img src="{{ asset('images/img/imagen_17.png') }}" alt="limpieza" class="w-full">
-
-                    </div>
-                    <h2 class="font-airbnb_700 text-text24 md:text-text32">
-                        Neque porro quisquam est, qui dolorem
-                    </h2>
-                    <p class="font-airbnb_400 text-text14 md:text-text20 text-textAzulStrong">
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo connostrud exercitation ullamco
-                        laboris nisi
-                    </p>
-
-                    <a href="{{ route('post') }}"
-                        class="gap-2 font-airbnb_500 text-text16 md:text-text24 text-textCeleste flex items-center">
-                        <div>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.37056 6.30093L17.7008 6.30078M17.7008 6.30078V16.4841M17.7008 6.30078L6.30078 17.7008"
-                                    stroke="#0071BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-
-                        <span>Leer artículo</span>
-                    </a>
-                </div>
-
-                <div class="flex flex-col gap-5" data-aos="fade-up" data-aos-offset="150">
-                    <div>
-                        <img src="{{ asset('images/img/imagen_18.png') }}" alt="limpieza" class="w-full">
-
-
-                    </div>
-                    <h2 class="font-airbnb_700 text-text24 md:text-text32">
-                        Neque porro quisquam est, qui dolorem
-                    </h2>
-                    <p class="font-airbnb_400 text-text14 md:text-text20 text-textAzulStrong">
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo connostrud exercitation ullamco
-                        laboris nisi
-                    </p>
-
-                    <a href="{{ route('post') }}"
-                        class="gap-2 font-airbnb_500 text-text16 md:text-text24 text-textCeleste flex items-center">
-                        <div>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.37056 6.30093L17.7008 6.30078M17.7008 6.30078V16.4841M17.7008 6.30078L6.30078 17.7008"
-                                    stroke="#0071BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-
-                        <span>Leer artículo</span>
-                    </a>
-                </div>
-
-                <div class="flex flex-col gap-5" data-aos="fade-up" data-aos-offset="150">
-                    <div>
-                        <img src="{{ asset('images/img/imagen_19.png') }}" alt="limpieza" class="w-full">
-
-                    </div>
-                    <h2 class="font-airbnb_700 text-text24 md:text-text32">
-                        Neque porro quisquam est, qui dolorem
-                    </h2>
-                    <p class="font-airbnb_400 text-text14 md:text-text20 text-textAzulStrong">
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo connostrud exercitation ullamco
-                        laboris nisi
-                    </p>
-
-                    <a href="{{ route('post') }}"
-                        class="gap-2 font-airbnb_500 text-text16 md:text-text24 text-textCeleste flex items-center">
-                        <div>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.37056 6.30093L17.7008 6.30078M17.7008 6.30078V16.4841M17.7008 6.30078L6.30078 17.7008"
-                                    stroke="#0071BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-
-                        <span>Leer artículo</span>
-                    </a>
-                </div>
-
-                <div class="flex flex-col gap-5" data-aos="fade-up" data-aos-offset="150">
-                    <div>
-                        <img src="{{ asset('images/img/imagen_20.png') }}" alt="limpieza" class="w-full">
-
-                    </div>
-                    <h2 class="font-airbnb_700 text-text24 md:text-text32">
-                        Neque porro quisquam est, qui dolorem
-                    </h2>
-                    <p class="font-airbnb_400 text-text14 md:text-text20 text-textAzulStrong">
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo connostrud exercitation ullamco
-                        laboris nisi
-                    </p>
-
-                    <a href="{{ route('post') }}"
-                        class="gap-2 font-airbnb_500 text-text16 md:text-text24 text-textCeleste flex items-center">
-                        <div>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M7.37056 6.30093L17.7008 6.30078M17.7008 6.30078V16.4841M17.7008 6.30078L6.30078 17.7008"
-                                    stroke="#0071BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-
-                        <span>Leer artículo</span>
-                    </a>
+                    @foreach ($categorias as $item)
+                            
+                        @if ($item->blogs->where('visible', 1)->count() != 0)
+                            <a href="/blog/{{ $item->id }}"
+                                class="relative block bg-transparent px-4 text-text20 transition duration-300 text-[#0071BE] border-pagination_gris pagination__blog
+                                @if ($id == 0) 
+                                @else 
+                                {{ $item->id == $categoria->id ? 'border-pagination' : '' }} @endif
+                                ">
+                                {{ $item->name }}
+                            </a>
+                        @endif
+                    @endforeach
                 </div>
             </div>
 
-            <div class="flex justify-center items-center" data-aos="fade-up" data-aos-offset="150">
-                <div class="list-style-none flex font-airbnb_500">
-                    <div>
-                        <a class="relative block bg-transparent px-4 text-text20 transition duration-300 text-[#0071BE] border-pagination border-b-2 pagination__blog"
-                            href="#">
-                            01
-                        </a>
-                    </div>
-                    <div aria-current="page">
-                        <a class="relative block bg-transparent px-4 text-text20 transition duration-300 text-[#0071BE] border-b-2 pagination__blog"
-                            href="#">
-                            02
-                        </a>
-                    </div>
-                    <div>
-                        <a class="relative block bg-transparent px-4 text-text20 transition duration-300 text-[#0071BE] border-b-2 pagination__blog"
-                            href="#">
-                            03
-                        </a>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-11/12 mx-auto text-textAzul">
+                @foreach ($blogs as $blog)
+                    <div class="flex flex-col gap-5" data-aos="fade-up" data-aos-offset="150">
+                        <div>
+                            <img src="{{ asset('images/img/imagen_15.png') }}" alt="limpieza" class="w-full">
+                        </div>
+                        <h2 class="font-airbnb_700 text-text24 md:text-text32">
+                            {{ $blog->title }}
+                        </h2>
+                        <div class="font-airbnb_400 text-text14 md:text-text20 text-textAzulStrong">
+                            {!! $blog->description !!}
+                        </div>
 
-                    <div>
-                        <a class="relative block bg-transparent px-4 text-text20 transition duration-300 text-[#0071BE] border-b-2 pagination__blog"
-                            href="#">
-                            04
-                        </a>
-                    </div>
+                        <a href="{{ route('post', $blog->id) }}"
+                            class="gap-2 font-airbnb_500 text-text16 md:text-text24 text-textCeleste flex items-center">
+                            <div>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.37056 6.30093L17.7008 6.30078M17.7008 6.30078V16.4841M17.7008 6.30078L6.30078 17.7008"
+                                        stroke="#0071BE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
 
-                    <div>
-                        <a class="relative block bg-transparent px-4 text-text20 transition duration-300 text-[#0071BE] border-b-2 pagination__blog"
-                            href="#">
-                            05
+                            <span>Leer artículo</span>
                         </a>
                     </div>
-                </div>
+                @endforeach
+            </div>
+
+            <div class="flex justify-center items-center">
+                {{ $blogs->links() }}
             </div>
         </section>
+
     </main>
 
 
 
 @section('scripts_improtados')
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const paginations = document.querySelectorAll(".pagination__blog");
-            paginations.forEach((item, index) => {
-                item.addEventListener("click", (e) => {
-                    item.classList.add("border-pagination");
-                    paginations.forEach((pag) => {
-                        if (e.target !== pag) {
-                            pag.classList.remove("border-pagination");
-                        }
+        /* document.addEventListener("DOMContentLoaded", () => {
+                const paginations = document.querySelectorAll(".pagination__blog");
+                paginations.forEach((item, index) => {
+                    item.addEventListener("click", (e) => {
+                        item.classList.add("border-pagination");
+                        paginations.forEach((pag) => {
+                            if (e.target !== pag) {
+                                pag.classList.remove("border-pagination");
+                            }
+                        });
                     });
                 });
-            });
-        });
+            }); */
     </script>
 
 @stop

@@ -8,22 +8,22 @@
     <nav class="menu-list ">
         <ul>
             <li>
-                <a href="index.html">Inicio</a>
+                <a href="{{route('index')}}">Inicio</a>
             </li>
             <li>
-                <a href="#servicios">Servicios</a>
+                <a href="{{route('index').'#servicios'}}">Servicios</a>
             </li>
             <li>
-                <a href="#pasos">Paso a Paso</a>
+                <a href="{{route('index').'#pasos'}}">Paso a Paso</a>
             </li>
             <li>
-                <a href="#nosotros">Nosotros</a>
+                <a href="{{route('index').'#nosotros'}}">Nosotros</a>
             </li>
             <li>
-                <a href="blog.html">Blog</a>
+                <a href="{{route('blog', 0)}}">Blog</a>
             </li>
             <li>
-                <a href="#contacto">Contacto</a>
+                <a href="{{route('index').'#contacto'}}">Contacto</a>
             </li>
         </ul>
     </nav>
@@ -35,16 +35,17 @@
         <div class="flex justify-between items-center pt-10" data-aos="fade-up" data-aos-offset="150">
             <div>
                 <a href="{{route('index')}}">
-                    <img src="./images/img/image_2.png" alt="Limpia BnB" />
+                    <img src="{{asset('/images/img/image_2.png')}}" alt="Limpia BnB" />
                 </a>
             </div>
             <nav class="font-airbnb_500 text-text20 2md:text-text24 hidden md:flex gap-10 items-center text__blog-header">
                 <a href="{{route('index')}}">Inicio</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#pasos">Paso a paso</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="{{ route('blog') }}">Blog</a>
-                <a href="#contacto">Contacto</a>
+                <a href="{{route('index').'#servicios'}}">Servicios</a>
+                <a href="{{route('index').'#pasos'}}">Paso a paso</a>
+                <a href="{{route('index').'#nosotros'}}">Nosotros</a>
+                {{-- <a href="{{ route('blog', 1) }}">Blog</a> --}}
+                <a href="{{ route('blog', 0) }}">Blog</a>
+                <a href="{{route('index').'#contacto'}}">Contacto</a>
             </nav>
 
             <div class="md:hidden">
@@ -67,8 +68,8 @@
     <!--  -->
     <div class="flex justify-end relative w-11/12">
         <div class="fixed bottom-[25px] z-[100] right-[25px]">
-            <a href="#" class="">
-                <img src="./images/img/icon.png" alt="whatsapp" class="w-20 h-20 md:w-full md:h-full" />
+            <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}" target="_blank">
+                <img src="{{asset('/images/svg/cotizar.svg')}}" alt="whatsapp" class="w-20 h-20 md:w-full md:h-full" />
             </a>
         </div>
     </div>

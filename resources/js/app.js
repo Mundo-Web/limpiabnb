@@ -11,9 +11,9 @@ import flatpickr from "flatpickr";
 // Import AOS
 import "aos/dist/aos.css";
 import AOS from "aos";
-document.addEventListener("DOMContentLoaded", function () {
+window.onload = function () {
     AOS.init();
-});
+};
 
 // import component from './components/component';
 import dashboardCard01 from "./components/dashboard-card-01";

@@ -27,6 +27,7 @@ class GeneralSeeder extends Seeder
             'instagram' => 'www.instagram.com',
             'youtube' => 'www.youtube.com',
             'twitter' => 'www.twitter.com',
+            'linkedin' => 'www.linkedin.com',
             'whatsapp' => '555-555-123' ,
             'form_email' => 'usuario@mundoweb.pe',
             'business_hours' => 'horas',
