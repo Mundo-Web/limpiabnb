@@ -47,6 +47,10 @@
             color: white;
         }
 
+        .button__base-form{
+            padding: 1rem 2rem;
+        }
+
         .button__base-padding {
             padding: 0.8rem 2rem;
         }
@@ -284,7 +288,7 @@
             content: "";
             position: absolute;
             width: 5px;
-            height: 210px;
+            height: 189px; /* 210 */
             top: -150px;
             left: 23px;
             background-color: #f8f2f2;
@@ -648,8 +652,7 @@
             return true;
         }
 
-        function validarEmail(value) {
-            console.log(value)
+        function validarEmail(value) {         
             const regex =
                 /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/
 
@@ -707,6 +710,7 @@
                     });
 
                     $('#formContactos')[0].reset();
+                    console.log("exito");
                 },
                 error: function(error) {
                     Swal.close();
@@ -727,6 +731,46 @@
                 }
             });
         })
+
+
+        /* $('#formCotizacion').submit(function(event) {
+            event.preventDefault();
+            let formDataArray = $(this).serializeArray();
+            console.log(formDataArray);
+
+            $.ajax({
+                url: '{{ route('guardarContactos') }}',
+                method: 'POST',
+                data: formDataArray,
+                success: function(response) {
+                    Swal.close();
+
+                    Swal.fire({
+                        title: response.message,
+                        icon: "success",
+                    });
+
+                    $('#formCotizacion')[0].reset();
+                },
+                error: function(error) {
+                    Swal.close();
+                    const obj = error.responseJSON.message;
+                    const keys = Object.keys(error.responseJSON.message);
+                    let flag = false;
+                    keys.forEach(key => {
+                        if (!flag) {
+                            const e = obj[key][0];
+                            Swal.fire({
+                                title: error.message,
+                                text: e,
+                                icon: "error",
+                            });
+                            flag = true; // Marcar como mostrado
+                        }
+                    });
+                }
+            });
+        }) */
     </script>
 
 </body>

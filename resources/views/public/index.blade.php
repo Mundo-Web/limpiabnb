@@ -2,17 +2,17 @@
 
 @section('css_improtados')
 
-<style>
-    .bg__image-main{
-        background-image: url({{ asset('images/img/imagen_27.png') }});
-    }
-
-    @media (min-width: 768px){
-        .bg__image-main{
-            background-image: url({{ asset('images/img/image_1.png') }});
+    <style>
+        .bg__image-main {
+            background-image: url({{ asset('images/img/imagen_27.png') }});
         }
-    }
-</style>
+
+        @media (min-width: 768px) {
+            .bg__image-main {
+                background-image: url({{ asset('images/img/image_1.png') }});
+            }
+        }
+    </style>
 
 @stop
 
@@ -47,7 +47,7 @@
                                 </a>
 
                                 <a href="{{ route('mobile') }}"
-                                    class="cursor-pointer flex gap-2 basis-4/12 lg:basis-6/12 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto lg:hidden">
+                                    class="cursor-pointer flex gap-2 basis-4/12 lg:basis-6/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto lg:hidden">
                                     Quiero mi servicio
                                 </a>
                             </div>
@@ -71,7 +71,8 @@
                                 </div>
                             </div>
                             <div class="form-outer">
-                                <form action="#">
+                                <form action="" id="formCotizacion">
+                                    @csrf
                                     <div class="page slide-page">
                                         <div class="px-10 h-full flex flex-col justify-center">
                                             <div class="text-textAzul flex flex-col gap-10">
@@ -106,14 +107,15 @@
 
                                                 <div
                                                     class="flex gap-5 flex-col 2lg:flex-row justify-between items-center text-center">
-                                                    <button href="#asesoria"
-                                                        class="w-full lg:basis-8/12 button__base bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
+                                                    <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
+                                                        target="_blank"
+                                                        class="w-full lg:basis-8/12 button__base button__base-form bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
                                                         Asesoría en WhatsApp
-                                                    </button>
+                                                    </a>
 
                                                     <div class="w-full 2lg:w-auto">
                                                         <button
-                                                            class="firstNext next cursor-pointer flex gap-2 lg:basis-4/12 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
+                                                            class="firstNext next cursor-pointer flex gap-2 lg:basis-4/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
                                                             <span>Siguiente</span>
                                                             <div>
                                                                 <svg width="24" height="24" viewBox="0 0 24 24"
@@ -147,19 +149,21 @@
                                                         <label for="habitaciones" class="text__label">
                                                             ¿Cuántas m2 tiene tu departamento?
                                                         </label>
-                                                        <input required name="metros" type="number" id="habitaciones" class="text__input" />
+                                                        <input required name="metros" type="number" id="metros"
+                                                            class="text__input" />
                                                     </div>
                                                 </div>
 
                                                 <div
                                                     class="flex gap-5 flex-col 2lg:flex-row justify-between items-center text-center">
-                                                    <a href="#asesoria"
-                                                        class="w-full lg:basis-8/12 button__base bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
+                                                    <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
+                                                        target="_blank"
+                                                        class="w-full lg:basis-8/12 button__base button__base-form bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
                                                         Asesoría en WhatsApp
                                                     </a>
                                                     <div class="w-full 2lg:w-auto">
                                                         <button
-                                                            class="next-1 next cursor-pointer flex gap-2 lg:basis-4/12 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
+                                                            class="next-1 next cursor-pointer flex gap-2 lg:basis-4/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
                                                             <span>Siguiente</span>
                                                             <div>
                                                                 <svg width="24" height="24" viewBox="0 0 24 24"
@@ -192,7 +196,8 @@
                                                         <label for="habitaciones" class="text__label">
                                                             Déjanos tu dirección
                                                         </label>
-                                                        <input required name="direction" type="text" id="habitaciones" class="text__input font-airbnb_500"
+                                                        <input required name="direction" type="text" id="direction"
+                                                            class="text__input font-airbnb_500"
                                                             placeholder="Avenida, Calle, Jiron, Pasaje..." />
                                                     </div>
 
@@ -229,14 +234,15 @@
 
                                                 <div
                                                     class="flex gap-5 flex-col 2xl:flex-row justify-between items-center text-center">
-                                                    <a href="#asesoria"
-                                                        class="w-full 2xl:basis-7/12 button__base bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
+                                                    <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
+                                                        target="_blank"
+                                                        class="w-full 2xl:basis-7/12 button__base button__base-form bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
                                                         Asesoría en WhatsApp
                                                     </a>
 
                                                     <div class="w-full 2xl:w-auto">
                                                         <button
-                                                            class="next-2 next cursor-pointer flex gap-2 w-full 2xl:basis-5/12 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center">
+                                                            class="next-2 next cursor-pointer flex gap-2 w-full 2xl:basis-5/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center">
                                                             <span>Enviar mi solicitud</span>
                                                             <div>
                                                                 <svg width="24" height="24" viewBox="0 0 24 24"
@@ -265,17 +271,21 @@
                                                     <p class=" text-text32 md:text-text40 font-airbnb_700">
                                                         ¡Éxito! Hemos recibido tu información
                                                     </p>
-                                                    <p class="font-normal text-text16 md:text-text24">
+                                                    <p class="font-airbnb_400 text-text16 md:text-text24">
                                                         Basándonos en la información proporcionada, tu
                                                         estimación de precio inicial es...
                                                     </p>
-                                                    <p class="font-bold text-text48 md:text-text52">
-                                                        s/ 150
-                                                    </p>
+
+                                                    <div>
+                                                        <p class="font-airbnb_700 text-text48 md:text-text52">
+                                                            S/ 150
+                                                        </p>
+                                                    </div>
+
 
                                                     <div>
                                                         <button
-                                                            class="submit cursor-pointer flex gap-2 basis-4/12 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center"
+                                                            class="submit cursor-pointer flex gap-2 basis-4/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center"
                                                             type="submit">
                                                             <span>Adquirir el servicio</span>
                                                             <div>
@@ -319,61 +329,59 @@
                 <div class="pb-10 pt-44" data-aos="fade-up" data-aos-offset="150">
                     <div class="swiper servicios__header">
                         <div class="swiper-wrapper ">
-                        @foreach ($beneficios as $beneficio)
-                            
+                            @foreach ($beneficios as $beneficio)
                                 <div class="swiper-slide ">
                                     <div class="flex gap-2 items-center justify-start">
                                         <div class="flex justify-center items-center">
-                                            <img src="{{$beneficio->icono}}" alt="">
+                                            <img src="{{ $beneficio->icono }}" alt="">
                                         </div>
                                         <h2 class="font-airbnb_500 text-text18 w-full md:w-2/3">
-                                            {{$beneficio->titulo}}                                      
+                                            {{ $beneficio->titulo }}
                                         </h2>
                                     </div>
                                 </div>
-                            
-                        @endforeach
-                    </div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
- 
+
         <section id="servicios" data-aos="fade-up" data-aos-offset="150">
             <div class="swiper servicios__principales text-textAzul">
                 <div class="swiper-wrapper">
 
                     @foreach ($services as $service)
-                    <div class="swiper-slide">
-                        <div class="flex flex-col lg:flex-row gap-10 md:gap-0">
-                            <div class="basis-1/2 order-2 md:order-1">
-                                <img src="{{ asset($service->url_image) }}" 
-                                alt="{{$service->name_image}}"
-                                    class="w-full h-full">
-                                    <p>{{$service->name_image}}</p>
-                            </div>
-                            <div
-                                class="flex flex-col md:gap-32 basis-1/2 order-1 md:order-2 md:p-12 w-11/12 md:w-full mx-auto">
-                                <div class="py-12 md:w-5/6 md:mx-auto">
-                                    <div class="buttonSliderServicios">
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                    </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col lg:flex-row gap-10 md:gap-0">
+                                <div class="basis-1/2 order-2 md:order-1">
+                                    <img src="{{ asset($service->url_image) }}" alt="{{ $service->name_image }}"
+                                        class="w-full h-full">
+                                    <p>{{ $service->name_image }}</p>
                                 </div>
-
-                                <div class="text-textAzul flex flex-col gap-5 md:w-5/6 mx-auto" data-aos="fade-up"
-                                    data-aos-offset="150">
-                                    <h2 class="font-airbnb_700 text-text32 2md:text-text52 leading-none md:leading-tight">
-                                        {{-- Limpieza y lavandería de airbnbs con reposición de
-                                        ammenities hoteleros --}}
-                                        {{$service->title}}
-                                    </h2>
-
-                                    <div class="font-airbnb_400 text-text16 2md:text-text20">
-                                        {!!$service->description!!}
+                                <div
+                                    class="flex flex-col md:gap-32 basis-1/2 order-1 md:order-2 md:p-12 w-11/12 md:w-full mx-auto">
+                                    <div class="py-12 md:w-5/6 md:mx-auto">
+                                        <div class="buttonSliderServicios">
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                        </div>
                                     </div>
 
-                                    {{-- <p class="font-airbnb_400 text-text16 2md:text-text20">
+                                    <div class="text-textAzul flex flex-col gap-5 md:w-5/6 mx-auto" data-aos="fade-up"
+                                        data-aos-offset="150">
+                                        <h2
+                                            class="font-airbnb_700 text-text32 2md:text-text52 leading-none md:leading-tight">
+                                            {{-- Limpieza y lavandería de airbnbs con reposición de
+                                        ammenities hoteleros --}}
+                                            {{ $service->title }}
+                                        </h2>
+
+                                        <div class="font-airbnb_400 text-text16 2md:text-text20">
+                                            {!! $service->description !!}
+                                        </div>
+
+                                        {{-- <p class="font-airbnb_400 text-text16 2md:text-text20">
                                         No te preocupes por la logística, nos encargamos del
                                         lavado y reposición de la ropa de cama y toallas.
                                     </p>
@@ -415,16 +423,16 @@
                                         </div>
                                     </div> --}}
 
-                                    <div class="flex flex-col md:flex-row items-center">
-                                        <a
-                                            class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto font-airbnb_500 leading-none">
-                                            Solicitar servicio
-                                        </a>
+                                        <div class="flex flex-col md:flex-row items-center">
+                                            <a
+                                                class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto font-airbnb_500 leading-none">
+                                                Solicitar servicio
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     @endforeach
 
 
@@ -747,7 +755,8 @@
                     </ul>
 
                     <div class="flex items-center justify-start w-full h-full">
-                        <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}" target="_blank"
+                        <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
+                            target="_blank"
                             class="cursor-pointer flex gap-2 button__base font-airbnb_500 bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center leading-none">
                             Obtener una Cotización
                         </a>
@@ -785,8 +794,8 @@
 
                 <div class="col-span-1 md:col-span-1 order-3 md:order-2">
                     <div class="flex items-center justify-end w-full h-full">
-                        <a
-                         href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}" target="_blank"
+                        <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
+                            target="_blank"
                             class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center font-airbnb_500 leading-none">
                             Obtener una Cotización
                         </a>
@@ -798,23 +807,24 @@
                         <div class="swiper testimonios">
                             <div class="swiper-wrapper pt-24 md:pt-0">
                                 @foreach ($testimonios as $testimonio)
-                                <div class="swiper-slide">
-                                    <div class="flex flex-col gap-5 bg-[#F8FBFD] p-10 rounded-lg">
-                                        <p class="font-airbnb_700 text-[20px] 2md:text-text32 leading-none text-[#004472]">
-                                            {{$testimonio->name}}
-                                        </p>
+                                    <div class="swiper-slide">
+                                        <div class="flex flex-col gap-5 bg-[#F8FBFD] p-10 rounded-lg">
+                                            <p
+                                                class="font-airbnb_700 text-[20px] 2md:text-text32 leading-none text-[#004472]">
+                                                {{ $testimonio->name }}
+                                            </p>
 
-                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20 text-[#004472]">
-                                            {{$testimonio->testimonie}}
-                                        </p>
+                                            <p class="font-airbnb_400 text-[16px] 2md:text-text20 text-[#004472]">
+                                                {{ $testimonio->testimonie }}
+                                            </p>
 
-                                        <p class="font-airbnb_400 text-[16px] 2md:text-text20 text-[#004472]">
-                                            {{-- 26 de noviembre, 2023 --}}
-                                            {{ \Carbon\Carbon::parse($testimonio->created_at)->locale('es')->isoFormat('DD [de] MMMM, YYYY') }}
-                                        </p>
+                                            <p class="font-airbnb_400 text-[16px] 2md:text-text20 text-[#004472]">
+                                                {{-- 26 de noviembre, 2023 --}}
+                                                {{ \Carbon\Carbon::parse($testimonio->created_at)->locale('es')->isoFormat('DD [de] MMMM, YYYY') }}
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                @endforeach                                                                                   
+                                @endforeach
                             </div>
 
                             <div class="flex justify-end items-center buttonSliderTestimonios">
@@ -891,26 +901,30 @@
                             Déjanos tus datos y consulta
                         </p>
 
-                        <form  id="formContactos">
+                        <form id="formContactos">
                             @csrf
                             <div class="flex flex-col gap-5 font-airbnb_400">
                                 <div class="flex flex-col md:flex-row gap-5">
                                     <input id="nombre" required type="text" name="name" placeholder="Nombres"
                                         class="outline-none py-3 2md:py-4 basis-1/2 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 font-normal text-text16 2md:text-text20 placeholder:text-[#8D979C] text-[#004472]" />
 
-                                    <input id="apellido" required type="text" name="last_name" placeholder="Apellidos"
+                                    <input id="apellido" required type="text" name="last_name"
+                                        placeholder="Apellidos"
                                         class="outline-none py-3 2md:py-4 basis-1/2 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 font-normal text-text16 2md:text-text20 placeholder:text-[#8D979C] text-[#004472]" />
                                 </div>
                                 <div class="flex flex-col md:flex-row gap-5">
-                                    <input required  id="email" type="email" name="email" placeholder="Correo Electrónico"
+                                    <input required id="email" type="email" name="email"
+                                        placeholder="Correo Electrónico"
                                         class="outline-none py-3 2md:py-4 basis-1/2 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 font-normal text-text16 2md:text-text20 placeholder:text-[#8D979C] text-[#004472]" />
 
-                                    <input maxlength="9" id="telefono" required type="tel" name="phone" placeholder="Número de Teléfono"
+                                    <input maxlength="9" id="telefono" required type="tel" name="phone"
+                                        placeholder="Número de Teléfono"
                                         class="outline-none py-3 2md:py-4 basis-1/2 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 font-normal text-text16 2md:text-text20 placeholder:text-[#8D979C] text-[#004472]" />
                                 </div>
 
                                 <div>
-                                    <textarea id="mensaje" required name="message" id="" cols="30" rows="5" placeholder="Comentario"
+                                    <textarea id="mensaje" required name="message" id="" cols="30" rows="5"
+                                        placeholder="Comentario"
                                         class="outline-none py-3 2md:py-4 border-[1.5px] border-[#ADC3D2] rounded-lg px-2 w-full font-normal text-text16 2md:text-text20 placeholder:text-[#8D979C] text-[#004472]"></textarea>
                                 </div>
 
@@ -976,7 +990,8 @@
                                         </p>
                                         <p class="font-airbnb_400 text-text16 2md:text-text20 text-[#004472]">
                                             {{-- Calle Independencia 360 Miraflores --}}
-                                            {{$generales->address}}, {{$generales->inside}} - {{$generales->district}}
+                                            {{ $generales->address }}, {{ $generales->inside }} -
+                                            {{ $generales->district }}
                                         </p>
                                     </div>
                                 </div>
@@ -990,8 +1005,9 @@
                                             Número de Teléfono
                                         </p>
 
-                                        <p href="#" class="font-airbnb_400 text-text16 2md:text-text20 text-[#004472]">
-                                            {{-- +51 931 359996 --}} {{$generales->office_phone}}
+                                        <p href="#"
+                                            class="font-airbnb_400 text-text16 2md:text-text20 text-[#004472]">
+                                            {{-- +51 931 359996 --}} {{ $generales->office_phone }}
                                         </p>
                                     </div>
                                 </div>
@@ -1004,7 +1020,8 @@
                                         <p class="font-airbnb_500 text-text18 2md:text-text24 leading-none text-[#00395F]">
                                             Correo Electrónico
                                         </p>
-                                        <p class="font-airbnb_400 text-text16 2md:text-text20 text-[#004472]">{{-- info@limpiabnb.pe --}} {{$generales->email}}</p>
+                                        <p class="font-airbnb_400 text-text16 2md:text-text20 text-[#004472]">
+                                            {{-- info@limpiabnb.pe --}} {{ $generales->email }}</p>
                                     </div>
                                 </div>
 
@@ -1195,11 +1212,11 @@
             /* progresbar */
 
             function alerta(message) {
-            Swal.fire({
-                title: message,
-                icon: "error",
-            });
-        }
+                Swal.fire({
+                    title: message,
+                    icon: "error",
+                });
+            }
 
             const slidePage = document.querySelector(".slide-page");
             const nextBtnFirst = document.querySelector(".firstNext");
@@ -1208,7 +1225,7 @@
             const prevBtnThird = document.querySelector(".prev-2");
             const nextBtnThird = document.querySelector(".next-2");
             /* const prevBtnFourth = document.querySelector(".prev-3"); */
-            const submitBtn = document.querySelector(".submit");
+            /* const submitBtn = document.querySelector(".submit"); */
             const bullet = document.querySelectorAll(".step .bullet");
             const progress = document.querySelector(".progress-bar");
             const corona = document.querySelector(".corona-top");
@@ -1223,7 +1240,7 @@
                 const banios = document.querySelector('input[name="banios"]').value;
                 const arrayValuePageOne = [habitaciones, camas, banios];
 
-                if(arrayValuePageOne.includes("")){
+                if (arrayValuePageOne.includes("")) {
                     alerta("Por favor, asegurese de completar todos los campos");
                     return;
                 }
@@ -1244,7 +1261,7 @@
                 const metros = document.querySelector('input[name="metros"]').value;
                 const arrayValuePageTwo = [metros];
 
-                if(arrayValuePageTwo.includes("")){
+                if (arrayValuePageTwo.includes("")) {
                     alerta("Por favor, asegurese de completar todos los campos");
                     return;
                 }
@@ -1260,6 +1277,15 @@
 
             nextBtnThird.addEventListener("click", function(event) {
                 event.preventDefault();
+
+                const direction = document.querySelector('input[name="direction"]').value;
+                const arrayValuePageThree = [direction];
+
+                if (arrayValuePageThree.includes("")) {
+                    alerta("Por favor, asegurese de completar todos los campos");
+                    return;
+                }
+
                 slidePage.style.marginLeft = "-75%";
                 bullet[current - 1].classList.add("active");
                 // current -> indica la cantidad de bullets
@@ -1268,7 +1294,9 @@
                     corona.classList.remove('hidden');
                 }
             });
-            submitBtn.addEventListener("click", function(event) {
+
+
+            /* submitBtn.addEventListener("click", function(event) {
                 event.preventDefault();
                 // Enviar datos al servidor
                 //.....
@@ -1285,7 +1313,67 @@
                 });
                 slidePage.style.marginLeft = "0%";
                 corona.classList.add('hidden');
-            });
+            }); */
+
+            $('#formCotizacion').submit(function(event) {
+                event.preventDefault();
+                let formDataArray = $(this).serializeArray();
+                console.log(formDataArray);
+
+                $.ajax({
+                    url: '{{ route('guardarContactos') }}',
+                    method: 'POST',
+                    data: formDataArray,
+                    success: function(response) {
+                        Swal.fire({
+                            title: response.message,
+                            icon: "success",
+                        });
+
+                        $('#formCotizacion')[0].reset();
+
+                        /* current = 2;
+                        progress.classList.remove("opacity-0");
+                        progress.classList.add("opacity-1");
+
+                        bullet.forEach((step, index) => {
+                            if (index !== 0) {
+                                step.classList.remove("active");
+                            }
+                        });
+                        slidePage.style.marginLeft = "0%";
+                        corona.classList.add('hidden'); */
+                    },
+                    error: function(error) {
+                        const obj = error.responseJSON.message;
+                        const keys = Object.keys(error.responseJSON.message);
+                        let flag = false;
+                        keys.forEach(key => {
+                            if (!flag) {
+                                const e = obj[key][0];
+                                Swal.fire({
+                                    title: error.message,
+                                    text: e,
+                                    icon: "error",
+                                });
+                                flag = true; // Marcar como mostrado
+                            }
+                        });
+                    }
+                });
+            })
+
+
+
+
+
+
+
+
+
+
+
+
 
             prevBtnSec.addEventListener("click", function(event) {
                 event.preventDefault();
@@ -1304,7 +1392,7 @@
                  slidePage.style.marginLeft = "-50%";
                  bullet[current - 2].classList.remove("active");
                  current -= 1;
-             }); */          
+             }); */
         });
     </script>
 @stop

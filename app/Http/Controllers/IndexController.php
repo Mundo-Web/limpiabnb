@@ -66,8 +66,9 @@ class IndexController extends Controller
 
     public function mobile()
     {
-        
-        return view('public.mobile');
+        $generales = General::all()->first();
+
+        return view('public.mobile', compact('generales'));
     }
 
     public function post($id)

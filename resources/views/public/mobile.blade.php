@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="form-outer">
-                    <form action="#">
+                    <form action="" id="formCotizacionMobile">
                         <div class="page slide-page">
                             <div class="px-5 h-full flex flex-col justify-center">
                                 <div class="text-textAzul flex flex-col gap-10">
@@ -55,33 +55,33 @@
                                             <label for="habitaciones" class="text__label font-airbnb_500 max-w-[50%]">
                                                 ¿Cuántas habitaciones tienes?
                                             </label>
-                                            <input type="number" id="habitaciones" class="text__input max-w-[50%]" />
+                                            <input required name="habitaciones" type="number" id="habitaciones" class="text__input max-w-[50%]" />
                                         </div>
 
                                         <div class="flex justify-between gap-10 items-center">
                                             <label for="camas" class="text__label basis-1/2 font-airbnb_500">
                                                 ¿Cuántas camas tienes?
                                             </label>
-                                            <input type="number" id="camas" class="text__input max-w-[50%]" />
+                                            <input required name="camas" type="number" id="camas" class="text__input max-w-[50%]" />
                                         </div>
 
                                         <div class="flex justify-between gap-10 items-center">
                                             <label for="banios" class="text__label max-w-[50%] font-airbnb_500">
                                                 ¿Cuántas baños tienes?
                                             </label>
-                                            <input type="number" id="banios" class="text__input max-w-[50%]" />
+                                            <input required name="banios" type="number" id="banios" class="text__input max-w-[50%]" />
                                         </div>
                                     </div>
 
                                     <div class="flex gap-5 flex-col 2lg:flex-row justify-between items-center text-center">
-                                        <button href="#asesoria"
-                                            class="w-full lg:basis-8/12 button__base font-airbnb_500 bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
+                                        <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}" target="_blank"
+                                            class="w-full lg:basis-8/12 button__base button__base-form font-airbnb_500 bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
                                             Asesoría en WhatsApp
-                                        </button>
+                                        </a>
 
                                         <div class="w-full 2lg:w-auto">
                                             <button
-                                                class="firstNext next cursor-pointer font-airbnb_500 flex gap-2 lg:basis-4/12 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
+                                                class="firstNext next cursor-pointer font-airbnb_500 flex gap-2 lg:basis-4/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
                                                 <span>Siguiente</span>
                                                 <div>
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -111,21 +111,21 @@
                                     </h4>
                                     <div class="flex flex-col gap-5">
                                         <div class="flex flex-col justify-between gap-5">
-                                            <label for="habitaciones" class="text__label font-airbnb_500">
+                                            <label for="metros" class="text__label font-airbnb_500">
                                                 ¿Cuántas m2 tiene tu departamento?
                                             </label>
-                                            <input type="number" id="habitaciones" class="text__input" />
+                                            <input required name="metros" type="number" id="metros" class="text__input" />
                                         </div>
                                     </div>
 
                                     <div class="flex gap-5 flex-col 2lg:flex-row justify-between items-center text-center">
-                                        <a href="#asesoria"
-                                            class="w-full lg:basis-8/12 font-airbnb_500 button__base bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
+                                        <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}" target="_blank"
+                                            class="w-full lg:basis-8/12 font-airbnb_500 button__base button__base-form bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
                                             Asesoría en WhatsApp
                                         </a>
                                         <div class="w-full 2lg:w-auto">
                                             <button
-                                                class="next-1 next cursor-pointer font-airbnb_500 flex gap-2 lg:basis-4/12 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
+                                                class="next-1 next cursor-pointer font-airbnb_500 flex gap-2 lg:basis-4/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
                                                 <span>Siguiente</span>
                                                 <div>
                                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -157,43 +157,20 @@
                                             <label for="habitaciones" class="text__label font-airbnb_500">
                                                 Déjanos tu dirección
                                             </label>
-                                            <input type="text" id="habitaciones" class="text__input"
+                                            <input required name="direction" type="text" id="direction" class="text__input"
                                                 placeholder="Avenida, Calle, Jiron, Pasaje..." />
-                                        </div>
-
-                                        <div class="flex flex-col justify-between gap-5">
-                                            <label class="text__label font-airbnb_500">
-                                                ¿Prefieres que nos comuniquemos por Teléfono o Correo
-                                                Electrónico?
-                                            </label>
-
-                                            <div class="flex gap-5 items-center">
-                                                <div class="flex items-center gap-2">
-                                                    <input type="radio" id="opcion1" name="opcion" value="opcion1"
-                                                        class="w-5 h-5 accent-[#BFDE8E] cursor-pointer">
-                                                    <label for="opcion1"
-                                                        class="text__label leading-none font-airbnb_500">WhatsApp</label>
-                                                </div>
-
-                                                <div class="flex items-center gap-2">
-                                                    <input type="radio" id="opcion2" name="opcion" value="opcion2"
-                                                        class="w-5 h-5 accent-[#BFDE8E] cursor-pointer">
-                                                    <label for="opcion2" class="text__label leading-none font-airbnb_500">Correo
-                                                        electrónico</label>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
 
                                     <div class="flex gap-5 flex-col 2xl:flex-row justify-between items-center text-center">
-                                        <a href="#asesoria"
-                                            class="w-full 2xl:basis-7/12 button__base bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
+                                        <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}" target="_blank"
+                                            class="w-full 2xl:basis-7/12 button__base button__base-form bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
                                             Asesoría en WhatsApp
                                         </a>
 
                                         <div class="w-full 2xl:w-auto">
                                             <button
-                                                class="next-2 next cursor-pointer flex gap-2 w-full 2xl:basis-5/12 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center">
+                                                class="next-2 next cursor-pointer flex gap-2 w-full 2xl:basis-5/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center">
                                                 <span>Enviar mi solicitud</span>
                                                 <div>
                                                     <svg width="24" height="24" viewBox="0 0 24 24"
@@ -221,18 +198,18 @@
 
 
                                         </div>
-                                        <p class="font-airbnb_700 text-text28 md:text-text32 2md:text-text40">
+                                        <p class="font-airbnb_700 text-text28 md:text-text32 2md:text-text40 w-11/12 mx-auto">
                                             ¡Éxito! Hemos recibido tu información
                                         </p>
-                                        <p class="font-airbnb_700 text-text16 md:text-text24">
+                                        <p class="font-airbnb_400 text-text16 md:text-text24 w-11/12 mx-auto">
                                             Basándonos en la información proporcionada, tu
                                             estimación de precio inicial es...
                                         </p>
-                                        <p class="font-airbnb_700 text-text48 md:text-text52">s/ 150</p>
+                                        <p class="font-airbnb_700 text-text48 md:text-text52 w-11/12 mx-auto">s/ 150</p>
 
                                         <div>
                                             <button
-                                                class="submit cursor-pointer flex gap-2 basis-4/12 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center">
+                                                class="submit cursor-pointer flex gap-2 basis-4/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center">
                                                 <span>Adquirir el servicio</span>
                                                 <div>
                                                     <svg width="24" height="24" viewBox="0 0 24 24"
@@ -276,6 +253,12 @@
 
 @section('scripts_improtados')
     <script>
+        function alerta(message) {
+                Swal.fire({
+                    title: message,
+                    icon: "error",
+                });
+        }
         /* progresbar */
         const slidePage = document.querySelector(".slide-page");
         const nextBtnFirst = document.querySelector(".firstNext");
@@ -284,7 +267,7 @@
         const prevBtnThird = document.querySelector(".prev-2");
         const nextBtnThird = document.querySelector(".next-2");
         /* const prevBtnFourth = document.querySelector(".prev-3"); */
-        const submitBtn = document.querySelector(".submit");
+        /* const submitBtn = document.querySelector(".submit"); */
         const bullet = document.querySelectorAll(".step .bullet");
         const progress = document.querySelector(".progress-bar");
         const corona = document.querySelector(".corona-top")
@@ -293,18 +276,59 @@
 
         nextBtnFirst.addEventListener("click", function(event) {
             event.preventDefault();
+
+            const habitaciones = document.querySelector('input[name="habitaciones"]').value;
+                const camas = document.querySelector('input[name="camas"]').value;
+                const banios = document.querySelector('input[name="banios"]').value;
+                const arrayValuePageOne = [habitaciones, camas, banios];
+
+                if(arrayValuePageOne.includes("")){
+                    alerta("Por favor, asegurese de completar todos los campos");
+                    return;
+                }
+
+                if (arrayValuePageOne.some(valor => valor <= 0)) {
+                    alerta("Por favor, asegurese de solo ingresar valores mayores a cero");
+                    return;
+                }
+
             slidePage.style.marginLeft = "-25%";
             bullet[current - 1].classList.add("active");
             current += 1;
         });
         nextBtnSec.addEventListener("click", function(event) {
             event.preventDefault();
+
+            const metros = document.querySelector('input[name="metros"]').value;
+                const arrayValuePageTwo = [metros];
+
+                if(arrayValuePageTwo.includes("")){
+                    alerta("Por favor, asegurese de completar todos los campos");
+                    return;
+                }
+                if (arrayValuePageTwo.some(valor => valor <= 0)) {
+                    alerta("Por favor, asegurese de solo ingresar valores mayores a cero");
+                    return;
+                }
+
+
+
             slidePage.style.marginLeft = "-50%";
             bullet[current - 1].classList.add("active");
             current += 1;
         });
         nextBtnThird.addEventListener("click", function(event) {
             event.preventDefault();
+
+            const direction = document.querySelector('input[name="direction"]').value;
+                const arrayValuePageThree = [direction];
+
+                if(arrayValuePageThree.includes("")){
+                    alerta("Por favor, asegurese de completar todos los campos");
+                    return;
+                }
+
+
             slidePage.style.marginLeft = "-75%";
             bullet[current - 1].classList.add("active");
             // current -> indica la cantidad de bullets
@@ -313,7 +337,55 @@
                 corona.classList.remove('hidden');
             }
         });
-        submitBtn.addEventListener("click", function(event) {
+
+        $('#formCotizacionMobile').submit(function(event) {
+                event.preventDefault();
+                let formDataArray = $(this).serializeArray();
+                console.log(formDataArray);
+
+                $.ajax({
+                    url: '{{ route('guardarContactos') }}',
+                    method: 'POST',
+                    data: formDataArray,
+                    success: function(response) {
+                        Swal.fire({
+                            title: response.message,
+                            icon: "success",
+                        });
+
+                        $('#formCotizacionMobile')[0].reset();
+
+                        /* current = 2;
+                    progress.classList.remove("opacity-0");
+                    progress.classList.add("opacity-1");
+
+                    bullet.forEach((step, index) => {
+                        if (index !== 0) {
+                            step.classList.remove("active");
+                        }
+                    });
+                    slidePage.style.marginLeft = "0%";
+                    corona.classList.add('hidden'); */
+                    },
+                    error: function(error) {
+                        const obj = error.responseJSON.message;
+                        const keys = Object.keys(error.responseJSON.message);
+                        let flag = false;
+                        keys.forEach(key => {
+                            if (!flag) {
+                                const e = obj[key][0];
+                                Swal.fire({
+                                    title: error.message,
+                                    text: e,
+                                    icon: "error",
+                                });
+                                flag = true; // Marcar como mostrado
+                            }
+                        });
+                    }
+                });
+            })
+        /* submitBtn.addEventListener("click", function(event) {
             event.preventDefault();
             // Enviar datos al servidor
             //.....
@@ -330,7 +402,7 @@
             });
             slidePage.style.marginLeft = "0%";
             corona.classList.add('hidden');
-        });
+        }); */
 
         prevBtnSec.addEventListener("click", function(event) {
             event.preventDefault();
@@ -344,12 +416,7 @@
             bullet[current - 2].classList.remove("active");
             current -= 1;
         });
-        /*  prevBtnFourth.addEventListener("click", function(event) {
-             event.preventDefault();
-             slidePage.style.marginLeft = "-50%";
-             bullet[current - 2].classList.remove("active");
-             current -= 1;
-         }); */
+
     </script>
 
 @stop

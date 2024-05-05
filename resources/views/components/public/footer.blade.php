@@ -78,7 +78,7 @@
         </div>
     </div>
 
-    <div class="text-center py-16 font-airbnb_400">
+    <div class="text-center py-16 font-airbnb_400 w-11/12 mx-auto text-text14">
         <p>&copy; 2024 LimpiaBnB. Todos los derechos reservados</p>
     </div>
 </footer>
