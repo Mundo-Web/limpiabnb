@@ -60,6 +60,16 @@ Route::get('/servicios', [IndexController::class, 'index'] )->name('servicios');
 
 Route::post('guardarContactos', [IndexController::class, 'guardarContacto'] )->name('guardarContactos');
 
+Route::post('buscarHabitaciones', [IndexController::class, 'buscarHabitaciones'] )->name('buscarHabitaciones');
+Route::post('buscarArea', [IndexController::class, 'buscarArea'] )->name('buscarArea');
+
+Route::post('guardarSolicitud', [IndexController::class, 'guardarSolicitud'] )->name('guardarSolicitud');
+
+
+
+
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 

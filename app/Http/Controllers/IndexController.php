@@ -13,11 +13,10 @@ use App\Models\Testimony;
 use App\Models\Strength;
 use App\Models\Blog;
 use App\Models\Category;
-
+use App\Models\Distribucion;
+use App\Models\Espacio;
 use Illuminate\Http\Request;
-
-
-
+use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
@@ -31,7 +30,8 @@ class IndexController extends Controller
         $generales = General::all()->first();
         $services = Service::where('status', '=', 1)->where('visible', '=',  1)->get();
         $testimonios = Testimony::where('status', '=', 1)->where('visible', '=',  1)->get();
-        return view('public.index', compact('generales', 'services', 'testimonios', 'beneficios'));
+        $espacios = Espacio::where('status', '=', 1)->where('visible', '=',  1)->get();
+        return view('public.index', compact('generales', 'services', 'testimonios', 'beneficios', 'espacios'));
     }
 
     public function blog(Request $request)
@@ -347,5 +347,39 @@ class IndexController extends Controller
        
     }
 
+    public function buscarHabitaciones(Request $request){
+        $distribucion = DB::select('select * from distribucion where espacios_id = ? ',  [$request->id]);
+
+        return response()->json($distribucion);
+    }
+    public function buscarArea(Request $request){
+        $distribucion = DB::select('select * from area where distribucion_id = ? ',  [$request->id]);
+
+        return response()->json($distribucion);
+    }
+
+    public function guardarSolicitud(Request $request){
+
+        $espacios = DB::select('select * from espacios where id = ?',[$request->habitaciones]);
+        $distribucion = DB::select('select * from distribucion where id = ?', [$request->distribucion]);
+        $metraje= $request->metros;
+        $direction = $request->direction;
+        $telefono = $request->telefono;
+        $correo = $request->correo;
+
+        $espacios = $espacios[0]->name;
+        $distribucion = $distribucion[0]->name;
+
+      
+
+        Message::create([
+            'full_name' =>'',
+            'email' =>$correo,
+            'phone'=>$telefono,
+            'message'=> "El siguiente usuario desea adquirir el siguiente servicio  $espacios , $distribucion , S/. $metraje  . Y su direccion es $direction"
+        ]);
+
+
+    }
     
 }
