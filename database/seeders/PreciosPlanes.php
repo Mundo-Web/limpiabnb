@@ -16,12 +16,12 @@ class PreciosPlanes extends Seeder
     public function run(): void
     {
         DB::table('espacios')->insert([
-            ['name' => '1 BDR', 'status' =>    1, 'visible' => 1],
-            ['name' => '2 BDR', 'status' =>    1, 'visible' => 1],
-            ['name' => '3 BDR', 'status' =>    1, 'visible' => 1],
-            ['name' => '4 BDR', 'status' =>    1, 'visible' => 1],
-            ['name' => '5 BDR', 'status' =>    1, 'visible' => 1],
-            ['name' => '6 BDR', 'status' =>    1, 'visible' => 1]
+            ['name' => '1 Habitación', 'status' =>    1, 'visible' => 1],
+            ['name' => '2 Habitación', 'status' =>    1, 'visible' => 1],
+            ['name' => '3 Habitación', 'status' =>    1, 'visible' => 1],
+            ['name' => '4 Habitación', 'status' =>    1, 'visible' => 1],
+            ['name' => '5 Habitación', 'status' =>    1, 'visible' => 1],
+            ['name' => '6 Habitación', 'status' =>    1, 'visible' => 1]
         ]);
         DB::table('distribucion')->insert([
             ['espacios_id' => 1, 'name' =>     '1 cama + 1 baño', 'status' =>     1, 'visible' =>    1],

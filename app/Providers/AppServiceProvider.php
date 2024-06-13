@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Blog;
 use App\Models\Message;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
@@ -27,5 +28,13 @@ class AppServiceProvider extends ServiceProvider
             // Pasar los datos a la vista
             $view->with('mensajes', $mensajes);
         });
+        View::composer('components.public.header', function ($view) {
+            // Obtener los datos del footer
+            $mensajes = Message::where('is_read', '!=', 1 )->where('status', '!=', 0)->count(); // Suponiendo que tienes un modelo Footer y un método footerData() en él
+            $blog = Blog::all()->count();
+            // Pasar los datos a la vista
+            $view->with('blog', $blog) ;
+        });
+        
     }
 }

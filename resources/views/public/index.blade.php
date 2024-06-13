@@ -55,8 +55,8 @@
           </div>
 
           <div class="hidden lg:flex justify-end">
-            <div class="contenedor bg-white rounded-lg py-12 mx-auto">
-              <div class="progress-bar flex justify-between px-10">
+            <div class="contenedor bg-white rounded-lg py-10 mx-auto">
+              <div class="progress-bar flex justify-between px-8">
                 <div class="step">
                   <div class="bullet active"></div>
                 </div>
@@ -85,7 +85,7 @@
                               ¿Cuántas habitaciones tienes?
                             </label>
                             <select required name="habitaciones" type="number" id="habitaciones"
-                              class="text__input max-w-[50%]">
+                              class="selectpicker block appearance-none w-full bg-white border border-gray-300 hover:border-gray-400 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
                               <option value="">Elige el n de Habitaciones</option>
                               @foreach ($espacios as $item)
                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
@@ -99,7 +99,7 @@
                               Elige una combinacion
                             </label>
                             <select required name="distribucion" type="number" id="distribucion"
-                              class="text__input max-w-[50%]">
+                              class="selectpicker w-full">
                               <option value="">Elige combinacion</option>
 
                             </select>
@@ -115,11 +115,7 @@
                         </div>
 
                         <div class="flex gap-5 flex-col 2lg:flex-row justify-between items-center text-center">
-                          <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
-                            target="_blank"
-                            class="w-full lg:basis-8/12 button__base button__base-form bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
-                            Asesoría en WhatsApp
-                          </a>
+
 
                           <div class="w-full 2lg:w-auto">
                             <button id="btnSiguiente1"
@@ -155,18 +151,14 @@
                             <label for="metros" class="text__label">
                               ¿Cuántas m2 tiene tu departamento?
                             </label>
-                            <select id="metros" name="metros">
+                            <select id="metros" name="metros" class="selectpicker w-1/2">
                               <option value=""> Selecciona una opcion</option>
                             </select>
                           </div>
                         </div>
 
                         <div class="flex gap-5 flex-col 2lg:flex-row justify-between items-center text-center">
-                          <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
-                            target="_blank"
-                            class="w-full lg:basis-8/12 button__base button__base-form bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
-                            Asesoría en WhatsApp
-                          </a>
+
                           <div class="w-full 2lg:w-auto">
                             <button
                               class="next-1 next disabled  cursor-pointer flex gap-2 lg:basis-4/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
@@ -186,7 +178,7 @@
                   </div>
                   <div class="page">
                     <div class="px-10 h-full flex flex-col justify-center">
-                      <div class="text-textAzul flex flex-col gap-10">
+                      <div class="text-textAzul flex flex-col gap-7">
                         <div>
                           <button class="prev-2 prev">
                             <span class="button-previo"></span>
@@ -195,28 +187,37 @@
                         <p class="text__cotizar leading-none md:leading-tight font-airbnb_700">
                           Calcula el precio de limpieza de tu Airbnb
                         </p>
-                        <div class="flex flex-col gap-10">
+                        <div class="flex flex-col gap-6">
                           <div class="flex flex-col justify-between gap-5 font-airbnb_500">
+
                             <label for="habitaciones" class="text__label">
                               Déjanos tu dirección
                             </label>
                             <input required name="direction" type="text" id="direction"
                               class="text__input font-airbnb_500" placeholder="Avenida, Calle, Jiron, Pasaje..." />
                           </div>
-                          <div class="flex flex-col justify-between gap-5 font-airbnb_500">
-                            <label for="habitaciones" class="text__label">
-                              Teléfono
-                            </label>
-                            <input required name="telefono" type="text" id="telefono"
-                              class="text__input font-airbnb_500" placeholder="123456789" />
+                          <div class="flex flex-col justify-between gap-5 font-airbnb_500 md:flex-row">
+                            <div class="flex flex-col justify-between w-1/2">
+                              <label for="habitaciones" class="text__label">
+                                Teléfono
+                              </label>
+                              <input required name="telefono" type="text" id="telefono"
+                                class="text__input font-airbnb_500 w-3/4" placeholder="123456789" />
+                            </div>
+                            <div class="flex flex-col justify-between">
+                              <label for="habitaciones" class="text__label">
+                                Correo @
+                              </label>
+                              <input required name="correo" type="text" id="correo"
+                                class="text__input font-airbnb_500" placeholder="tucorreo@dominio.com" />
+
+                            </div>
+
                           </div>
 
-                          <div class="flex flex-col justify-between gap-5 font-airbnb_500">
-                            <label for="habitaciones" class="text__label">
-                              Correo @
-                            </label>
-                            <input required name="correo" type="text" id="correo"
-                              class="text__input font-airbnb_500" placeholder="tucorreo@dominio.com" />
+                          <div class="flex flex-col justify-between gap-5 font-airbnb_500 ">
+
+
                           </div>
                           {{-- <div class="flex flex-col justify-between gap-5">
                                                         <label class="text__label font-airbnb_500">
@@ -250,11 +251,7 @@
                         </div>
 
                         <div class="flex gap-5 flex-col 2xl:flex-row justify-between items-center text-center">
-                          <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
-                            target="_blank"
-                            class="w-full 2xl:basis-7/12 button__base button__base-form bg-bgButtonBaseGreen hover:bg-lime-600 md:duration-500">
-                            Asesoría en WhatsApp
-                          </a>
+
 
                           <div class="w-full 2xl:w-auto">
                             <button
@@ -297,8 +294,8 @@
                           </div>
 
 
-                          <div>
-                            <button
+                          <div id="containerBntService">
+                            <button id="btnAdquirirServicio"
                               class="submit cursor-pointer flex gap-2 basis-4/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center"
                               type="submit">
                               <span>Adquirir el servicio</span>
@@ -1031,11 +1028,11 @@
                       Horario de Atención
                     </p>
                     <p class="font-airbnb_400 text-text16 2md:text-text20 text-[#004472]">
-                      Lunes a Viernes: 9:00 AM - 6:00 PM
+                      {{ $generales->schedule }}
                     </p>
-                    <p class="font-airbnb_400 text-text16 2md:text-text20 text-[#004472]">
+                    {{-- <p class="font-airbnb_400 text-text16 2md:text-text20 text-[#004472]">
                       Domingo: 10:00 AM - 5:00 PM
-                    </p>
+                    </p> --}}
                   </div>
                 </div>
               </div>
@@ -1316,6 +1313,12 @@
         event.preventDefault();
         let formDataArray = $(this).serializeArray();
         console.log(formDataArray);
+        let loading = `<svg aria-hidden="true" class="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+            <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+        </svg>
+        <span class="sr-only">Loading...</span>`
+        $("#btnAdquirirServicio").html(loading)
 
         $.ajax({
           url: '{{ route('guardarSolicitud') }}',
@@ -1323,11 +1326,14 @@
           data: formDataArray,
           success: function(response) {
             Swal.fire({
-              title: response.message,
+              title: `Solicitud enviada correctamente `,
               icon: "success",
+
             });
 
             $('#formCotizacion')[0].reset();
+
+            $("#containerBntService").attr('hidden', true)
 
             /* current = 2;
             progress.classList.remove("opacity-0");
@@ -1455,7 +1461,73 @@
 
     $('#metros').on('change', function(e) {
       let preciofinal = $('#metros').val()
-      $('#preciofinal').text(preciofinal)
+      $('#preciofinal').text(`S/. ${preciofinal}`)
+    })
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.selectpicker').select2();
+    });
+
+    $('#formContactos').submit(function(e) {
+      e.preventDefault()
+      console.log('Enviando contacto')
+      let formDataArray = $(this).serializeArray();
+      Swal.fire({
+
+        title: 'Procesando información',
+        html: `Enviando... 
+<div class="max-w-2xl mx-auto overflow-hidden flex justify-center items-center mt-4 ">
+                <div role="status">
+                    <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                        <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+                    </svg>
+                    
+                </div>
+            </div> 
+`,
+        allowOutsideClick: false
+
+      });
+
+      $.ajax({
+        url: '{{ route('guardarContactos') }}',
+        method: 'POST',
+        data: formDataArray,
+        success: function(response) {
+          Swal.close();
+          Swal.fire({
+            title: `Solicitud enviada correctamente `,
+            icon: "success",
+
+          });
+
+          // $('#formCotizacion')[0].reset();
+
+          $("#containerBntService").attr('hidden', true)
+
+
+        },
+        error: function(error) {
+          Swal.close();
+          const obj = error.responseJSON.message;
+          const keys = Object.keys(error.responseJSON.message);
+          let flag = false;
+          keys.forEach(key => {
+            if (!flag) {
+              const e = obj[key][0];
+              Swal.fire({
+                title: error.message,
+                text: e,
+                icon: "error",
+              });
+              flag = true; // Marcar como mostrado
+            }
+          });
+        }
+      });
     })
   </script>
 @stop
