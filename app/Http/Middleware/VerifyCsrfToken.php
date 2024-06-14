@@ -14,6 +14,7 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         //
         'buscarHabitaciones',
-        'buscarArea'
+        'buscarArea',
+        'admin/subcategoria/obtenerd'
     ];
 }
