@@ -874,7 +874,7 @@
 
         <div class="lg:col-span-2">
           <div class="w-full h-full">
-            <img src="{{ asset('images/img/EquipoLimpia.png') }}" alt="limpieza" class="w-full h-full">
+            <img src="{{ asset('images/img/EquipoLimpia.png') }}" alt="limpieza" class="w-full h-full object-cover">
 
           </div>
         </div>
