@@ -1,5 +1,14 @@
 @extends('components.public.matrix')
 
+
+
+@section('meta_keywords')
+  @if (isset($blog->tag_seo))
+    <meta name="keywords" content="{{ $blog->tag_seo }}">
+  @endif
+
+@endsection
+
 @section('css_improtados')
 
   <style>
@@ -30,6 +39,7 @@
       <div class="flex flex-col gap-5">
         <div class="flex flex-col gap-3 font-airbnb_400 text-text16 2md:text-text22">
           {!! $blog->description !!}
+          {{ $blog->tag_seo }}
           {{-- <p>
                         Nam a lorem ut dui ultrices efficitur vitae et metus. Mauris quis
                         vulputate orci, ac hendrerit purus. Nunc sagittis lacus sem. Nam

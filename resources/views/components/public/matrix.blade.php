@@ -8,6 +8,8 @@
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 
   <link rel="icon" href="{{ asset('images\img\image_2.png') }}" type="image/x-icon">
+  @yield('meta_keywords')
+
 
   {{-- Aqui van los CSS --}}
   @yield('css_improtados')

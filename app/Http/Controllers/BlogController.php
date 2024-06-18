@@ -45,6 +45,9 @@ class BlogController extends Controller
       'title' => 'required',
     ]);
 
+    $tagSeo = implode(',', $request->tag_seo);
+ 
+
     $post = new Blog();
 
     try {
@@ -62,6 +65,7 @@ class BlogController extends Controller
       $post->description = $request->description;
       $post->status = 1;
       $post->visible = 1;
+      $post->tag_seo = $tagSeo;
   
       $post->save();
   
@@ -97,8 +101,9 @@ class BlogController extends Controller
   public function edit(Blog $blog)
   {
     $categories = Category::all();
+    $seoTags = explode(',', $blog->tag_seo);
 
-    return view('pages.blog.edit', compact('blog', 'categories'));
+    return view('pages.blog.edit', compact('blog', 'categories', 'seoTags'));
   }
 
   /**
@@ -106,10 +111,12 @@ class BlogController extends Controller
    */
   public function update(Request $request, $id)
   {
+    $tagSeo = implode(',', $request->tag_seo);
 
     $blog = Blog::findOrfail($id);
     $blog->title = $request->title;
     $blog->description = $request->description;
+    $blog->tag_seo = $tagSeo;
 
     try {
       if ($request->hasFile("imagen")) {
