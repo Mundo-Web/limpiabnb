@@ -1085,7 +1085,7 @@
         //allowSlidePrev: false,  //Bloquea el deslizamiento hacia el slide anterior
         allowTouchMove: false, // Bloquea el movimiento táctil
         autoplay: {
-          delay: 1500,
+          delay: 5000,
           disableOnInteraction: false,
         },
 
@@ -1117,7 +1117,7 @@
         //allowSlidePrev: false,  //Bloquea el deslizamiento hacia el slide anterior
         allowTouchMove: false, // Bloquea el movimiento táctil
         autoplay: {
-          delay: 2000,
+          delay: 5000,
           disableOnInteraction: false,
         },
       });
@@ -1135,7 +1135,7 @@
         },
         allowTouchMove: true, // Bloquea el movimiento táctil
         autoplay: {
-          delay: 1500,
+          delay: 5000,
           disableOnInteraction: false,
         },
 
