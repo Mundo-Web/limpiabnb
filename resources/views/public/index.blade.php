@@ -843,7 +843,9 @@
         </div>
       </div>
     </section>
-    @if ($nosotros->count() > 0)
+
+
+    @isset($nosotros)
       <section id="nosotros" data-aos="fade-up" data-aos-offset="150">
         <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 my-12">
           <div class="lg:col-span-1 relative bg-bgAzul text-textWhite flex justify-center items-center py-24 md:py-0">
@@ -856,16 +858,16 @@
               <h2 class="font-airbnb_700 text-text40 2md:text-text52 leading-none md:leading-tight">
                 {{ $nosotros->titulo ?? 'Configura about-Us en el backend' }}
                 {{-- De Servicio de Administración a Líder en Limpieza: El
-              Surgimiento de Limpia BnB --}}
+            Surgimiento de Limpia BnB --}}
               </h2>
 
               <p class="font-airbnb_400 text-text16 2md:text-text20">
                 {{ $nosotros->descripcion }}
 
                 {{-- Limpia BnB nace de Ventura BnB, una empresa de administración de
-              departamentos a corto plazo, la cual creó y calibró un equipo de
-              limpieza con tan buenos resultados, que en cuestión de poco
-              tiempo estaba limpiando los airbnbs de otros anfitriones. --}}
+            departamentos a corto plazo, la cual creó y calibró un equipo de
+            limpieza con tan buenos resultados, que en cuestión de poco
+            tiempo estaba limpiando los airbnbs de otros anfitriones. --}}
               </p>
             </div>
 
@@ -892,7 +894,7 @@
         </div>
       </section>
 
-    @endif
+    @endisset
 
 
 
