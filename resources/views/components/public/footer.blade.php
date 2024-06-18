@@ -1,4 +1,7 @@
 <footer class="bg-bgAzul text-textWhite pt-16">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <div class="grid grid-cols-1 lg:grid-cols-2 w-11/12 mx-auto border-b-[1.5px] border-white pb-12 gap-12"
     data-aos="fade-up" data-aos-offset="150">
@@ -12,19 +15,51 @@
       <div class="flex gap-5">
         @if (strlen($generales->instagram) > 0)
           <a href="https://{{ $generales->instagram }}" target="_blank">
-            <img src="{{ asset('/images/img/instagram.png') }}" alt="instagram" />
+            <div class="flex bg-white rounded-full items-center justify-center p-0 w-[50px] h-[50px]">
+              <i class="fa-brands fa-instagram fa-2x " style="color:#0071be"> </i>
+
+            </div>
           </a>
         @endif
         @if (strlen($generales->facebook) > 0)
           <a href="https://{{ $generales->facebook }}" target="_blank">
-            <img src="{{ asset('/images/img/facebook.png') }}" alt="facebook" />
+            <div class="flex bg-white rounded-full items-center justify-center p-0 w-[50px] h-[50px]">
+              <i class="fa-brands fa-facebook-f fa-2x " style="color:#0071be"> </i>
+
+
+
+            </div>
           </a>
         @endif
         @if (strlen($generales->linkedin) > 0)
           <a href="https://{{ $generales->linkedin }}" target="_blank">
-            <img src="{{ asset('/images/img/linkedin.png') }}" alt="linkedin" />
+            <div class="flex bg-white rounded-full items-center justify-center p-0 w-[50px] h-[50px]">
+              <i class="fa-brands fa-linkedin-in fa-2x " style="color:#0071be"> </i>
+
+            </div>
           </a>
         @endif
+        @if (strlen($generales->twitter) > 0)
+          <a href="https://{{ $generales->twitter }}" target="_blank">
+            <div class="flex bg-white rounded-full items-center justify-center p-0 w-[50px] h-[50px]">
+              <i class="fa-brands fa-x-twitter fa-2x " style="color:#0071be"> </i>
+
+            </div>
+          </a>
+        @endif
+        @if (strlen($generales->youtube) > 0)
+          <a href="https://{{ $generales->youtube }}" target="_blank">
+            <div class="flex bg-white rounded-full items-center justify-center p-0 w-[50px] h-[50px]">
+              <i class="fa-brands fa-youtube fa-2x " style="color:#0071be"> </i>
+
+            </div>
+          </a>
+        @endif
+
+
+
+
+
 
 
         {{-- corregir por linkedin --}}
@@ -82,8 +117,8 @@
       <div class="flex flex-col gap-10">
         <p class="font-airbnb_500 text-text16 2md:text-text20">Aviso Legal</p>
         <div class="flex flex-col gap-5 font-airbnb_400">
-          <p class="font-airbnb_400 text-text14 2md:text-text18">Política de Privacidad</p>
-          <p class="font-airbnb_400 text-text14 2md:text-text18">Términos y Condiciones</p>
+          <a href="/politica_privacidad" class="font-airbnb_400 text-text14 2md:text-text18">Política de Privacidad</a>
+          <a href="/term_condiciones" class="font-airbnb_400 text-text14 2md:text-text18">Términos y Condiciones</a>
         </div>
       </div>
     </div>

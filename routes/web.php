@@ -23,8 +23,10 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LogosClientController;
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\PoliticasdePrivacidadController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\StrengthController;
+use App\Http\Controllers\TerminosycondicionesController;
 use App\Models\AboutUs;
 
 /*
@@ -66,7 +68,8 @@ Route::post('buscarArea', [IndexController::class, 'buscarArea'] )->name('buscar
 Route::post('guardarSolicitud', [IndexController::class, 'guardarSolicitud'] )->name('guardarSolicitud');
 
 
-
+Route::get('/politica_privacidad', [IndexController::class, 'politicaprivacidad'])->name('politica_privacidad');
+Route::get('/term_condiciones', [IndexController::class, 'term_condiciones'])->name('term_condiciones');
 
 
 
@@ -128,6 +131,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::post('/attributes/updateVisible', [AttributesController::class, 'updateVisible'])->name('attributes.updateVisible');
         Route::post('/attributes/borrar', [AttributesController::class, 'borrar'])->name('attributes.borrar');
 
+        Route::resource('/verPoliticasPrivacidad', PoliticasdePrivacidadController::class);
+        Route::post('verPoliticasPrivacidad/delete', [PoliticasdePrivacidadController::class, 'delete'])->name('PoliticasPrivacidad.delete');
+
+
+        Route::resource('terminoscondiciones', TerminosycondicionesController::class);
+        Route::post('terminoscondiciones/delete', [TerminosycondicionesController::class, 'delete'])->name('terminoscondiciones.delete');
 
         Route::fallback(function() {
             return view('pages/utility/404');

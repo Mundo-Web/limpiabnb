@@ -37,12 +37,11 @@
 
             <div class="flex flex-col gap-5">
               <h2 class="font-airbnb_700 text-text48 2md:text-text64 leading-none md:leading-tight">
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                Guías Prácticas de Limpieza
               </h2>
 
               <p class="font-airbnb_400 text-text16 2md:text-text20 text-textAzulStrong">
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo con
+                Cómo Lograr una Limpieza Profunda
               </p>
               <form action="#" class="flex gap-5 items-center flex-col md:flex-row">
                 <div class="w-full md:basis-1/2">
@@ -107,7 +106,7 @@
         @foreach ($blogs as $blog)
           <div class="flex flex-col gap-5" data-aos="fade-up" data-aos-offset="150">
             <div>
-              <img src="{{ asset($blog->url_image) }}" alt="limpieza" class="w-full">
+              <img src="{{ asset($blog->url_image) }}" alt="limpieza" class="md:h-[600px] md:w-[700px] object-cover">
             </div>
             <h2 class="font-airbnb_700 text-text24 md:text-text32">
               {{ $blog->title }}
@@ -143,18 +142,18 @@
 @section('scripts_improtados')
   <script>
     /* document.addEventListener("DOMContentLoaded", () => {
-                  const paginations = document.querySelectorAll(".pagination__blog");
-                  paginations.forEach((item, index) => {
-                      item.addEventListener("click", (e) => {
-                          item.classList.add("border-pagination");
-                          paginations.forEach((pag) => {
-                              if (e.target !== pag) {
-                                  pag.classList.remove("border-pagination");
-                              }
-                          });
-                      });
-                  });
-              }); */
+                            const paginations = document.querySelectorAll(".pagination__blog");
+                            paginations.forEach((item, index) => {
+                                item.addEventListener("click", (e) => {
+                                    item.classList.add("border-pagination");
+                                    paginations.forEach((pag) => {
+                                        if (e.target !== pag) {
+                                            pag.classList.remove("border-pagination");
+                                        }
+                                    });
+                                });
+                            });
+                        }); */
   </script>
 
 @stop

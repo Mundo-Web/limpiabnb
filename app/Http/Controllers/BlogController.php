@@ -45,7 +45,8 @@ class BlogController extends Controller
       'title' => 'required',
     ]);
 
-    $tagSeo = implode(',', $request->tag_seo);
+
+    $tagSeo = implode(',', $request->tag_seo ?? []);
  
 
     $post = new Blog();
@@ -58,6 +59,12 @@ class BlogController extends Controller
         $this->saveImg($file, $routeImg, $nombreImagen);
         $post->url_image = $routeImg . $nombreImagen;
         $post->name_image = $nombreImagen;
+      }else {
+        $routeImg = 'images/img/';
+        $nombreImagen = 'noimagen.jpg';
+
+        $post->url_image = $routeImg . $nombreImagen;
+        $post->name_image = $nombreImagen ; 
       }
   
       $post->category_id = $request->category_id;

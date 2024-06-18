@@ -16,7 +16,9 @@ use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Distribucion;
 use App\Models\Espacio;
+use App\Models\politycsCondition;
 use App\Models\Staff;
+use App\Models\termsCondition;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -141,6 +143,18 @@ class IndexController extends Controller
     {
         //
     }
+    public function politicaprivacidad(){
+        $politicas = politycsCondition::first();
+        // $general = General::all()->first();
+         $generales = General::all()->first();
+        return view('public.politicaPriv', compact('politicas', 'generales' ));
+      }
+      public function term_condiciones(){
+        $terms = termsCondition::first();
+        // $general = General::all()->first();
+         $generales = General::all()->first();
+        return view('public.termsCondiciones', compact('terms', 'generales' ));
+      }
 
     /**
      * Save contact from blade
