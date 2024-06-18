@@ -2,36 +2,35 @@
 
 @section('css_improtados')
 
-    <style>
-        .text__blog-header {
-            color: #0071BE;
-        }
+  <style>
+    .text__blog-header {
+      color: #0071BE;
+    }
 
-        .menu__blog-azul {
-            stroke: #0071BE
-        }
-    </style>
+    .menu__blog-azul {
+      stroke: #0071BE
+    }
+  </style>
 
 @stop
 
 @section('content')
-    <main>
-        <section class="text-textAzul w-11/12 mx-auto flex flex-col gap-10 pt-44 pb-24" data-aos="fade-up"
-            data-aos-offset="150">
-            <div class="flex flex-col gap-5">
-                <h1 class="text-text48 2md:text-text52 font-airbnb_700 leading-none md:leading-tight">
-                    {{$blog->title}}
-                </h1>
-                <p class="font-airbnb_500 text-text18 2md:text-text22 text-textCeleste">
-                    {{ \Carbon\Carbon::parse($blog->created_at)->locale('es')->isoFormat('DD [de] MMMM, YYYY') }}
-                </p>
-                <p class="after__underline"></p>
-            </div>
+  <main>
+    <section class="text-textAzul w-11/12 mx-auto flex flex-col gap-10 pt-44 pb-24" data-aos="fade-up" data-aos-offset="150">
+      <div class="flex flex-col gap-5">
+        <h1 class="text-text48 2md:text-text52 font-airbnb_700 leading-none md:leading-tight">
+          {{ $blog->title }}
+        </h1>
+        <p class="font-airbnb_500 text-text18 2md:text-text22 text-textCeleste">
+          {{ \Carbon\Carbon::parse($blog->created_at)->locale('es')->isoFormat('DD [de] MMMM, YYYY') }}
+        </p>
+        <p class="after__underline"></p>
+      </div>
 
-             <div class="flex flex-col gap-5">
-                <div class="flex flex-col gap-3 font-airbnb_400 text-text16 2md:text-text22">
-                    {!!$blog->description!!}
-                    {{-- <p>
+      <div class="flex flex-col gap-5">
+        <div class="flex flex-col gap-3 font-airbnb_400 text-text16 2md:text-text22">
+          {!! $blog->description !!}
+          {{-- <p>
                         Nam a lorem ut dui ultrices efficitur vitae et metus. Mauris quis
                         vulputate orci, ac hendrerit purus. Nunc sagittis lacus sem. Nam
                         varius purus et urna vehicula, eget dictum magna efficitur.
@@ -51,9 +50,9 @@
                         vulputate orci, ac hendrerit purus. Nunc sagittis lacus sem. Nam
                         varius purus et urna vehicula.
                     </p> --}}
-                </div>
+        </div>
 
-                {{-- <div class="flex flex-col gap-5">
+        {{-- <div class="flex flex-col gap-5">
                     <h2 class="font-airbnb_700 text-text22 2md:text-text26">
                         Vestibulum vehicula urna arcu
                     </h2>
@@ -78,9 +77,9 @@
                         </div>
                     </div>
                 </div> --}}
-            </div>
+      </div>
 
-            {{--  <div>
+      {{--  <div>
                 <div class="flex flex-col gap-5">
                     <h2 class="font-airbnb_700 text-text22 2md:text-text26">
                         Nunc tincidunt sollicitudin lectus a ornare
@@ -121,15 +120,15 @@
                 </div>
             </div> --}}
 
-            <div data-aos="fade-up" data-aos-offset="150">
+      <div data-aos="fade-up" data-aos-offset="150">
 
-                <img src="{{ asset('images/img/imagen_25.png') }}" alt="limpieza" class="w-full h-full hidden md:block">
+        <img src="{{ asset($blog->url_image) }}" alt="limpieza" class="w-full h-full hidden md:block">
 
-                <img src="{{ asset('images/img/imagen_26.png') }}" alt="limpieza" class="w-full h-full block md:hidden">
+        <img src="{{ asset($blog->url_image) }}" alt="limpieza" class="w-full h-full block md:hidden">
 
-            </div>
+      </div>
 
-            {{-- <div data-aos="fade-up" data-aos-offset="150">
+      {{-- <div data-aos="fade-up" data-aos-offset="150">
                 <div class="flex flex-col gap-5">
                     <h2 class="font-airbnb_700 text-text22 2md:text-text26">
                         Mauris leo nibh, consequat pulvinar auctor
@@ -159,51 +158,48 @@
                 </div>
             </div> --}}
 
-            <div class="flex justify-between items-center border-t-[1.5px] border-[#DDDDDD] py-10">
-                <div class="flex flex-col gap-2">
-                    @if ($postAnterior)
-                        <a class="flex items-center gap-2" href="{{ route('post', $postAnterior) }}">
-                            <div>
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14.8892 10.167L9.33366 16.0003M9.33366 16.0003L14.8892 21.8337M9.33366 16.0003L22.667 16.0003"
-                                        stroke="#3F76BB" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                            <p class="font-airbnb_700 text-text16 2md:text-text22 text-textCeleste">
-                                Previous
-                            </p>
-                        </a>
-                        {{-- <p class="font-corbel_400 text-text16 xl:text-text20 hidden md:block text-textGray">
+      <div class="flex justify-between items-center border-t-[1.5px] border-[#DDDDDD] py-10">
+        <div class="flex flex-col gap-2">
+          @if ($postAnterior)
+            <a class="flex items-center gap-2" href="{{ route('post', $postAnterior) }}">
+              <div>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.8892 10.167L9.33366 16.0003M9.33366 16.0003L14.8892 21.8337M9.33366 16.0003L22.667 16.0003"
+                    stroke="#3F76BB" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <p class="font-airbnb_700 text-text16 2md:text-text22 text-textCeleste">
+                Previous
+              </p>
+            </a>
+            {{-- <p class="font-corbel_400 text-text16 xl:text-text20 hidden md:block text-textGray">
                             {{ $postAnterior->title }}
                         </p> --}}
-                    @endif
-                </div>  
+          @endif
+        </div>
 
-                <div class="flex flex-col gap-2">
-                    @if ($postSiguiente)
-                        <a class="flex items-center gap-2" href="{{ route('post', $postSiguiente) }}">
-                            <p class="font-airbnb_700 text-text16 2md:text-text22 text-textCeleste">
-                                Next
-                            </p>
-                            <div>
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M17.1108 10.167L22.6663 16.0003M22.6663 16.0003L17.1108 21.8337M22.6663 16.0003L9.33301 16.0003"
-                                        stroke="#3F76BB" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                        </a>
-                        {{-- <p class="font-corbel_400 text-text16 xl:text-text20 hidden md:block text-textGray">
+        <div class="flex flex-col gap-2">
+          @if ($postSiguiente)
+            <a class="flex items-center gap-2" href="{{ route('post', $postSiguiente) }}">
+              <p class="font-airbnb_700 text-text16 2md:text-text22 text-textCeleste">
+                Next
+              </p>
+              <div>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.1108 10.167L22.6663 16.0003M22.6663 16.0003L17.1108 21.8337M22.6663 16.0003L9.33301 16.0003"
+                    stroke="#3F76BB" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </a>
+            {{-- <p class="font-corbel_400 text-text16 xl:text-text20 hidden md:block text-textGray">
                             {{ $postSiguiente->title }}
                         </p> --}}
-                    @endif      
-                </div>        
-            </div>
-        </section>
-    </main>
+          @endif
+        </div>
+      </div>
+    </section>
+  </main>
 
 
 

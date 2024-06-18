@@ -152,7 +152,7 @@
     }
 
     .swiper-button-next {
-      background-color: #0071be;
+      background-color: #D1ECF8;
       background-repeat: no-repeat;
       background-position: center;
       width: 60px !important;

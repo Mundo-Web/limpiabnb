@@ -72,7 +72,8 @@
     <div class="fixed bottom-[25px] z-[100] right-[25px]">
       <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
         target="_blank">
-        <img src="{{ asset('/images/svg/cotizar.svg') }}" alt="whatsapp" class="w-20 h-20 md:w-full md:h-full" />
+        <img src="{{ asset('images/svg/WhatsApp_header.svg') }}" alt="whatsapp"
+          class="w-20 h-20 md:w-full md:h-full" />
       </a>
     </div>
   </div>

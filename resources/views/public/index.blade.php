@@ -20,7 +20,7 @@
 @section('content')
 
   <main>
-    <section class="bg__image-main relative bg-cover bg-center bg-no-repeat sm:w-full h-full">
+    <section id="cotizar" class="bg__image-main relative bg-cover bg-center bg-no-repeat sm:w-full h-full">
       <div class="absolute inset-0 bg__dark"></div>
       <div class="relative pt-44 w-11/12 mx-auto text-textWhite">
         <div class="grid grid-cols-1 lg:grid-cols-2" data-aos="fade-up" data-aos-offset="150">
@@ -86,7 +86,7 @@
                             </label>
                             <select required name="habitaciones" type="number" id="habitaciones"
                               class="selectpicker block appearance-none w-full bg-white border border-gray-300 hover:border-gray-400 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-                              <option value="">Elige el n de Habitaciones</option>
+                              <option value="">Elige el n° de Habitaciones</option>
                               @foreach ($espacios as $item)
                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
                               @endforeach
@@ -289,7 +289,7 @@
 
                           <div>
                             <p class="font-airbnb_700 text-text48 md:text-text52" id="preciofinal">
-                              S/ 150
+                              S/
                             </p>
                           </div>
 
@@ -365,13 +365,16 @@
               <div class="flex flex-col lg:flex-row gap-10 md:gap-0">
                 <div class="basis-1/2 order-2 md:order-1">
                   <img src="{{ asset($service->url_image) }}" alt="{{ $service->name_image }}" class="w-full h-full">
-                  <p>{{ $service->name_image }}</p>
+
                 </div>
                 <div class="flex flex-col md:gap-32 basis-1/2 order-1 md:order-2 md:p-12 w-11/12 md:w-full mx-auto">
                   <div class="py-12 md:w-5/6 md:mx-auto">
                     <div class="buttonSliderServicios">
-                      <div class="swiper-button-next"></div>
-                      <div class="swiper-button-prev"></div>
+                      @if ($services->count() > 1)
+                        <div class="swiper-button-next hover:bg-[#0071be]"></div>
+                        <div class="swiper-button-prev hover:bg-[#0071be]"></div>
+                      @endif
+
                     </div>
                   </div>
 
@@ -758,8 +761,7 @@
           </ul>
 
           <div class="flex items-center justify-start w-full h-full">
-            <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
-              target="_blank"
+            <a {{-- href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}" --}} href="#cotizar"
               class="cursor-pointer flex gap-2 button__base font-airbnb_500 bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center leading-none">
               Obtener una Cotización
             </a>
@@ -817,7 +819,7 @@
                       </p>
 
                       <p class="font-airbnb_400 text-[16px] 2md:text-text20 text-[#004472]">
-                        {{ $testimonio->testimonie }}
+                        {!! $testimonio->testimonie !!}
                       </p>
 
                       <p class="font-airbnb_400 text-[16px] 2md:text-text20 text-[#004472]">
@@ -830,8 +832,11 @@
               </div>
 
               <div class="flex justify-end items-center buttonSliderTestimonios">
-                <div class="swiper-button-next siguiente"></div>
-                <div class="swiper-button-prev anterior"></div>
+                @if ($testimonios->count() > 3)
+                  <div class="swiper-button-next siguiente hover:bg-[#0071be]"></div>
+                  <div class="swiper-button-prev anterior hover:bg-[#0071be]"></div>
+                @endif
+
               </div>
             </div>
           </div>
@@ -849,15 +854,18 @@
               </p>
             </div>
             <h2 class="font-airbnb_700 text-text40 2md:text-text52 leading-none md:leading-tight">
-              De Servicio de Administración a Líder en Limpieza: El
-              Surgimiento de Limpia BnB
+              {{ $nosotros->titulo ?? 'Configura about-Us en el backend' }}
+              {{-- De Servicio de Administración a Líder en Limpieza: El
+              Surgimiento de Limpia BnB --}}
             </h2>
 
             <p class="font-airbnb_400 text-text16 2md:text-text20">
-              Limpia BnB nace de Ventura BnB, una empresa de administración de
+              {{ $nosotros->descripcion }}
+
+              {{-- Limpia BnB nace de Ventura BnB, una empresa de administración de
               departamentos a corto plazo, la cual creó y calibró un equipo de
               limpieza con tan buenos resultados, que en cuestión de poco
-              tiempo estaba limpiando los airbnbs de otros anfitriones.
+              tiempo estaba limpiando los airbnbs de otros anfitriones. --}}
             </p>
           </div>
 
@@ -867,14 +875,17 @@
 
         <div class="lg:col-span-1 hidden lg:block">
           <div class="w-full h-full">
-            <img src="{{ asset('images/img/image_4.png') }}" alt="limpieza" class="w-full h-full">
+
+            <img src="{{ asset($nosotros->imagen) }}" alt="limpieza" class="w-full h-full">
 
           </div>
         </div>
 
         <div class="lg:col-span-2">
           <div class="w-full h-full">
-            <img src="{{ asset('images/img/EquipoLimpia.png') }}" alt="limpieza" class="w-full h-full object-cover">
+            @if ($staff->count() > 0)
+              <img src="{{ asset($staff->imagen) }}" alt="limpieza" class="w-full h-full object-cover">
+            @endif
 
           </div>
         </div>
@@ -891,7 +902,7 @@
               </p>
             </div>
             <h3 class="font-airbnb_700 text-text32 2md:text-text40 leading-none 2md:leading-tight">
-              ¿Listo para brindar a tus huéspedes una experiencia inolvidable
+              ¿Listo para brindar a tus huéspedes una experiencia inolvidable?
             </h3>
 
             <p class="font-airbnb_400 text-text16 2md:text-text20">
@@ -1098,10 +1109,10 @@
         //allowSlideNext: false,  //Bloquea el deslizamiento hacia el siguiente slide
         //allowSlidePrev: false,  //Bloquea el deslizamiento hacia el slide anterior
         allowTouchMove: false, // Bloquea el movimiento táctil
-        /* autoplay: {
-          delay: 1500,
+        autoplay: {
+          delay: 2000,
           disableOnInteraction: false,
-        }, */
+        },
       });
 
       var testimonios = new Swiper(".testimonios", {

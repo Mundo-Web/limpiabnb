@@ -14,5 +14,8 @@ class Staff extends Model
     'instagram',
     'youtube',
     'twitter',
-    'status'];
+    'status',
+    'imagen'
+
+];
 }

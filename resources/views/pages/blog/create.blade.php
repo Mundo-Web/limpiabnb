@@ -58,7 +58,7 @@
 
               <div class="md:col-span-5">
                 <label for="description">Descripcion de post</label>
-                <div class="relative mb-2 mt-2">
+                <div class="relative mb-2 mt-2 rounded-lg">
                   <x-textarea name="description" value="" /></textarea>
 
                 </div>

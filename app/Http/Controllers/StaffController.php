@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Staff;
 use Illuminate\Http\Request;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 class StaffController extends Controller
 {
@@ -13,7 +17,7 @@ class StaffController extends Controller
     public function index()
     {
         $staff = Staff::all();
-        return view('pages.staff.index', compact('staff') );
+        return view('pages.staff.index', compact('staff'));
     }
 
     /**
@@ -22,7 +26,6 @@ class StaffController extends Controller
     public function create()
     {
         return view('pages.staff.create');
-        
     }
 
     /**
@@ -31,12 +34,32 @@ class StaffController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        Staff::create($request->all());
+
+        if ($request->hasFile("imagen")) {
+            $file = $request->file('imagen');
+            $routeImg = 'storage/images/imagen/';
+            $nombreImagen = Str::random(10) . '_' . $file->getClientOriginalName();
+
+            $this->saveImg($file, $routeImg, $nombreImagen);
+
+            $data['imagen'] = $routeImg . $nombreImagen;
+            // $AboutUs->name_image = $nombreImagen;
+        }
+        Staff::create($data);
 
         return redirect()->route('staff.index')->with('success', 'Publicación creado exitosamente.');
+    }
+    public function saveImg($file, $route, $nombreImagen)
+    {
+        $manager = new ImageManager(new Driver());
+        $img =  $manager->read($file);
 
-        
-        
+
+        if (!file_exists($route)) {
+            mkdir($route, 0777, true); // Se crea la ruta con permisos de lectura, escritura y ejecución
+        }
+
+        $img->save($route . $nombreImagen);
     }
 
     /**
@@ -62,13 +85,12 @@ class StaffController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        
+
         Staff::updateOrCreate(
             ['id' => $id], // Condiciones para buscar el registro existente
             $request->all() // Datos para actualizar o crear el registro
         );
         return redirect()->route('staff.index')->with('success', 'Publicación Actualizada exitosamente.');
-
     }
 
     /**
@@ -79,13 +101,14 @@ class StaffController extends Controller
         //
     }
 
-    public function updateVisible(Request $request){
-        $id = $request->id; 
-        $stauts = $request->status; 
+    public function updateVisible(Request $request)
+    {
+        $id = $request->id;
+        $stauts = $request->status;
         $staff = Staff::find($id);
-        $staff->status = $stauts; 
+        $staff->status = $stauts;
 
         $staff->save();
-        return response()->json(['message'=> 'registro actualizado']);
+        return response()->json(['message' => 'registro actualizado']);
     }
 }

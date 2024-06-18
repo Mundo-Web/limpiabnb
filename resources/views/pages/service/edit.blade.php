@@ -38,7 +38,7 @@
               <div class="md:col-span-5">
                 <label for="description">Descripción de servicio</label>
                 <div class="relative mb-2 mt-2">
-                  <x-textarea name="description" value="{!! $servicios->description !!}" /></textarea>
+                  <x-textarea name="description" value="{!! $servicios->description !!}" />
 
                 </div>
               </div>

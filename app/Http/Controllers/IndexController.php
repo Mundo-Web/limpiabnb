@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreIndexRequest;
 use App\Http\Requests\UpdateIndexRequest;
 use App\Helpers\EmailConfig;
+use App\Models\AboutUs;
 use App\Models\Index;
 use App\Models\Message;
 use App\Models\General;
@@ -15,6 +16,7 @@ use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Distribucion;
 use App\Models\Espacio;
+use App\Models\Staff;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -31,7 +33,10 @@ class IndexController extends Controller
         $services = Service::where('status', '=', 1)->where('visible', '=',  1)->get();
         $testimonios = Testimony::where('status', '=', 1)->where('visible', '=',  1)->get();
         $espacios = Espacio::where('status', '=', 1)->where('visible', '=',  1)->get();
-        return view('public.index', compact('generales', 'services', 'testimonios', 'beneficios', 'espacios'));
+        $nosotros = AboutUs::where('status', '=', 1 )->first();
+        $staff = Staff::where('status', '=', 1 )->first();
+        
+        return view('public.index', compact('generales', 'services', 'testimonios', 'beneficios', 'espacios', 'nosotros', 'staff'));
     }
 
     public function blog(Request $request)
