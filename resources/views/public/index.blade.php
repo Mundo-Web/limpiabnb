@@ -843,54 +843,58 @@
         </div>
       </div>
     </section>
-
-    <section id="nosotros" data-aos="fade-up" data-aos-offset="150">
-      <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 my-12">
-        <div class="lg:col-span-1 relative bg-bgAzul text-textWhite flex justify-center items-center py-24 md:py-0">
-          <div class="z-10 relative w-5/6 flex flex-col gap-10 py-5">
-            <div class="before__underline">
-              <p class="text-text18 2md:text-text24 font-airbnb_500">
-                Nuestra historia
-              </p>
-            </div>
-            <h2 class="font-airbnb_700 text-text40 2md:text-text52 leading-none md:leading-tight">
-              {{ $nosotros->titulo ?? 'Configura about-Us en el backend' }}
-              {{-- De Servicio de Administración a Líder en Limpieza: El
+    @if ($nosotros->count() > 0)
+      <section id="nosotros" data-aos="fade-up" data-aos-offset="150">
+        <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 my-12">
+          <div class="lg:col-span-1 relative bg-bgAzul text-textWhite flex justify-center items-center py-24 md:py-0">
+            <div class="z-10 relative w-5/6 flex flex-col gap-10 py-5">
+              <div class="before__underline">
+                <p class="text-text18 2md:text-text24 font-airbnb_500">
+                  Nuestra historia
+                </p>
+              </div>
+              <h2 class="font-airbnb_700 text-text40 2md:text-text52 leading-none md:leading-tight">
+                {{ $nosotros->titulo ?? 'Configura about-Us en el backend' }}
+                {{-- De Servicio de Administración a Líder en Limpieza: El
               Surgimiento de Limpia BnB --}}
-            </h2>
+              </h2>
 
-            <p class="font-airbnb_400 text-text16 2md:text-text20">
-              {{ $nosotros->descripcion }}
+              <p class="font-airbnb_400 text-text16 2md:text-text20">
+                {{ $nosotros->descripcion }}
 
-              {{-- Limpia BnB nace de Ventura BnB, una empresa de administración de
+                {{-- Limpia BnB nace de Ventura BnB, una empresa de administración de
               departamentos a corto plazo, la cual creó y calibró un equipo de
               limpieza con tan buenos resultados, que en cuestión de poco
               tiempo estaba limpiando los airbnbs de otros anfitriones. --}}
-            </p>
-          </div>
+              </p>
+            </div>
 
-          <img src="{{ asset('images/img/image_6.png') }}" alt="limpieza" class="absolute top-0 left-0 z-0">
-
-        </div>
-
-        <div class="lg:col-span-1 hidden lg:block">
-          <div class="w-full h-full">
-
-            <img src="{{ asset($nosotros->imagen) }}" alt="limpieza" class="w-full h-full">
+            <img src="{{ asset('images/img/image_6.png') }}" alt="limpieza" class="absolute top-0 left-0 z-0">
 
           </div>
-        </div>
 
-        <div class="lg:col-span-2">
-          <div class="w-full h-full">
-            @if ($staff->count() > 0)
-              <img src="{{ asset($staff->imagen) }}" alt="limpieza" class="w-full h-full object-cover">
-            @endif
+          <div class="lg:col-span-1 hidden lg:block">
+            <div class="w-full h-full">
 
+              <img src="{{ asset($nosotros->imagen) }}" alt="limpieza" class="w-full h-full">
+
+            </div>
+          </div>
+
+          <div class="lg:col-span-2">
+            <div class="w-full h-full">
+              @if ($staff->count() > 0)
+                <img src="{{ asset($staff->imagen) }}" alt="limpieza" class="w-full h-full object-cover">
+              @endif
+
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+    @endif
+
+
 
     <section id="contacto" data-aos="fade-up" data-aos-offset="150">
       <div class="w-11/12 mx-auto text-textAzul my-12">
