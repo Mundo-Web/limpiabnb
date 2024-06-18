@@ -885,9 +885,10 @@
 
           <div class="lg:col-span-2">
             <div class="w-full h-full">
-              @if ($staff->count() > 0)
+
+              @isset($staff)
                 <img src="{{ asset($staff->imagen) }}" alt="limpieza" class="w-full h-full object-cover">
-              @endif
+              @endisset
 
             </div>
           </div>
