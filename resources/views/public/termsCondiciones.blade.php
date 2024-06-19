@@ -38,7 +38,7 @@
 
     <section class="pb-12 flex flex-col gap-10">
       <div class="hidden md:flex justify-center items-center w-11/12 mx-auto" data-aos="fade-up" data-aos-offset="150">
-        {!! $terms->content !!}
+        {!! $terms->content ?? '' !!}
 
       </div>
 
@@ -52,18 +52,18 @@
 @section('scripts_improtados')
   <script>
     /* document.addEventListener("DOMContentLoaded", () => {
-                                const paginations = document.querySelectorAll(".pagination__blog");
-                                paginations.forEach((item, index) => {
-                                    item.addEventListener("click", (e) => {
-                                        item.classList.add("border-pagination");
-                                        paginations.forEach((pag) => {
-                                            if (e.target !== pag) {
-                                                pag.classList.remove("border-pagination");
-                                            }
-                                        });
-                                    });
-                                });
-                            }); */
+                                  const paginations = document.querySelectorAll(".pagination__blog");
+                                  paginations.forEach((item, index) => {
+                                      item.addEventListener("click", (e) => {
+                                          item.classList.add("border-pagination");
+                                          paginations.forEach((pag) => {
+                                              if (e.target !== pag) {
+                                                  pag.classList.remove("border-pagination");
+                                              }
+                                          });
+                                      });
+                                  });
+                              }); */
   </script>
 
 @stop

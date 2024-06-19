@@ -94,7 +94,7 @@
         <div class="flex flex-col gap-5 font-airbnb_400">
           <p class="font-airbnb_400 text-text14 2md:text-text18">
             {{-- 123 Calle Principal, Ciudad Perfecta --}}
-            {{ $generales->address }}, {{ $generales->inside }} - {{ $generales->district }}
+            {{ $generales->address }} {{ $generales->inside }} - {{ $generales->district }}
           </p>
 
           <div>
