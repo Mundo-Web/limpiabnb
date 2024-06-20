@@ -74,7 +74,7 @@
                 <form action="" id="formCotizacion">
                   @csrf
                   <div class="page slide-page">
-                    <div class="px-10 h-full flex flex-col justify-center">
+                    <div class="px-10 h-full flex flex-col justify-start md:justify-center">
                       <div class="text-textAzul flex flex-col gap-10">
                         <p class="text__cotizar leading-none md:leading-tight font-airbnb_700">
                           Calcula el precio de limpieza de tu Airbnb
@@ -135,7 +135,7 @@
                     </div>
                   </div>
                   <div class="page">
-                    <div class="px-10 h-full flex flex-col justify-center">
+                    <div class="px-10 h-full flex flex-col justify-start md:justify-center">
                       <div class="text-textAzul flex flex-col gap-10 ">
                         <div>
                           <button class="prev-1 prev">
@@ -177,7 +177,7 @@
                     </div>
                   </div>
                   <div class="page">
-                    <div class="px-10 h-full flex flex-col justify-center">
+                    <div class="px-10 h-full flex flex-col justify-start md:justify-center">
                       <div class="text-textAzul flex flex-col gap-7">
                         <div>
                           <button class="prev-2 prev">
