@@ -46,15 +46,15 @@
                   Ver servicios
                 </a>
 
-                <a href="{{ route('mobile') }}"
+                {{--  <a href="{{ route('mobile') }}"
                   class="cursor-pointer flex gap-2 basis-4/12 lg:basis-6/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto lg:hidden">
                   Quiero mi servicio
-                </a>
+                </a> --}}
               </div>
             </div>
           </div>
 
-          <div class="hidden lg:flex justify-end">
+          <div class=" lg:flex justify-end">
             <div class="contenedor bg-white rounded-lg py-10 mx-auto">
               <div class="progress-bar flex justify-between px-8">
                 <div class="step">
