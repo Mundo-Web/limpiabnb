@@ -358,6 +358,8 @@
 
     <section id="servicios" data-aos="fade-up" data-aos-offset="150">
       <div class="swiper servicios__principales text-textAzul">
+
+
         <div class="swiper-wrapper">
 
           @foreach ($services as $service)
@@ -367,7 +369,7 @@
                   <img src="{{ asset($service->url_image) }}" alt="{{ $service->name_image }}" class="w-full h-full">
 
                 </div>
-                <div class="flex flex-col md:gap-32 basis-1/2 order-1 md:order-2 md:p-12 w-11/12 md:w-full mx-auto">
+                <div class="flex flex-col md:gap-5 basis-1/2 order-1 md:order-2 md:p-12 w-11/12 md:w-full mx-auto">
                   <div class="py-12 md:w-5/6 md:mx-auto">
                     <div class="buttonSliderServicios">
                       @if ($services->count() > 1)
@@ -380,6 +382,9 @@
 
                   <div class="text-textAzul flex flex-col gap-5 md:w-5/6 mx-auto" data-aos="fade-up"
                     data-aos-offset="150">
+                    <h2 class="font-airbnb_700 text-text32 2md:text-text52 leading-none md:leading-tight">
+                      Servicios
+                    </h2>
                     <h2 class="font-airbnb_700 text-text32 2md:text-text52 leading-none md:leading-tight">
                       {{-- Limpieza y lavandería de airbnbs con reposición de
                                         ammenities hoteleros --}}
@@ -654,6 +659,7 @@
                         </div>
                     </div> --}}
         </div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
 
@@ -1084,10 +1090,10 @@
         //allowSlideNext: false,  //Bloquea el deslizamiento hacia el siguiente slide
         //allowSlidePrev: false,  //Bloquea el deslizamiento hacia el slide anterior
         allowTouchMove: false, // Bloquea el movimiento táctil
-        autoplay: {
+        /* autoplay: {
           delay: 5000,
           disableOnInteraction: false,
-        },
+        }, */
 
         breakpoints: {
           0: {
@@ -1116,9 +1122,17 @@
         //allowSlideNext: false,  //Bloquea el deslizamiento hacia el siguiente slide
         //allowSlidePrev: false,  //Bloquea el deslizamiento hacia el slide anterior
         allowTouchMove: false, // Bloquea el movimiento táctil
-        autoplay: {
+        /* autoplay: {
           delay: 5000,
           disableOnInteraction: false,
+        }, */
+        pagination: {
+          el: '.swiper-pagination',
+
+        },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          draggable: true,
         },
       });
 
@@ -1134,10 +1148,10 @@
           prevEl: ".swiper-button-prev",
         },
         allowTouchMove: true, // Bloquea el movimiento táctil
-        autoplay: {
+        /* autoplay: {
           delay: 5000,
           disableOnInteraction: false,
-        },
+        }, */
 
         breakpoints: {
           0: {
