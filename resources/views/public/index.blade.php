@@ -30,7 +30,7 @@
                 <span class="text-text16 md:text-text20  font-airbnb_500">¡Bienvenido a LimpiaBnB!</span>
               </p>
 
-              <h1 class="font-airbnb_700 text-text40 md:text-text60 leading-none md:leading-tight">
+              <h1 class="font-airbnb_700 text-text32 md:text-text60 leading-none md:leading-tight">
                 Transformamos tu espacio en un lugar impecable y acogedor para
                 tus huéspedes
               </h1>
