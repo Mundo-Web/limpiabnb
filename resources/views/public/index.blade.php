@@ -783,9 +783,9 @@
       </div>
     </section>
 
-    <section class="w-11/12 mx-auto text-textAzul pt-10 md:pt-24" data-aos="fade-up" data-aos-offset="150">
-      <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2">
-        <div class="col-span-1 md:col-span-3 order-1 flex flex-col justify-center">
+    <section class="w-11/12 mx-auto text-textAzul pt-5 md:pt-10" data-aos="fade-up" data-aos-offset="150">
+      <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-1">
+        <div class="col-span-1 md:col-span-3 order-1 flex flex-col justify-start  md:justify-center">
           <div class="flex flex-col gap-5">
             <div class="before__underline before__underline-step">
               <p class="text-[#BFDE8E] text-text18 2md:text-text24 font-airbnb_500">
@@ -800,16 +800,6 @@
               transformación de sus espacios y la calidad de nuestros
               servicios.
             </p>
-          </div>
-        </div>
-
-        <div class="col-span-1 md:col-span-1 order-3 md:order-2">
-          <div class="flex items-center justify-end w-full h-full">
-            <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
-              target="_blank"
-              class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center font-airbnb_500 leading-none">
-              Obtener una Cotización
-            </a>
           </div>
         </div>
 
@@ -845,6 +835,15 @@
 
               </div>
             </div>
+          </div>
+        </div>
+        <div class="col-span-1 md:col-span-1 order-3 md:order-2">
+          <div class="flex items-center justify-end w-full h-full">
+            <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
+              target="_blank"
+              class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center font-airbnb_500 leading-none">
+              Obtener una Cotización
+            </a>
           </div>
         </div>
       </div>
