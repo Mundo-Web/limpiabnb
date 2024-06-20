@@ -696,7 +696,7 @@
                     </h6>
                     <p class="font-airbnb_400 text-[16px] 2md:text-text20">
                       Haz clic en el botón "¡Obtener una Cotización
-                      Personalizada!" para iniciar el proceso.
+                      !" para iniciar el proceso.
                     </p>
                   </div>
                 </div>
@@ -719,11 +719,11 @@
 
                   <div data-aos="fade-up" data-aos-offset="150">
                     <h6 class="font-airbnb_700 text-text24 2md:text-text32">
-                      Responder Preguntas
+                      Rellena el formulario
                     </h6>
 
                     <p class="font-airbnb_400 text-[16px] 2md:text-text20">
-                      Responde algunas preguntas rápidas sobre tu propiedad y
+                      Selecciona las opciones que se ajustan a tu propiedad y
                       necesidades.
                     </p>
                   </div>
@@ -987,7 +987,7 @@
           <div class="basis-1/2">
             <div class="flex flex-col h-full justify-center gap-10">
               <h4 class="font-airbnb_700 text-text40 2md:text-text48 leading-none 2md:leading-tight">
-                Conéctate con Nosotros
+                Contáctate con Nosotros
               </h4>
               <p class="text-text16 font-airbnb_400 2md:text-text20 text-[#004472]">
                 Estamos aquí para responder a tus preguntas y personalizar
