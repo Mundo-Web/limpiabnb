@@ -767,7 +767,7 @@
           </ul>
 
           <div class="flex items-center justify-start w-full h-full">
-            <a {{-- href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}" --}} href="#cotizar"
+            <a {{-- href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}" --}} href="#formCotizacion"
               class="cursor-pointer flex gap-2 button__base font-airbnb_500 bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center leading-none">
               Obtener una Cotización
             </a>
