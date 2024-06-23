@@ -36,7 +36,7 @@ class IndexController extends Controller
         $testimonios = Testimony::where('status', '=', 1)->where('visible', '=',  1)->get();
         $espacios = Espacio::where('status', '=', 1)->where('visible', '=',  1)->get();
         $nosotros = AboutUs::where('status', '=', 1 )->first();
-        $staff = Staff::where('status', '=', 1 )->first();
+        $staff = Staff::where('status', '=', 1 )->get();
         
         return view('public.index', compact('generales', 'services', 'testimonios', 'beneficios', 'espacios', 'nosotros', 'staff'));
     }

@@ -261,8 +261,8 @@
                     d="M21 3h2v4H1V3h2V1h4v2h10V1h4v2Z" />
                 </svg>
                 <span
-                  class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">About
-                  Us</span>
+                  class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                  Nuestra Historia</span>
               </div>
             </a>
           </li>

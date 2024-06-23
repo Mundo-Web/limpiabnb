@@ -25,23 +25,14 @@
 @section('content')
   <main>
 
-    <section class="pt-44 pb-20 text-textAzul">
-      {{-- <div class="relative " data-aos="fade-up" data-aos-offset="150">
+    <section class="w-11/12 mx-auto gap-5 grid grid-cols-1 grid-rows-1  pt-60 px-10 lg:px-40 pb-10">
+      <div class="flex flex-col items-center gap-5 col-span-1 row-span-1 leading-relaxed" data-aos="fade-up"
+        data-aos-offset="150">
+
         {!! $politicas->content ?? '' !!}
-      </div> --}}
 
-
-
-    </section>
-
-
-    <section class="pb-12 flex flex-col gap-10">
-      <div class="hidden md:flex justify-center items-center w-11/12 mx-auto" data-aos="fade-up" data-aos-offset="150">
-        {!! $politicas->content ?? '' !!}
 
       </div>
-
-
     </section>
 
   </main>
@@ -51,18 +42,18 @@
 @section('scripts_improtados')
   <script>
     /* document.addEventListener("DOMContentLoaded", () => {
-                            const paginations = document.querySelectorAll(".pagination__blog");
-                            paginations.forEach((item, index) => {
-                                item.addEventListener("click", (e) => {
-                                    item.classList.add("border-pagination");
-                                    paginations.forEach((pag) => {
-                                        if (e.target !== pag) {
-                                            pag.classList.remove("border-pagination");
-                                        }
-                                    });
-                                });
-                            });
-                        }); */
+                                      const paginations = document.querySelectorAll(".pagination__blog");
+                                      paginations.forEach((item, index) => {
+                                          item.addEventListener("click", (e) => {
+                                              item.classList.add("border-pagination");
+                                              paginations.forEach((pag) => {
+                                                  if (e.target !== pag) {
+                                                      pag.classList.remove("border-pagination");
+                                                  }
+                                              });
+                                          });
+                                      });
+                                  }); */
   </script>
 
 @stop

@@ -13,6 +13,19 @@
     }
 }
 
+.ql-editor h1 {
+    @apply text-4xl font-bold mt-4 mb-2;
+  }
+
+  .ql-editor h2 {
+    @apply text-3xl font-semibold mt-3 mb-2;
+  }
+
+  .ql-editor h3 {
+    @apply text-2xl font-medium mt-3 mb-1;
+  }
+
+
 .select2-container {
     /* The container where the selectbox is housing*/
     @apply relative box-border align-middle inline-block m-0 mb-2;

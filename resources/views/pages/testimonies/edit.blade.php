@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="Editar Testimonio">
 
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
     <form action="{{ route('testimonios.update', $testimony->id) }}" method="POST" enctype="multipart/form-data">
@@ -29,7 +29,7 @@
                       </g>
                     </svg>
                   </div>
-                  <input type="text" id="name" name="name" value="{{ $testimony->name }}"
+                  <input type="text" id="name" name="name" value="{{ $testimony->name }}" required
                     class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Nombre">
                 </div>
@@ -61,7 +61,7 @@
                 <label for="testimonie">Comentario</label>
                 <div class="relative mb-2 mt-2">
 
-                  <x-textarea name="testimonie" value="{!! $testimony->testimonie !!}" /></textarea>
+                  <x-textarea name="testimonie" value="{!! $testimony->testimonie !!}" required /></textarea>
 
                 </div>
               </div>

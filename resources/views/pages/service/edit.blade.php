@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="Editar Servicio">
 
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
     <form action="{{ route('servicios.update', $servicios->id) }}" method="POST" enctype="multipart/form-data">
@@ -68,7 +68,7 @@
               <div class="md:col-span-5 text-right mt-6">
                 <div class="inline-flex items-end">
                   <button type="submit"
-                    class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">Actualizar
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">Editar
                     datos</button>
                 </div>
               </div>

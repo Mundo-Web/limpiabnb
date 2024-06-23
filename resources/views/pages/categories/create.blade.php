@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="Crear Categoria">
 
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
     <form action="{{ route('categorias.store') }}" method="POST" enctype="multipart/form-data">
@@ -28,7 +28,7 @@
                       </g>
                     </svg>
                   </div>
-                  <input type="text" id="name" name="name" value=""
+                  <input type="text" id="name" name="name" value="" required
                     class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Nombre">
                 </div>
@@ -38,7 +38,7 @@
                 <label for="description">Descripción</label>
                 <div class="relative mb-2 mt-2">
 
-                  <x-textarea name="description" value="" /></textarea>
+                  <x-textarea name="description" value="" id="description" />
 
                 </div>
               </div>
@@ -60,3 +60,20 @@
   </div>
 
 </x-app-layout>
+<script>
+  $(document).ready(function() {
+    $('form').on('submit', function(event) {
+      var name = document.getElementById("name");
+      var textArea = document.getElementById("description");
+      if (!textArea.value || !name.value) {
+        Swal.fire({
+
+          icon: "warning",
+          title: 'Debe ingresar un Nombre y una Descripcion',
+
+        });
+        event.preventDefault(); // Detener el envío del formulario
+      }
+    });
+  });
+</script>

@@ -117,6 +117,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
         Route::resource('/staff', StaffController::class);
         Route::post('/staff/updateVisible', [StaffController::class, 'updateVisible'])->name('staff.updateVisible');
+        Route::post('/staff/borrar', [StaffController::class, 'borrar'])->name('staff.borrar');
+
 
         Route::resource('/strength', StrengthController::class);
         Route::post('/strength/updateVisible', [StrengthController::class, 'updateVisible'])->name('strength.updateVisible');

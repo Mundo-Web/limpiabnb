@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="Crear Nosotros">
 
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
     <form action="{{ route('aboutus.store') }}" method="POST" enctype="multipart/form-data">
@@ -6,7 +6,7 @@
       <div
         class="col-span-full xl:col-span-8 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
         <header class="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
-          <h2 class="font-semibold text-slate-800 dark:text-slate-100 text-2xl tracking-tight">Agregar About Us
+          <h2 class="font-semibold text-slate-800 dark:text-slate-100 text-2xl tracking-tight">Agregar Nosotros
           </h2>
         </header>
 
@@ -28,7 +28,7 @@
                       </g>
                     </svg>
                   </div>
-                  <input type="text" id="titulo" name="titulo" value=""
+                  <input type="text" id="titulo" name="titulo" value="" required
                     class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Titulo">
                 </div>
@@ -48,15 +48,15 @@
                       </g>
                     </svg>
                   </div>
-                  <input type="text" id="descripcion" name="descripcion" value=""
-                    class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Descripcion">
+                  <x-textarea name="descripcion" value="" id="descripcion" />
+
+
                 </div>
               </div>
               <div class="md:col-span-5">
                 <label for="imagen">Imagen principal</label>
                 <div class="relative mb-2  mt-2">
-                  <input id="imagen" name="imagen"
+                  <input id="imagen" name="imagen" required
                     class="p-2.5 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                     aria-describedby="user_avatar_help" id="user_avatar" type="file">
                 </div>
@@ -65,7 +65,7 @@
                 <div class="inline-flex items-end">
                   <button type="submit"
                     class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">Guardar
-                    servicio</button>
+                    Nosotros</button>
                 </div>
               </div>
             </div>
@@ -79,3 +79,23 @@
 
 
 </x-app-layout>
+<script>
+  $(document).ready(function() {
+    $('form').on('submit', function(event) {
+      let fileInput = $('#titulo');
+
+      let description = document.getElementById('descripcion')
+      console.log(description)
+      let imagen = $('#imagen');
+      if (!fileInput.val() || !description.value || !imagen.val()) {
+        Swal.fire({
+
+          icon: "warning",
+          title: 'Debe ingresar Titulo , Foto y Descripcion del servicio',
+
+        });
+        event.preventDefault(); // Detener el envío del formulario
+      }
+    });
+  });
+</script>

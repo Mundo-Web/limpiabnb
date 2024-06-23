@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="Editar Terminos y condiciones">
 
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
     <form action="{{ route('terminoscondiciones.update', $terminos->id) }}" method="POST">
@@ -31,7 +31,7 @@
                     </svg>
                   </div>
 
-                  <x-textarea name="content" value="{!! $terminos->content !!}" />
+                  <x-textarea name="content" :value="$terminos->content" />
                 </div>
               </div>
 
@@ -55,26 +55,3 @@
 
 
 </x-app-layout>
-
-
-<script>
-  let editor = null
-  $('document').ready(async function() {
-
-    editor = await tinymce.init({
-      selector: 'textarea#description',
-      height: 500,
-      plugins: [
-        'advlist', 'autolink', 'lists', 'link', 'charmap', 'preview',
-        'searchreplace', 'visualblocks', 'code', 'fullscreen',
-        'insertdatetime', 'table'
-      ],
-      toolbar: 'undo redo | blocks | ' +
-        'bold italic backcolor | alignleft aligncenter ' +
-        'alignright alignjustify | bullist numlist outdent indent | ' +
-        'removeformat | help',
-      content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px;}'
-    });
-
-  })
-</script>

@@ -395,47 +395,7 @@
                       {!! $service->description !!}
                     </div>
 
-                    {{-- <p class="font-airbnb_400 text-text16 2md:text-text20">
-                                        No te preocupes por la logística, nos encargamos del
-                                        lavado y reposición de la ropa de cama y toallas.
-                                    </p>
 
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex flex-col gap-3">
-                                            <h3
-                                                class="font-airbnb_500 text-text18 2md:text-text24 leading-none md:leading-tight">
-                                                Limpieza del AirBnB
-                                            </h3>
-                                            <p class="font-airbnb_400 text-text16 2md:text-text20">
-                                                Limpieza del airbnb, con cambio de ropa de cama y
-                                                toallas. reponemos jabón, shampoo, PH premium, esponja
-                                                y trapo de cocina. Podemos añadir otras cosas de ser
-                                                conversado previamente con el cliente.
-                                            </p>
-                                        </div>
-
-                                        <div class="flex flex-col gap-3">
-                                            <h3
-                                                class="font-airbnb_500 text-text18 2md:text-text24 leading-none md:leading-tight">
-                                                Inventario
-                                            </h3>
-                                            <p class="font-airbnb_400 text-text16 2md:text-text20">
-                                                Hacemos un inventario del departamento y reportamos si
-                                                algo falta o está roto.
-                                            </p>
-                                        </div>
-
-                                        <div class="flex flex-col gap-3">
-                                            <h3
-                                                class="font-airbnb_500 text-text18 2md:text-text24 leading-none md:leading-tight">
-                                                Reporte
-                                            </h3>
-                                            <p class="font-normal text-text16 2md:text-text20">
-                                                Entregamos un reporte fotográfico de como recibimos y
-                                                como dejamos el departamento.
-                                            </p>
-                                        </div>
-                                    </div> --}}
 
                     <div class="flex flex-col md:flex-row items-center">
                       <a
@@ -450,214 +410,7 @@
           @endforeach
 
 
-          {{-- <div class="swiper-slide">
-                        <div class="flex flex-col lg:flex-row gap-10 md:gap-0">
-                            <div class="basis-1/2 order-2 md:order-1">
-                                <img src="{{ asset('images/img/servicio_limpieza.png') }}" alt="limpieza"
-                                    class="w-full h-full">
-                            </div>
-                            <div
-                                class="flex flex-col md:gap-32 basis-1/2 order-1 md:order-2 md:p-12 w-11/12 md:w-full mx-auto">
-                                <div class="py-12 md:w-5/6 md:mx-auto">
-                                    <div class="buttonSliderServicios">
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                    </div>
-                                </div>
 
-                                <div class="text-textAzul flex flex-col gap-5 md:w-5/6 mx-auto" data-aos="fade-up"
-                                    data-aos-offset="150">
-                                    <h2 class="font-airbnb_700 text-text40 2md:text-text52 leading-none md:leading-tight">
-                                        Limpieza y lavandería de airbnbs con reposición de
-                                        ammenities hoteleros
-                                    </h2>
-                                    <p class="font-airbnb_400 text-text16 2md:text-text20">
-                                        No te preocupes por la logística, nos encargamos del
-                                        lavado y reposición de la ropa de cama y toallas.
-                                    </p>
-
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex flex-col gap-3">
-                                            <h3
-                                                class="font-airbnb_500 text-text18 2md:text-text24 leading-none md:leading-tight">
-                                                Limpieza del AirBnB
-                                            </h3>
-                                            <p class="font-airbnb_400 text-text16 2md:text-text20">
-                                                Limpieza del airbnb, con cambio de ropa de cama y
-                                                toallas. reponemos jabón, shampoo, PH premium, esponja
-                                                y trapo de cocina. Podemos añadir otras cosas de ser
-                                                conversado previamente con el cliente.
-                                            </p>
-                                        </div>
-
-                                        <div class="flex flex-col gap-3">
-                                            <h3
-                                                class="font-airbnb_500 text-text18 2md:text-text24 leading-none md:leading-tight">
-                                                Inventario
-                                            </h3>
-                                            <p class="font-airbnb_400 text-text16 2md:text-text20">
-                                                Hacemos un inventario del departamento y reportamos si
-                                                algo falta o está roto.
-                                            </p>
-                                        </div>
-
-                                        <div class="flex flex-col gap-3">
-                                            <h3
-                                                class="font-airbnb_500 text-text18 2md:text-text24 leading-none md:leading-tight">
-                                                Reporte
-                                            </h3>
-                                            <p class="font-normal text-text16 2md:text-text20">
-                                                Entregamos un reporte fotográfico de como recibimos y
-                                                como dejamos el departamento.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="flex flex-col md:flex-row items-center">
-                                        <a
-                                            class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto font-airbnb_500">
-                                            Solicitar servicio
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
-
-          {{-- <div class="swiper-slide">
-                        <div class="flex flex-col lg:flex-row gap-5">
-                            <div class="basis-1/2 order-2 md:order-1">
-                                <img src="{{ asset('images/img/solo_limpieza.png') }}" alt="limpieza"
-                                    class="w-full h-full">
-
-                            </div>
-                            <div
-                                class="flex flex-col md:gap-32 basis-1/2 order-1 md:order-2 md:p-12 w-11/12 md:w-full mx-auto">
-                                <div class="py-6 md:py-12 md:w-5/6 md:mx-auto">
-                                    <div class="buttonSliderServicios">
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                    </div>
-                                </div>
-
-                                <div class="text-textAzul flex flex-col gap-5 md:w-5/6 mx-auto" data-aos="fade-up"
-                                    data-aos-offset="150">
-                                    <h2 class="font-airbnb_700 text-text40 2md:text-text52 leading-none md:leading-tight">
-                                        Solo limpieza
-                                    </h2>
-                                    <p class="font-airbnb_400 text-text16 2md:text-text20">
-                                        Ponemos al personal y tú nos entregas la ropa de cama
-                                        limpia, productos de limpieza y ammenities hoteleros
-                                    </p>
-
-                                    <div class="flex flex-col md:flex-row items-center">
-                                        <a
-                                            class="cursor-pointer flex gap-2 button__base font-airbnb_500 bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto">
-                                            Solicitar servicio
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="flex flex-col lg:flex-row gap-5">
-                            <div class="basis-1/2 order-2 md:order-1">
-                                <img src="{{ asset('images/img/solo_lavanderia.png') }}" alt="lavanderia"
-                                    class="w-full h-full">
-
-                            </div>
-                            <div
-                                class="flex flex-col md:gap-32 basis-1/2 order-1 md:order-2 md:p-12 w-11/12 md:w-full mx-auto">
-                                <div class="py-6 md:py-12 md:w-5/6 md:mx-auto">
-                                    <div class="buttonSliderServicios">
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                    </div>
-                                </div>
-
-                                <div class="text-textAzul flex flex-col gap-5 md:w-5/6 mx-auto" data-aos="fade-up"
-                                    data-aos-offset="150">
-                                    <h2 class="font-airbnb_700 text-text40 2md:text-text52 leading-none md:leading-tight">
-                                        Solo lavandería
-                                    </h2>
-                                    <p class="font-airbnb_400 text-text16 2md:text-text20">
-                                        Nos dejas tu ropa de cama y te la entregamos al día
-                                        siguiente!
-                                    </p>
-
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex flex-col gap-3">
-                                            <h3
-                                                class="font-airbnb_500 text-text18 2md:text-text24 leading-none md:leading-tight">
-                                                Entrega
-                                            </h3>
-                                            <p class="font-airbnb_400 text-text16 2md:text-text20">
-                                                Se recoje y deja en miraflores y por un costo extra
-                                                podemos hacer delivery tambien.
-                                            </p>
-                                        </div>
-
-                                        <div class="flex flex-col gap-3">
-                                            <h3
-                                                class="font-airbnb_500 text-text18 2md:text-text24 leading-none md:leading-tight">
-                                                Lavado
-                                            </h3>
-                                            <p class="font-airbnb_400 text-text16 2md:text-text20">
-                                                Lavada secada y planchada. Contamos estandar de
-                                                hotelería 5 estrellas.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="flex flex-col md:flex-row items-center">
-                                        <a
-                                            class="cursor-pointer flex gap-2 button__base font-airbnb_500 bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto">
-                                            Solicitar servicio
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="flex flex-col lg:flex-row gap-5">
-                            <div class="basis-1/2 order-2 md:order-1">
-                                <img src="{{ asset('images/img/limpieza_desinfeccion.png') }}"
-                                    alt="limpieza y desinfección" class="w-full h-full">
-
-                            </div>
-                            <div
-                                class="flex flex-col md:gap-32 basis-1/2 order-1 md:order-2 md:p-12 w-11/12 md:w-full mx-auto">
-                                <div class="py-6 md:py-12 md:w-5/6 md:mx-auto">
-                                    <div class="buttonSliderServicios">
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                    </div>
-                                </div>
-
-                                <div class="text-textAzul flex flex-col gap-5 md:w-5/6 mx-auto" data-aos="fade-up"
-                                    data-aos-offset="150">
-                                    <h2 class="font-airbnb_700 text-text40 2md:text-text52 leading-none md:leading-tight">
-                                        Limpieza y desinfección de sofás y colchones
-                                    </h2>
-                                    <p class="font-airbnb_400 text-text16 2md:text-text20">
-                                        Lavamos y desinfectamos tus colchones con aspiradoras
-                                        Karcher, dejamos tu colchon limio en tiempo record.
-                                    </p>
-
-                                    <div class="flex flex-col md:flex-row items-center">
-                                        <a
-                                            class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto font-airbnb_500">
-                                            Solicitar servicio
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -888,15 +641,39 @@
             </div>
           </div>
 
-          <div class="lg:col-span-2">
-            <div class="w-full h-full">
+          @if ($staff->count() > 0)
+            <div class="lg:col-span-2">
+              <div class="swiper servicios__principales text-textAzul">
 
-              @isset($staff)
-                <img src="{{ asset($staff->imagen) }}" alt="limpieza" class="w-full h-full object-cover">
-              @endisset
+
+
+
+
+
+                <div class="swiper-wrapper">
+
+                  @foreach ($staff as $item)
+                    <div class="swiper-slide">
+                      <img src="{{ asset($item->imagen) }}" alt="limpieza" class="w-full h-full object-cover">
+                    </div>
+                  @endforeach
+
+
+
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
 
             </div>
-          </div>
+          @else
+            <div class="lg:col-span-2 w-[1700px] h-[1130px] object-cover">
+
+              <img src="{{ asset('images/img/noimagen.jpg') }}" alt="limpieza" class="w-full h-full">
+
+            </div>
+          @endif
+
+
         </div>
       </section>
 
@@ -1121,12 +898,13 @@
         //allowSlideNext: false,  //Bloquea el deslizamiento hacia el siguiente slide
         //allowSlidePrev: false,  //Bloquea el deslizamiento hacia el slide anterior
         allowTouchMove: false, // Bloquea el movimiento táctil
-        /* autoplay: {
+        autoplay: {
           delay: 5000,
           disableOnInteraction: false,
-        }, */
+        },
         pagination: {
           el: '.swiper-pagination',
+          clickable: true,
 
         },
         scrollbar: {

@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="Crear Servicio">
 
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
     <form action="{{ route('servicios.store') }}" method="POST" enctype="multipart/form-data">
@@ -28,7 +28,7 @@
                       </g>
                     </svg>
                   </div>
-                  <input type="text" id="title" name="title" value=""
+                  <input type="text" id="title" name="title" value="" required
                     class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Titulo">
                 </div>
@@ -37,14 +37,14 @@
               <div class="md:col-span-5">
                 <label for="description">Descripcion de servicio</label>
                 <div class="relative mb-2 mt-2">
-                  <x-textarea name="description" value="" />
+                  <x-textarea name="description" value="" id="description" />
                 </div>
               </div>
 
               <div class="md:col-span-5">
                 <label for="address">Subir una Foto</label>
                 <div class="relative mb-2  mt-2">
-                  <input name="imagen"
+                  <input name="imagen" required id="imagen"
                     class="p-2.5 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                     aria-describedby="user_avatar_help" id="user_avatar" type="file">
                 </div>
@@ -70,3 +70,22 @@
 
 
 </x-app-layout>
+
+<script>
+  $(document).ready(function() {
+    $('form').on('submit', function(event) {
+      let fileInput = $('#title');
+      let description = $('#description');
+      let imagen = $('#imagen');
+      if (!fileInput.val() || !description.val() || !imagen.val()) {
+        Swal.fire({
+
+          icon: "warning",
+          title: 'Debe ingresar Titulo , Foto y Descripcion del servicio',
+
+        });
+        event.preventDefault(); // Detener el envío del formulario
+      }
+    });
+  });
+</script>

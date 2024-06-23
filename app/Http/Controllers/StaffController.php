@@ -54,6 +54,12 @@ class StaffController extends Controller
         $manager = new ImageManager(new Driver());
         $img =  $manager->read($file);
 
+        $img->coverDown(1700, 1130, 'center');
+        /* $img->resize(1700, 1130, function ($constraint) {
+            $constraint->aspectRatio(); //Mantiene la proporción original de la imagen.
+            $constraint->upsize(); // Evita que la imagen sea escalada si ya es más pequeña que el tamaño objetivo
+        }); */
+
 
         if (!file_exists($route)) {
             mkdir($route, 0777, true); // Se crea la ruta con permisos de lectura, escritura y ejecución
@@ -85,10 +91,22 @@ class StaffController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $data = $request->all();
+
+        if ($request->hasFile("imagen")) {
+            $file = $request->file('imagen');
+            $routeImg = 'storage/images/imagen/';
+            $nombreImagen = Str::random(10) . '_' . $file->getClientOriginalName();
+
+            $this->saveImg($file, $routeImg, $nombreImagen);
+
+            $data['imagen'] = $routeImg . $nombreImagen;
+            // $AboutUs->name_image = $nombreImagen;
+        }
 
         Staff::updateOrCreate(
             ['id' => $id], // Condiciones para buscar el registro existente
-            $request->all() // Datos para actualizar o crear el registro
+            $data // Datos para actualizar o crear el registro
         );
         return redirect()->route('staff.index')->with('success', 'Publicación Actualizada exitosamente.');
     }
@@ -110,5 +128,16 @@ class StaffController extends Controller
 
         $staff->save();
         return response()->json(['message' => 'registro actualizado']);
+    }
+
+    public function borrar(Request $request){
+        $staff = Staff::find($request->id);
+
+		
+		if ($staff->imagen && file_exists($staff->imagen)) {
+			unlink($staff->imagen);
+		}
+
+		$staff->delete();
     }
 }

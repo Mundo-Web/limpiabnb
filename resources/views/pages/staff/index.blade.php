@@ -1,14 +1,14 @@
 <x-app-layout>
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
 
-    <section class="py-4 border-b border-slate-100 dark:border-slate-700">
+    <section class="py-4 border-b border-slate-100 dark:border-slate-700 xl:w-1/2">
       <a href="{{ route('staff.create') }}"
         class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-sm">Agregar Staff</a>
     </section>
 
 
     <div
-      class="col-span-full xl:col-span-8 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
+      class="xl:w-1/2 col-span-full xl:col-span-8 bg-white dark:bg-slate-800 shadow-lg rounded-lg border border-slate-200 dark:border-slate-700">
 
 
       <header class="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
@@ -23,11 +23,8 @@
             <thead>
               <tr>
                 <th>Nombre </th>
-                <th>cargo</th>
-                <th>facebook</th>
-                <th>instagram</th>
-                <th>youtube</th>
-                <th>twitter</th>
+                <th>Imagen </th>
+
                 <th>Visible</th>
                 <th>Acciones</th>
               </tr>
@@ -37,11 +34,8 @@
               @foreach ($staff as $item)
                 <tr>
                   <td>{{ $item->nombre }}</td>
-                  <td>{{ $item->cargo }}</td>
-                  <td>{{ $item->facebook }}</td>
-                  <td>{{ $item->instagram }}</td>
-                  <td>{{ $item->youtube }}</td>
-                  <td>{{ $item->twitter }}</td>
+                  <td class="px-3 py-2"><img class="w-20" src="{{ asset($item->imagen) }}" alt=""></td>
+
                   <td>
                     <form method="POST" action="">
                       @csrf
@@ -60,7 +54,7 @@
 
 
                   </td>
-                  <td class="flex flex-row justify-end items-center gap-5">
+                  <td class="flex flex-row  items-center gap-5">
 
                     <a href="{{ route('staff.edit', $item->id) }}"
                       class="bg-yellow-400 px-3 py-2 rounded text-white  "><i
@@ -81,11 +75,8 @@
             <tfoot>
               <tr>
                 <th>Nombre </th>
-                <th>cargo</th>
-                <th>facebook</th>
-                <th>instagram</th>
-                <th>youtube</th>
-                <th>twitter</th>
+                <th>Imagen </th>
+
                 <th>Visible</th>
                 <th>Acciones</th>
               </tr>
@@ -144,6 +135,49 @@
         });
 
       })
+    });
+    $(".btn_delete").on("click", function(e) {
+      e.preventDefault()
+
+      let id = $(this).attr('data-idService');
+
+      Swal.fire({
+        title: "Seguro que deseas eliminar?",
+        text: "Vas a eliminar un Logo",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si, borrar!",
+        cancelButtonText: "Cancelar"
+      }).then((result) => {
+        if (result.isConfirmed) {
+
+          $.ajax({
+
+            url: '{{ route('staff.borrar') }}',
+            method: 'POST',
+            data: {
+              _token: $('input[name="_token"]').val(),
+              id: id,
+
+            }
+
+          }).done(function(res) {
+
+            Swal.fire({
+              title: 'Elemento eliminado correctamente',
+              icon: "success"
+            });
+
+            location.reload();
+
+          })
+
+
+        }
+      });
+
     });
   })
 </script>
