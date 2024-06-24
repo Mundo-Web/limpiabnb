@@ -31,7 +31,7 @@ class BlogController extends Controller
    */
   public function create()
   {
-    $categories = Category::all();
+    $categories = Category::where('status', 1)->where('visible', 1)->get();
 
     return view('pages.blog.create', compact('categories'));
   }
