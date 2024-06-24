@@ -358,31 +358,31 @@
         </div>
         @if ($sliders->count())
 
-          <div class="absolute inset-0 bg__dark z-10 h-full" style="max-height:   1131px;"></div <div
-            class="swiper-wrapper ">
+          <div class="absolute inset-0 bg__dark z-10 h-full" style="max-height:   1131px;"></div>
+          <div class="swiper-wrapper ">
 
 
-          @foreach ($sliders as $imagen)
-            <div class="swiper-slide">
-              <img src="{{ asset($imagen->url_image . $imagen->name_image) }}" alt=""
-                class="object-cover w-full" style="max-height:   1131px;">
-              <div class=" bg-cover bg-center bg-no-repeat sm:w-full h-full"
-                style="background: url('{{ asset($imagen->url_image . $imagen->name_image) }}') ; background-repeat: no-repeat; background-size:cover">
+            @foreach ($sliders as $imagen)
+              <div class="swiper-slide">
+                <img src="{{ asset($imagen->url_image . $imagen->name_image) }}" alt=""
+                  class="object-cover w-full" style="max-height:   1131px;">
+                <div class=" bg-cover bg-center bg-no-repeat sm:w-full h-full"
+                  style="background: url('{{ asset($imagen->url_image . $imagen->name_image) }}') ; background-repeat: no-repeat; background-size:cover">
 
+                </div>
               </div>
-            </div>
-          @endforeach
+            @endforeach
 
 
-      </div>
-    @else
-      <div class="absolute inset-0 bg__dark z-10 h-full">
+          </div>
+        @else
+          <div class="absolute inset-0 bg__dark z-10 h-full">
 
-      </div>
-      <img src="{{ asset('images/img/noimagen.jpg') }}" class=" " style="height:   1131px;"alt="">
+          </div>
+          <img src="{{ asset('images/img/noimagen.jpg') }}" class=" " style="height:   1131px;"alt="">
 
 
-    @endisset
+        @endisset
 
     </div>
 
