@@ -347,7 +347,7 @@
           Swal.fire({
 
             icon: "success",
-            title: 'Paso a Paso Actualizado Correctamente',
+            title: 'Testimonios Actualizado Correctamente',
 
           });
 
