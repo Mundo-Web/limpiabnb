@@ -3,9 +3,9 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <div class="grid grid-cols-1 lg:grid-cols-2 w-11/12 mx-auto border-b-[1.5px] border-white pb-12 gap-12"
+  <div class="grid grid-cols-1 lg:grid-cols-3 w-11/12 mx-auto border-b-[1.5px] border-white pb-12 gap-12"
     data-aos="fade-up" data-aos-offset="150">
-    <div class="flex flex-col gap-10">
+    <div class="flex flex-col col-span-1 gap-10">
       <p class="font-bold text-text28 2md:text-text36">LimpiaBnB</p>
 
       <p class="font-airbnb_400 text-text16 2md:text-text20 w-full md:w-1/2">
@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <div class="flex flex-col md:flex-row gap-10">
+    <div class="flex flex-col col-span-2 md:flex-row gap-10">
       <div class="flex flex-col gap-10">
         <p class="font-airbnb_500  text-text16 2md:text-text20">
           Enlaces Rápidos
