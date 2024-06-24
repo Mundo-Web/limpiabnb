@@ -34,6 +34,7 @@ class AboutUsController extends Controller
     $img =  $manager->read($file);
 
 
+    $img->coverDown(628, 572, 'center');
     if (!file_exists($route)) {
       mkdir($route, 0777, true); // Se crea la ruta con permisos de lectura, escritura y ejecución
     }
