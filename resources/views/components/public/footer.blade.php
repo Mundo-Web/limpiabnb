@@ -68,7 +68,7 @@
     </div>
 
     <div class="flex flex-col col-span-2 md:flex-row gap-10">
-      <div class="flex flex-col gap-10">
+      <div class="flex-grow md:basis-1/4 gap-10">
         <p class="font-airbnb_500  text-text16 2md:text-text20">
           Enlaces Rápidos
         </p>
@@ -87,7 +87,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col gap-10">
+      <div class="flex-grow md:basis-1/4 gap-10">
         <p class="font-airbnb_500 text-text16 2md:text-text20 ">
           Datos de contacto
         </p>
@@ -114,7 +114,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col gap-10">
+      <div class="flex-grow md:basis-1/4 gap-10">
         <p class="font-airbnb_500 text-text16 2md:text-text20">Aviso Legal</p>
         <div class="flex flex-col gap-5 font-airbnb_400">
           <a href="/politica_privacidad" class="font-airbnb_400 text-text14 2md:text-text18">Política de Privacidad</a>
