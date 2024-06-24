@@ -6,6 +6,8 @@ use App\Models\Testimony;
 use App\Http\Requests\StoreTestimonyRequest;
 use App\Http\Requests\UpdateTestimonyRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+
 
 class TestimonyController extends Controller
 {
@@ -129,4 +131,36 @@ class TestimonyController extends Controller
          return response()->json(['message' => 'Estado modificado.']);
     
     }
+
+    public function updateJson(Request $request)
+	{
+
+		
+		try {
+			// Ruta del archivo JSON
+			$route = resource_path('views/pages/testimonies/testimonios.json');
+
+			// Leer el contenido del archivo
+			$file = File::get($route);
+			$archivoArray = json_decode($file, true);
+
+			// Actualizar el valor del preTitulo
+			$archivoArray['testimonios']['preTitulo'] = $request->preTitulo;
+			$archivoArray['testimonios']['titulo'] = $request->titulo;
+			$archivoArray['testimonios']['enlacebtn'] = $request->enlacebtn;
+			$archivoArray['testimonios']['textoBtn'] = $request->textoBtn;
+			$archivoArray['testimonios']['extracto'] = $request->extracto;
+
+			// Guardar los cambios en el archivo JSON
+
+			File::put($route, json_encode($archivoArray, JSON_PRETTY_PRINT));
+
+			return response()->json(['message' => 'Actualizando json ']);
+
+		} catch (\Throwable $th) {
+			//throw $th;
+			return response()->json(['message' => $th], 400);
+
+		}
+	}
 }

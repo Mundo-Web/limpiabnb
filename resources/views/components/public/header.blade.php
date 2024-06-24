@@ -35,7 +35,7 @@
     <div class="flex justify-between items-center pt-10" data-aos="fade-up" data-aos-offset="150">
       <div>
         <a href="{{ route('index') }}">
-          <img src="{{ asset('/images/img/image_2.png') }}" alt="Limpia BnB" />
+          <img class="w-20" src="{{ asset('/images/img/logo_limpia_bnb.svg') }}" alt="Limpia BnB" />
         </a>
       </div>
       <nav class="font-airbnb_500 text-text20 2md:text-text24 hidden md:flex gap-10 items-center text__blog-header">

@@ -23,7 +23,9 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LogosClientController;
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\PasopasoController;
 use App\Http\Controllers\PoliticasdePrivacidadController;
+use App\Http\Controllers\SliderController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\StrengthController;
 use App\Http\Controllers\TerminosycondicionesController;
@@ -93,6 +95,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::resource('/testimonios', TestimonyController::class);
         Route::post('/testimonios/deleteTestimony', [TestimonyController::class, 'deleteTestimony'] )->name('testimonios.deleteTestimony');
         Route::post('/testimonios/updateVisible', [TestimonyController::class, 'updateVisible'] )->name('testimonios.updateVisible');
+        Route::post('/testimonios/updateJson', [TestimonyController::class, 'updateJson'])->name('testimonios.updateJson');
+
 
         //Categorías
         Route::resource('/categorias', CategoryController::class);
@@ -139,6 +143,18 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
         Route::resource('terminoscondiciones', TerminosycondicionesController::class);
         Route::post('terminoscondiciones/delete', [TerminosycondicionesController::class, 'delete'])->name('terminoscondiciones.delete');
+
+         //Sliders   
+         Route::resource('/slider', SliderController::class);
+         Route::post('/slider/updateVisible', [SliderController::class, 'updateVisible'])->name('slider.updateVisible');
+         Route::post('/slider/deleteSlider', [SliderController::class, 'deleteSlider'])->name('slider.deleteSlider');
+         Route::post('/slider/updateJson', [SliderController::class, 'updateJson'])->name('slider.updateJson');
+         
+         
+         Route::resource('/pasopaso', PasopasoController::class);
+         Route::post('/pasopaso/updateJson', [PasopasoController::class, 'updateJson'])->name('pasopaso.updateJson');
+
+ 
 
         Route::fallback(function() {
             return view('pages/utility/404');

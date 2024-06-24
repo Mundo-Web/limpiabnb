@@ -17,6 +17,7 @@ use App\Models\Category;
 use App\Models\Distribucion;
 use App\Models\Espacio;
 use App\Models\politycsCondition;
+use App\Models\Slider;
 use App\Models\Staff;
 use App\Models\termsCondition;
 use Illuminate\Http\Request;
@@ -37,8 +38,9 @@ class IndexController extends Controller
         $espacios = Espacio::where('status', '=', 1)->where('visible', '=',  1)->get();
         $nosotros = AboutUs::where('status', '=', 1 )->first();
         $staff = Staff::where('status', '=', 1 )->get();
+        $sliders = Slider::where('status', '=', 1)->where('visible', '=',  1)->get();
         
-        return view('public.index', compact('generales', 'services', 'testimonios', 'beneficios', 'espacios', 'nosotros', 'staff'));
+        return view('public.index', compact('generales', 'services', 'testimonios', 'beneficios', 'espacios', 'nosotros', 'staff', 'sliders'));
     }
 
     public function blog(Request $request)
