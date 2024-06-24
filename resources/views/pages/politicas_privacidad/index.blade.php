@@ -1,14 +1,14 @@
 <x-app-layout title="Politicas de Privacidad">
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
 
-    <section class="py-4 border-b border-slate-100 dark:border-slate-700">
+    <section class="py-4 border-b border-slate-100 dark:border-slate-700 xl:w-1/2">
       <a href="{{ route('verPoliticasPrivacidad.create') }}"
         class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-sm">Agregar Politicas</a>
     </section>
 
 
     <div
-      class="col-span-full xl:col-span-8 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
+      class="xl:w-1/2 col-span-full xl:col-span-8 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
 
 
       <header class="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
