@@ -713,13 +713,15 @@
 
   <section id="contacto" data-aos="fade-up" data-aos-offset="150">
     <div class="w-11/12 mx-auto text-textAzul my-12">
+      <div class="before__underline before__underline-contacto mb-8">
+        <p class="text-text18 2md:text-text24 font-airbnb_500 text-textCeleste">
+          Contacto
+        </p>
+      </div>
       <div class="flex flex-col lg:flex-row gap-12 lg:gap-32">
+
         <div class="basis-1/2 flex flex-col gap-8">
-          <div class="before__underline before__underline-contacto">
-            <p class="text-text18 2md:text-text24 font-airbnb_500 text-textCeleste">
-              Contacto
-            </p>
-          </div>
+
           <h3 class="font-airbnb_700 text-text32 2md:text-text40 leading-none 2md:leading-tight">
             ¿Listo para brindar a tus huéspedes una experiencia inolvidable?
           </h3>
