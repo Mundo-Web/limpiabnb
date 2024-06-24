@@ -370,11 +370,10 @@
         },
         success: function(response) {
           Swal.fire({
-            position: "top-end",
+
             icon: "success",
-            title: titleSlider + " a sido modificado",
-            showConfirmButton: false,
-            timer: 1500
+            title: 'Seccion Bienvenido Actualizado con exito',
+
 
           });
 
