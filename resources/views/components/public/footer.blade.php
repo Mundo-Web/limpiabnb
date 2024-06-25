@@ -94,7 +94,7 @@
         <div class="flex flex-col gap-5 font-airbnb_400">
           <div>
 
-            <p class="font-airbnb_400 text-text14 2md:text-text18">
+            <p class="font-airbnb_400 text-text14 2md:text-text18 opacity-80">
               Direccion:
             </p>
             <p class="font-airbnb_400 text-text14 2md:text-text18">
@@ -104,7 +104,7 @@
           </div>
 
           <div>
-            <p class="font-airbnb_400 text-text14 2md:text-text18">
+            <p class="font-airbnb_400 text-text14 2md:text-text18 opacity-80">
               Correo Electrónico:
             </p>
             <p class="font-airbnb_400 text-text14 2md:text-text18">
@@ -112,7 +112,7 @@
           </div>
 
           <div>
-            <p class="font-airbnb_400 text-text14 2md:text-text18">Teléfono:
+            <p class="font-airbnb_400 text-text14 2md:text-text18 opacity-80">Teléfono:
 
             </p>
             <p class="font-airbnb_400 text-text14 2md:text-text18">
