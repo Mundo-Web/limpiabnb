@@ -9,7 +9,7 @@
   <meta property="og:title" content="Limpia BnB" />
   <meta property="og:description"
     content="Transformamos tu espacio en un lugar impecable y acogedor para tus huéspedes" />
-  <meta property="og:image" content="{{ asset('images\img\image_2.png') }}">
+  <meta property="og:image" content="{{ asset('images/img/image_2.png') }}">
   <meta property="og:url" content="https://limpiabnb.com/" />
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
