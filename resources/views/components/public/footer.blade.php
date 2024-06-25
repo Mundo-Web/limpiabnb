@@ -92,13 +92,16 @@
           Datos de contacto
         </p>
         <div class="flex flex-col gap-5 font-airbnb_400">
+          <div>
 
-          <p class="font-airbnb_400 text-text14 2md:text-text18">
-            Direccion:
-          </p>
-          <p class="font-airbnb_400 text-text14 2md:text-text18">
-            {{ $generales->address }} {{ $generales->inside }} - {{ $generales->district }}
-          </p>
+            <p class="font-airbnb_400 text-text14 2md:text-text18">
+              Direccion:
+            </p>
+            <p class="font-airbnb_400 text-text14 2md:text-text18">
+              {{ $generales->address }} {{ $generales->inside }} - {{ $generales->district }}
+            </p>
+
+          </div>
 
           <div>
             <p class="font-airbnb_400 text-text14 2md:text-text18">
