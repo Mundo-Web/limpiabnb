@@ -400,7 +400,8 @@
           <div class="swiper-slide">
             <div class="flex flex-col lg:flex-row gap-10 md:gap-0">
               <div class="basis-1/2 order-2 md:order-1">
-                <img src="{{ asset($service->url_image) }}" alt="{{ $service->name_image }}" class="w-full h-full">
+                <img src="{{ asset($service->url_image) }}" alt="{{ $service->name_image }}"
+                  class="w-full h-full object-cover">
 
               </div>
               <div class="flex flex-col md:gap-5 basis-1/2 order-1 md:order-2 md:p-12 w-11/12 md:w-full mx-auto">
