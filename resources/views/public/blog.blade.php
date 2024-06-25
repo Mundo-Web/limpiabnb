@@ -59,7 +59,7 @@
             </div>
           </div>
 
-          <div class="hidden ">
+          <div class="hidden xl:block">
             <img src="{{ asset('images/img/imagen_14.png') }}" alt="limpieza"
               class="absolute top-[100px] right-0 h-72 md:h-[100%]">
 
@@ -68,7 +68,7 @@
       </div>
 
       <img src="{{ asset('images/img/imagen_13.png') }}" alt="limpieza"
-        class="absolute top-0 right-0 w-[1000px] hidden xl:block z-[10]">
+        class="absolute top-0 right-0 w-[1000px] hidden  z-[10]">
 
     </section>
 
