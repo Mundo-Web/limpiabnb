@@ -59,7 +59,7 @@
             </div>
           </div>
 
-          <div class="hidden xl:block">
+          <div class="hidden ">
             <img src="{{ asset('images/img/imagen_14.png') }}" alt="limpieza"
               class="absolute top-[100px] right-0 h-72 md:h-[100%]">
 
@@ -142,18 +142,18 @@
 @section('scripts_improtados')
   <script>
     /* document.addEventListener("DOMContentLoaded", () => {
-                            const paginations = document.querySelectorAll(".pagination__blog");
-                            paginations.forEach((item, index) => {
-                                item.addEventListener("click", (e) => {
-                                    item.classList.add("border-pagination");
-                                    paginations.forEach((pag) => {
-                                        if (e.target !== pag) {
-                                            pag.classList.remove("border-pagination");
-                                        }
-                                    });
-                                });
-                            });
-                        }); */
+                              const paginations = document.querySelectorAll(".pagination__blog");
+                              paginations.forEach((item, index) => {
+                                  item.addEventListener("click", (e) => {
+                                      item.classList.add("border-pagination");
+                                      paginations.forEach((pag) => {
+                                          if (e.target !== pag) {
+                                              pag.classList.remove("border-pagination");
+                                          }
+                                      });
+                                  });
+                              });
+                          }); */
   </script>
 
 @stop
