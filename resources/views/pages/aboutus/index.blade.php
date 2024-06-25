@@ -36,7 +36,7 @@
                 <tr>
                   <td>{{ Str::limit($item->titulo, 40, '...') }}</td>
                   <td>
-                    {!! Str::limit($item->descripcion, 90, '...') !!}
+                    {!! Str::limit($item->descripcion, 80, '...') !!}
 
                   </td>
 
