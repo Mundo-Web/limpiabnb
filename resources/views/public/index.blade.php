@@ -941,6 +941,7 @@
         loop: true,
         centeredSlides: false,
         initialSlide: 0, // Empieza en el cuarto slide (índice 3) */
+        allowTouchMove: true,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
