@@ -35,6 +35,13 @@ class AppServiceProvider extends ServiceProvider
             // Pasar los datos a la vista
             $view->with('blog', $blog) ;
         });
+        View::composer('components.public.footer', function ($view) {
+            // Obtener los datos del footer
+            $mensajes = Message::where('is_read', '!=', 1 )->where('status', '!=', 0)->count(); // Suponiendo que tienes un modelo Footer y un método footerData() en él
+            $blog = Blog::all()->count();
+            // Pasar los datos a la vista
+            $view->with('blog', $blog) ;
+        });
         
     }
 }

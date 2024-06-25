@@ -83,6 +83,10 @@
           <a href="{{ route('index') . '#nosotros' }}" class="font-airbnb_400 text-text14 2md:text-text18">Acerca de
             Nosotros</a>
 
+          @if ($blog > 0)
+            <a href="{{ route('blog', 0) }}" class="font-airbnb_400 text-text14 2md:text-text18">Blog </a>
+          @endif
+
           <a href="{{ route('index') . '#contacto' }}" class="font-airbnb_400 text-text14 2md:text-text18">Contacto</a>
         </div>
       </div>
