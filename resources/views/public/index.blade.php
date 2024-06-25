@@ -660,14 +660,14 @@
             </p>
           </div>
 
-          <img src="{{ asset('images/img/image_6.png') }}" alt="limpieza" class="absolute top-0 left-0 z-0">
+          <img src="{{ asset('images/img/image_6.png') }}" alt="limpieza" class="absolute top-0 left-0 z-0 ">
 
         </div>
 
         <div class="lg:col-span-1 hidden lg:block">
           <div class="w-full h-full">
 
-            <img src="{{ asset($nosotros->imagen) }}" alt="limpieza" class="w-full h-full">
+            <img src="{{ asset($nosotros->imagen) }}" alt="limpieza" class="w-full h-full  object-cover">
 
           </div>
         </div>
