@@ -557,7 +557,8 @@
       </div>
       <div class="basis-1/2 flex justify-end items-center relative">
 
-        <img src="{{ asset($archivoPasoaPaso->PasoApaso['img']) }}" alt="limpieza" class="w-full md:w-[90%] h-full">
+        <img src="{{ asset($archivoPasoaPaso->PasoApaso['img']) }}" alt="limpieza"
+          class="w-full md:w-[90%] h-full object-cover">
         <img src="{{ asset('images/img/image_7.png') }}" alt="limpieza"
           class="absolute bottom-0 right-0 w-32 md:w-auto">
 
