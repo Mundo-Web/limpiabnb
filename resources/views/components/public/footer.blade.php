@@ -69,7 +69,7 @@
 
     <div class="flex flex-col col-span-2 md:flex-row gap-10">
       <div class="flex-grow md:basis-1/4 gap-10">
-        <p class="font-airbnb_500  text-text16 2md:text-text20">
+        <p class="font-airbnb_500  mb-3 text-text16 2md:text-text20">
           Enlaces Rápidos
         </p>
         <div class="flex flex-col gap-5 font-airbnb_400">
@@ -88,18 +88,24 @@
       </div>
 
       <div class="flex-grow md:basis-1/4 gap-10">
-        <p class="font-airbnb_500 text-text16 2md:text-text20 ">
+        <p class="font-airbnb_500 mb-3 text-text16 2md:text-text20 ">
           Datos de contacto
         </p>
         <div class="flex flex-col gap-5 font-airbnb_400">
           <p class="font-airbnb_400 text-text14 2md:text-text18">
             {{-- 123 Calle Principal, Ciudad Perfecta --}}
+
+          </p>
+          <p class="font-airbnb_400 text-text14 2md:text-text18">
+            Direccion:
+          </p>
+          <p class="font-airbnb_400 text-text14 2md:text-text18">
             {{ $generales->address }} {{ $generales->inside }} - {{ $generales->district }}
           </p>
 
           <div>
             <p class="font-airbnb_400 text-text14 2md:text-text18">
-              Correo Electrónico
+              Correo Electrónico:
             </p>
             <p class="font-airbnb_400 text-text14 2md:text-text18">
               {{-- info@limpiabnb.com.pe --}} {{ $generales->email }}</p>
@@ -107,6 +113,9 @@
 
           <div>
             <p class="font-airbnb_400 text-text14 2md:text-text18">Teléfono:
+
+            </p>
+            <p class="font-airbnb_400 text-text14 2md:text-text18">
               <span>{{-- +51 999 888 444 --}}{{ $generales->office_phone }} </span>
             </p>
 
@@ -115,7 +124,7 @@
       </div>
 
       <div class="flex-grow md:basis-1/4 gap-10">
-        <p class="font-airbnb_500 text-text16 2md:text-text20">Aviso Legal</p>
+        <p class="font-airbnb_500 mb-3 text-text16 2md:text-text20">Aviso Legal</p>
         <div class="flex flex-col gap-5 font-airbnb_400">
           <a href="/politica_privacidad" class="font-airbnb_400 text-text14 2md:text-text18">Política de Privacidad</a>
           <a href="/term_condiciones" class="font-airbnb_400 text-text14 2md:text-text18">Términos y Condiciones</a>
