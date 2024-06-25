@@ -39,7 +39,7 @@
                   <td>{{ $item->email }}</td>
                   <td>{{ $item->phone }}</td>
                   <td>
-                    {!! Str::limit($item->message, 150, '...') !!}
+                    {!! Str::limit($item->message, 40, '...') !!}
                   </td>
                   <td>
                     <form action="" method="POST">
