@@ -38,7 +38,9 @@
                   </td>
                   <td>{{ $item->email }}</td>
                   <td>{{ $item->phone }}</td>
-                  <td>{{ $item->message }}</td>
+                  <td>
+                    {!! Str::limit($item->message, 150, '...') !!}
+                  </td>
                   <td>
                     <form action="" method="POST">
                       @csrf

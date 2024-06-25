@@ -4,6 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Limpia BnB" />
+  <meta property="og:description"
+    content="Transformamos tu espacio en un lugar impecable y acogedor para tus huéspedes" />
+  <meta property="og:image" content="{{ asset('images\img\image_2.png') }}">
+  <meta property="og:url" content="https://limpiabnb.com/" />
+
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 
