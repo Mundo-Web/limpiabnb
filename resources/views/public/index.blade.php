@@ -801,7 +801,7 @@
 
         <div class="basis-1/2">
           <div class="flex flex-col h-full  gap-10">
-            <h4 class="font-airbnb_700 text-text40 2md:text-text48 leading-none 2md:leading-tight">
+            <h4 class="font-airbnb_700 text-text32 2md:text-text40 leading-none 2md:leading-tight">
               Contáctate con Nosotros
             </h4>
             <p class="text-text16 font-airbnb_400 2md:text-text20 text-[#004472]">
