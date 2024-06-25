@@ -948,7 +948,7 @@
         },
         //allowSlideNext: false,  //Bloquea el deslizamiento hacia el siguiente slide
         //allowSlidePrev: false,  //Bloquea el deslizamiento hacia el slide anterior
-        allowTouchMove: false, // Bloquea el movimiento táctil
+        
         autoplay: {
           delay: 5000,
           disableOnInteraction: false,
