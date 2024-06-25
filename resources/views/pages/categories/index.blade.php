@@ -33,7 +33,10 @@
               @foreach ($category as $item)
                 <tr>
                   <td>{{ $item->name }}</td>
-                  <td>{{ $item->description }}</td>
+                  <td>
+                    {!! Str::limit($item->description, 40, '...') !!}
+
+                  </td>
                   <td>
                     <form method="POST" action="">
                       @csrf
