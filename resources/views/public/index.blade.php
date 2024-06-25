@@ -433,7 +433,7 @@
 
 
                   <div class="flex flex-col md:flex-row items-center">
-                    <a
+                    <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
                       class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto font-airbnb_500 leading-none">
                       Solicitar servicio
                     </a>
@@ -624,8 +624,8 @@
       </div>
       <div class="col-span-1 md:col-span-1 order-3 md:order-2">
         <div class="flex items-center justify-end w-full h-full">
-          <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
-            target="_blank"
+          {{-- <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}" --}}
+          <a href="#formCotizacion"
             class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center font-airbnb_500 leading-none">
             {{ $archivoTesti->testimonios['textoBtn'] }}
           </a>
