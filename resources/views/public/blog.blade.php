@@ -45,16 +45,17 @@
               </p>
               <form action="#" class="flex gap-5 items-center flex-col md:flex-row">
                 <div class="w-full md:basis-1/2">
+                  <input type="text" placeholder="Suscribirme"
+                    class="font-airbnb_500 py-4 px-2 w-full border-[1px] border-[#0071BE] outline-none rounded-lg text-text16 2md:text-text20 placeholder:text-[#E3E3E3]" />
+                </div>
+                <div class="w-full md:basis-1/2">
                   <button type="submit"
                     class="firstNext next cursor-pointer flex gap-2 py-4 bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center px-2 rounded-lg text-white  text-text16 2md:text-text20 w-full font-airbnb_500">
                     <span>Suscribirme</span>
                   </button>
                 </div>
 
-                <div class="w-full md:basis-1/2">
-                  <input type="text" placeholder="Suscribirme"
-                    class="font-airbnb_500 py-4 px-2 w-full border-[1px] border-[#0071BE] outline-none rounded-lg text-text16 2md:text-text20 placeholder:text-[#E3E3E3]" />
-                </div>
+
               </form>
             </div>
           </div>
@@ -142,18 +143,18 @@
 @section('scripts_improtados')
   <script>
     /* document.addEventListener("DOMContentLoaded", () => {
-                              const paginations = document.querySelectorAll(".pagination__blog");
-                              paginations.forEach((item, index) => {
-                                  item.addEventListener("click", (e) => {
-                                      item.classList.add("border-pagination");
-                                      paginations.forEach((pag) => {
-                                          if (e.target !== pag) {
-                                              pag.classList.remove("border-pagination");
-                                          }
-                                      });
-                                  });
-                              });
-                          }); */
+                                const paginations = document.querySelectorAll(".pagination__blog");
+                                paginations.forEach((item, index) => {
+                                    item.addEventListener("click", (e) => {
+                                        item.classList.add("border-pagination");
+                                        paginations.forEach((pag) => {
+                                            if (e.target !== pag) {
+                                                pag.classList.remove("border-pagination");
+                                            }
+                                        });
+                                    });
+                                });
+                            }); */
   </script>
 
 @stop
