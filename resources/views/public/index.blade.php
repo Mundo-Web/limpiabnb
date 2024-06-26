@@ -7,9 +7,18 @@
       background-image: url({{ asset('images/img/imagen_27.png') }});
     }
 
+    .bienvenidaSection {
+      height: 1400px;
+    }
+
     @media (min-width: 768px) {
       .bg__image-main {
         background-image: url({{ asset('images/img/image_1.png') }});
+      }
+
+      .bienvenidaSection {
+        max-height: 1131px;
+
       }
     }
   </style>
@@ -111,8 +120,8 @@
                             Calcula el precio de limpieza de tu Airbnb
                           </p>
                           <div class="flex flex-col gap-5 font-airbnb_500">
-                            <div class="flex justify-between gap-10 items-center">
-                              <label for="habitaciones" class="text__label max-w-[50%] ">
+                            <div class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-10 md:items-center">
+                              <label for="habitaciones" class="text__label md:max-w-[50%] ">
                                 ¿Cuántas habitaciones tienes?
                               </label>
                               <select required name="habitaciones" type="number" id="habitaciones"
@@ -125,8 +134,8 @@
 
                             </div>
 
-                            <div class="flex justify-between gap-10 items-center">
-                              <label for="habitaciones" class="text__label max-w-[50%] ">
+                            <div class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-10 md:items-center">
+                              <label for="habitaciones" class="text__label md:max-w-[50%] ">
                                 Elige una combinacion
                               </label>
                               <select required name="distribucion" type="number" id="distribucion"
@@ -172,11 +181,11 @@
                             Calcula el precio de limpieza de tu Airbnb
                           </p>
                           <div class="flex flex-col gap-5 font-airbnb_500">
-                            <div class="flex flex-col justify-between gap-10">
+                            <div class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-10 md:items-center">
                               <label for="metros" class="text__label">
                                 ¿Cuántas m2 tiene tu departamento?
                               </label>
-                              <select id="metros" name="metros" class="selectpicker w-1/2">
+                              <select id="metros" name="metros" class="selectpicker md:w-1/2">
                                 <option value=""> Selecciona una opcion</option>
                               </select>
                             </div>
@@ -222,7 +231,7 @@
                                 class="text__input font-airbnb_500" placeholder="Avenida, Calle, Jiron, Pasaje..." />
                             </div>
                             <div class="flex flex-col justify-between gap-5 font-airbnb_500 md:flex-row">
-                              <div class="flex flex-col justify-between w-1/2">
+                              <div class="flex flex-col justify-between md:w-1/2">
                                 <label for="habitaciones" class="text__label">
                                   Teléfono
                                 </label>
@@ -358,14 +367,14 @@
         </div>
         @if ($sliders->count())
 
-          <div class="absolute inset-0 bg__dark z-10 h-full" style="max-height:   1131px;"></div>
+          <div class="absolute inset-0 bg__dark z-10 h-full bienvenidaSection"></div>
           <div class="swiper-wrapper ">
 
 
             @foreach ($sliders as $imagen)
               <div class="swiper-slide">
                 <img src="{{ asset($imagen->url_image . $imagen->name_image) }}" alt=""
-                  class="object-cover w-full" style="max-height:   1131px;">
+                  class="object-cover w-full bienvenidaSection">
                 <div class=" bg-cover bg-center bg-no-repeat sm:w-full h-full"
                   style="background: url('{{ asset($imagen->url_image . $imagen->name_image) }}') ; background-repeat: no-repeat; background-size:cover">
 
@@ -379,7 +388,7 @@
           <div class="absolute inset-0 bg__dark z-10 h-full">
 
           </div>
-          <img src="{{ asset('images/img/noimagen.jpg') }}" class=" " style="height:   1131px;"alt="">
+          <img src="{{ asset('images/img/noimagen.jpg') }}" class="bienvenidaSection " alt="">
 
 
         @endisset
@@ -948,7 +957,7 @@
         },
         //allowSlideNext: false,  //Bloquea el deslizamiento hacia el siguiente slide
         //allowSlidePrev: false,  //Bloquea el deslizamiento hacia el slide anterior
-        
+
         autoplay: {
           delay: 5000,
           disableOnInteraction: false,
