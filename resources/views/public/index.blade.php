@@ -7,9 +7,10 @@
       background-image: url({{ asset('images/img/imagen_27.png') }});
     }
 
-    /* .bienvenidaSection {
-                  height: 1400px;
-                } */
+    .bienvenidaSection {
+      /* height: 550px; */
+
+    }
 
     @media (min-width: 768px) {
       .bg__image-main {
@@ -374,7 +375,7 @@
             @foreach ($sliders as $imagen)
               <div class="swiper-slide">
                 <img src="{{ asset($imagen->url_image . $imagen->name_image) }}" alt=""
-                  class="object-cover w-full ">
+                  class="object-cover w-full " style="min-height: 550px;">
                 <div class=" bg-cover bg-center bg-no-repeat sm:w-full h-full"
                   style="background: url('{{ asset($imagen->url_image . $imagen->name_image) }}') ; background-repeat: no-repeat; background-size:cover">
 
