@@ -8,7 +8,7 @@
     }
 
     .gridBienvenida {
-      margin-top: 53%
+      margin-top: 50%
     }
 
     @media (min-width: 768px) {
