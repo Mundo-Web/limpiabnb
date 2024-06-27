@@ -1254,74 +1254,77 @@
 
       /* deslizante */
 
-      const one = document.querySelector(".one");
-      const two = document.querySelector(".two");
-      const three = document.querySelector(".three");
-      const firstIcon = document.querySelector("#firstIcon");
-      const firstCircle = document.querySelector("#firstCircle");
-      const secondIcon = document.querySelector("#secondIcon");
-      const secondCircle = document.querySelector("#secondCircle");
-      const thirdsIcon = document.querySelector("#thirdsIcon");
-      const thirdsCircle = document.querySelector("#thirdsCircle");
-
+    })
+  </script>
+  <script>
+    $(document).ready(function() {
+      const one = $(".one:visible");
+      const two = $(".two:visible");
+      const three = $(".three:visible");
+      const firstIcon = $("#firstIcon");
+      const firstCircle = $("#firstCircle");
+      const secondIcon = $("#secondIcon");
+      const secondCircle = $("#secondCircle");
+      const thirdsIcon = $("#thirdsIcon");
+      const thirdsCircle = $("#thirdsCircle");
 
       let stepOne = null;
       let stepTwo = null;
       let stepThree = null;
 
-      one.onclick = function() {
+      one.on('click', function() {
         stepOne = 1;
-        one.classList.add("active");
-        two.classList.remove("active");
-        three.classList.remove("active");
+        one.addClass("active");
+        two.removeClass("active");
+        three.removeClass("active");
 
         if (stepOne < stepTwo || stepOne < stepThree) {
-          secondIcon.setAttribute("stroke", "#66AAD8");
-          secondCircle.setAttribute("fill", "#F8FBFD");
-          thirdsIcon.setAttribute("stroke", "#66AAD8");
-          thirdsCircle.setAttribute("fill", "#F8FBFD");
+          secondIcon.attr("stroke", "#66AAD8");
+          secondCircle.attr("fill", "#F8FBFD");
+          thirdsIcon.attr("stroke", "#66AAD8");
+          thirdsCircle.attr("fill", "#F8FBFD");
         }
         if (stepOne < stepTwo && stepOne < stepThree) {
           stepTwo = null;
           stepThree = null;
         }
-      };
+      });
 
-      two.onclick = function() {
+      two.on('click', function() {
         stepTwo = 2;
-        one.classList.add("active");
-        two.classList.add("active");
-        three.classList.remove("active");
-        secondIcon.setAttribute("stroke", "#ffffff");
-        secondCircle.setAttribute("fill", "#0071be");
+        one.addClass("active");
+        two.addClass("active");
+        three.removeClass("active");
+        secondIcon.attr("stroke", "#ffffff");
+        secondCircle.attr("fill", "#0071be");
 
         if (stepTwo < stepThree || stepTwo > stepOne) {
-          thirdsIcon.setAttribute("stroke", "#66AAD8");
-          thirdsCircle.setAttribute("fill", "#F8FBFD");
+          thirdsIcon.attr("stroke", "#66AAD8");
+          thirdsCircle.attr("fill", "#F8FBFD");
 
-          firstIcon.setAttribute("stroke", "#ffffff");
-          firstCircle.setAttribute("fill", "#0071be");
+          firstIcon.attr("stroke", "#ffffff");
+          firstCircle.attr("fill", "#0071be");
         }
-      };
+      });
 
-      three.onclick = function() {
+      three.on('click', function() {
         stepThree = 3;
-        one.classList.add("active");
-        two.classList.add("active");
-        three.classList.add("active");
+        one.addClass("active");
+        two.addClass("active");
+        three.addClass("active");
 
-        thirdsIcon.setAttribute("stroke", "#ffffff");
-        thirdsCircle.setAttribute("fill", "#0071be");
+        thirdsIcon.attr("stroke", "#ffffff");
+        thirdsCircle.attr("fill", "#0071be");
 
         if (stepThree > stepTwo || stepThree > stepOne) {
-          firstIcon.setAttribute("stroke", "#ffffff");
-          firstCircle.setAttribute("fill", "#0071be");
-          secondIcon.setAttribute("stroke", "#ffffff");
-          secondCircle.setAttribute("fill", "#0071be");
+          firstIcon.attr("stroke", "#ffffff");
+          firstCircle.attr("fill", "#0071be");
+          secondIcon.attr("stroke", "#ffffff");
+          secondCircle.attr("fill", "#0071be");
         }
-      };
+      });
 
-      /* progresbar */
+      /* Progresbar */
 
       function alerta(message) {
         Swal.fire({
@@ -1330,26 +1333,22 @@
         });
       }
 
-      const slidePage = document.querySelector(".slide-page");
-      const nextBtnFirst = document.querySelector(".firstNext");
-      const prevBtnSec = document.querySelector(".prev-1");
-      const nextBtnSec = document.querySelector(".next-1");
-      const prevBtnThird = document.querySelector(".prev-2");
-      const nextBtnThird = document.querySelector(".next-2");
-      /* const prevBtnFourth = document.querySelector(".prev-3"); */
-      /* const submitBtn = document.querySelector(".submit"); */
-      const bullet = document.querySelectorAll(".step .bullet");
-      const progress = document.querySelector(".progress-bar");
-      const corona = document.querySelector(".corona-top");
+      const slidePage = $(".slide-page:visible");
+      const nextBtnFirst = $(".firstNext:visible");
+      const prevBtnSec = $(".prev-1:visible");
+      const nextBtnSec = $(".next-1:visible");
+      const prevBtnThird = $(".prev-2:visible");
+      const nextBtnThird = $(".next-2:visible");
+      const bullet = $(".step:visible .bullet:visible");
+      const progress = $(".progress-bar:visible");
+      const corona = $(".corona-top:visible");
 
       let current = 2; // Estado inicial
 
-      nextBtnFirst.addEventListener("click", function(event) {
+      nextBtnFirst.on("click", function(event) {
         event.preventDefault();
 
-        const habitaciones = document.getElementById('habitaciones').value;
-        // const camas = document.querySelector('input[name="camas"]').value;
-        // const banios = document.querySelector('input[name="banios"]').value;
+        const habitaciones = $('input[name="habitaciones"]:visible').val();
         const arrayValuePageOne = [habitaciones];
 
         if (arrayValuePageOne.includes("")) {
@@ -1362,35 +1361,23 @@
           return;
         }
 
-        slidePage.style.marginLeft = "-25%";
-        bullet[current - 1].classList.add("active");
+        slidePage.css('marginLeft', '-25%');
+        bullet.eq(current - 1).addClass("active");
         current += 1;
       });
 
-      nextBtnSec.addEventListener("click", function(event) {
+      nextBtnSec.on("click", function(event) {
         event.preventDefault();
 
-        /* const metros = document.querySelector('input[name="metros"]').value;
-        const arrayValuePageTwo = [metros];
-
-        if (arrayValuePageTwo.includes("")) {
-          alerta("Por favor, asegurese de completar todos los campos");
-          return;
-        }
-        if (arrayValuePageTwo.some(valor => valor <= 0)) {
-          alerta("Por favor, asegurese de solo ingresar valores mayores a cero");
-          return;
-        } */
-
-        slidePage.style.marginLeft = "-50%";
-        bullet[current - 1].classList.add("active");
+        slidePage.css('marginLeft', '-50%');
+        bullet.eq(current - 1).addClass("active");
         current += 1;
       });
 
-      nextBtnThird.addEventListener("click", function(event) {
+      nextBtnThird.on("click", function(event) {
         event.preventDefault();
 
-        const direction = document.querySelector('input[name="direction"]').value;
+        const direction = $('input[name="direction"]:visible').val();
         const arrayValuePageThree = [direction];
 
         if (arrayValuePageThree.includes("")) {
@@ -1398,36 +1385,15 @@
           return;
         }
 
-        slidePage.style.marginLeft = "-75%";
-        bullet[current - 1].classList.add("active");
-        // current -> indica la cantidad de bullets
+        slidePage.css('marginLeft', '-75%');
+        bullet.eq(current - 1).addClass("active");
         if (current === 4) {
-          progress.classList.add("opacity-0");
-          corona.classList.remove('hidden');
+          progress.addClass("opacity-0");
+          corona.removeClass('hidden');
         }
       });
 
-
-      /* submitBtn.addEventListener("click", function(event) {
-          event.preventDefault();
-          // Enviar datos al servidor
-          //.....
-
-          // Reiniciamos las condicionees iniciales
-          current = 2;
-          progress.classList.remove("opacity-0");
-          progress.classList.add("opacity-1");
-
-          bullet.forEach((step, index) => {
-              if (index !== 0) {
-                  step.classList.remove("active");
-              }
-          });
-          slidePage.style.marginLeft = "0%";
-          corona.classList.add('hidden');
-      }); */
-
-      $('#formCotizacion').submit(function(event) {
+      $('[id="formCotizacion"]:visible').submit(function(event) {
         event.preventDefault();
         let formDataArray = $(this).serializeArray();
         console.log(formDataArray);
@@ -1435,8 +1401,8 @@
             <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
             <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
         </svg>
-        <span class="sr-only">Loading...</span>`
-        $("#btnAdquirirServicio").html(loading)
+        <span class="sr-only">Loading...</span>`;
+        $('[id="btnAdquirirServicio"]:visible').html(loading);
 
         $.ajax({
           url: '{{ route('guardarSolicitud') }}',
@@ -1446,24 +1412,12 @@
             Swal.fire({
               title: `Solicitud enviada correctamente `,
               icon: "success",
-
             });
 
-            $('#formCotizacion')[0].reset();
+            $('[id="formCotizacion"]:visible')[0].reset();
 
-            $("#containerBntService").attr('hidden', true)
 
-            /* current = 2;
-            progress.classList.remove("opacity-0");
-            progress.classList.add("opacity-1");
-
-            bullet.forEach((step, index) => {
-                if (index !== 0) {
-                    step.classList.remove("active");
-                }
-            });
-            slidePage.style.marginLeft = "0%";
-            corona.classList.add('hidden'); */
+            $("[id='containerBntService']:visible").attr('hidden', true);
           },
           error: function(error) {
             const obj = error.responseJSON.message;
@@ -1482,47 +1436,31 @@
             });
           }
         });
-      })
+      });
 
-
-
-
-
-
-
-
-
-
-
-
-
-      prevBtnSec.addEventListener("click", function(event) {
+      prevBtnSec.on("click", function(event) {
         event.preventDefault();
-        slidePage.style.marginLeft = "0%";
-        bullet[current - 2].classList.remove("active");
+        slidePage.css('marginLeft', '0%');
+        bullet.eq(current - 2).removeClass("active");
         current -= 1;
       });
-      prevBtnThird.addEventListener("click", function(event) {
+
+      prevBtnThird.on("click", function(event) {
         event.preventDefault();
-        slidePage.style.marginLeft = "-25%";
-        bullet[current - 2].classList.remove("active");
+        slidePage.css('marginLeft', '-25%');
+        bullet.eq(current - 2).removeClass("active");
         current -= 1;
       });
-      /*  prevBtnFourth.addEventListener("click", function(event) {
-           event.preventDefault();
-           slidePage.style.marginLeft = "-50%";
-           bullet[current - 2].classList.remove("active");
-           current -= 1;
-       }); */
     });
   </script>
 
   <script>
-    $('#habitaciones').on('change', function() {
+    $(document).on('change', '#habitaciones', function() {
 
-      let habitaciones = $('#habitaciones').val();
+      let habitaciones = $(this).val();
 
-      $('#btnSiguiente1').addClass('opacity-50 cursor-not-allowed').prop('disabled', true);
+      const btnSiguiente = $('[id="btnSiguiente1"]:visible')
+      btnSiguiente.addClass('opacity-50 cursor-not-allowed').prop('disabled', true);
       //ejecutamos el ajax
       $.ajax({
         url: "{{ route('buscarHabitaciones') }}",
@@ -1533,22 +1471,25 @@
           id: habitaciones
         }
       }).done(function(res) {
-        $('#distribucion').empty();
-        $('#distribucion').append(
+
+        const distribuciones = $('[id="distribucion"]:visible')
+        distribuciones.empty();
+        distribuciones.append(
           '<option value="">Elige combinacion</option>'
         )
         // $('#cont_provincia').toggleClass('opacity-15')
-        $("#btnSiguiente1").removeClass('opacity-50 cursor-not-allowed').prop('disabled', false);
+        btnSiguiente.removeClass('opacity-50 cursor-not-allowed').prop('disabled', false);
         $.each(res, function(key, value) {
-          $('#distribucion').append(
+          distribuciones.append(
             '<option value="' + value['id'] + '">' + value['name'] + '</option>'
           )
         });
       });
     })
-    $('#distribucion').on('change', function() {
+    $(document).on('change', '#distribucion', function() {
 
-      let distribucion = $('#distribucion').val();
+      let distribucion = $(this).val();
+
 
 
       //ejecutamos el ajax
@@ -1561,13 +1502,14 @@
           id: distribucion
         }
       }).done(function(res) {
-        $('#metros').empty();
-        $('#metros').append(
+        const metros = $('[id="metros"]:visible')
+        metros.empty();
+        metros.append(
           '<option value="">Seleccionar m2</option>'
         )
         // $('#cont_provincia').toggleClass('opacity-15')
         $.each(res, function(key, value) {
-          $('#metros').append(
+          metros.append(
             '<option value="' + value['precio'] + '">' + value['name'] + '</option>'
           )
         });
@@ -1577,9 +1519,9 @@
       });
     })
 
-    $('#metros').on('change', function(e) {
-      let preciofinal = $('#metros').val()
-      $('#preciofinal').text(`S/. ${preciofinal}`)
+    $(document).on('change', '#metros', function(e) {
+      let preciofinal = $('[id="metros"]:visible').val()
+      $('[id="preciofinal"]:visible').text(`S/. ${preciofinal}`)
     })
   </script>
 
