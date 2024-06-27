@@ -7,12 +7,15 @@
       background-image: url({{ asset('images/img/imagen_27.png') }});
     }
 
-    .bienvenidaSection {
-      /* height: 550px; */
-
+    .gridBienvenida {
+      margin-top: 53%
     }
 
     @media (min-width: 768px) {
+      .gridBienvenida {
+        margin-top: 0%
+      }
+
       .bg__image-main {
         background-image: url({{ asset('images/img/image_1.png') }});
       }
@@ -68,7 +71,7 @@
 
 
 
-          <div class=" grid grid-cols-1 lg:grid-cols-2 ">
+          <div class=" grid grid-cols-1 lg:grid-cols-2 gridBienvenida">
             <div class="w-full lg:w-5/6  ">
               <div class="flex flex-col gap-5">
                 <p class="before__underline">
