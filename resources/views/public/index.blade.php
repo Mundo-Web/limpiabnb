@@ -81,7 +81,8 @@
                   {{ $archivoObjeto->bienvenida['titulo'] }}
                 </h1>
 
-                <p class="text-text18 md:text-text24 font-airbnb_400 [text-shadow:_0_0_4px_rgb(0_0_0_/_40%)]">
+                <p
+                  class="hidden md:block text-text18 md:text-text24 font-airbnb_400 [text-shadow:_0_0_4px_rgb(0_0_0_/_40%)]">
                   {{ $archivoObjeto->bienvenida['extracto'] }}
                 </p>
                 <div class="flex flex-col md:flex-row items-center ">
