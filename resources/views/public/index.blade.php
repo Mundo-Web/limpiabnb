@@ -61,7 +61,7 @@
     <section id="cotizar">
 
 
-      <div class=" swiper slider__headers">
+      <div class=" swiper slider__headers bienvenidaSection">
         <div class="  absolute pt-44 w-11/12  text-textWhite z-20  " style="margin-left: 4.1%">
 
 
@@ -374,7 +374,7 @@
             @foreach ($sliders as $imagen)
               <div class="swiper-slide">
                 <img src="{{ asset($imagen->url_image . $imagen->name_image) }}" alt=""
-                  class="object-cover w-full bienvenidaSection">
+                  class="object-cover w-full ">
                 <div class=" bg-cover bg-center bg-no-repeat sm:w-full h-full"
                   style="background: url('{{ asset($imagen->url_image . $imagen->name_image) }}') ; background-repeat: no-repeat; background-size:cover">
 
