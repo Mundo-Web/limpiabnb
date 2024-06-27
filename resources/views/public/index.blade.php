@@ -7,9 +7,9 @@
       background-image: url({{ asset('images/img/imagen_27.png') }});
     }
 
-    .bienvenidaSection {
-      height: 1400px;
-    }
+    /* .bienvenidaSection {
+                  height: 1400px;
+                } */
 
     @media (min-width: 768px) {
       .bg__image-main {
@@ -94,7 +94,7 @@
               </div>
             </div>
 
-            <div class=" lg:flex justify-end">
+            <div class="hidden lg:flex justify-end">
               <div class="contenedor bg-white rounded-lg py-10 mx-auto">
                 <div class="progress-bar flex justify-between px-8">
                   <div class="step">
@@ -397,6 +397,254 @@
 
 
 
+  </section>
+  <section class=" md:hidden" data-aos="fade-up" data-aos-offset="150">
+    <div class="   w-11/12  text-textWhite z-20   shadow-2xl" style="margin-left: 4.1%">
+      <div class=" grid grid-cols-1 lg:grid-cols-2 ">
+        <div class=" md:hidden">
+          <div class="contenedor bg-white rounded-lg py-10 mx-auto">
+            <div class="progress-bar flex justify-between px-8">
+              <div class="step">
+                <div class="bullet active"></div>
+              </div>
+              <div class="step">
+                <div class="bullet"></div>
+              </div>
+              <div class="step">
+                <div class="bullet"></div>
+              </div>
+              <div class="step hidden">
+                <div class="bullet"></div>
+              </div>
+            </div>
+            <div class="form-outer">
+              <form action="" id="formCotizacion">
+                @csrf
+                <div class="page slide-page">
+                  <div class="px-10 h-full flex flex-col justify-start md:justify-center">
+                    <div class="text-textAzul flex flex-col gap-10">
+                      <p class="text__cotizar leading-none md:leading-tight font-airbnb_700">
+                        Calcula el precio de limpieza de tu Airbnb
+                      </p>
+                      <div class="flex flex-col gap-5 font-airbnb_500">
+                        <div class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-10 md:items-center">
+                          <label for="habitaciones" class="text__label md:max-w-[50%] ">
+                            ¿Cuántas habitaciones tienes?
+                          </label>
+                          <select required name="habitaciones" type="number" id="habitaciones"
+                            class="selectpicker block appearance-none w-full bg-white border border-gray-300 hover:border-gray-400 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                            <option value="">Elige el n° de Habitaciones</option>
+                            @foreach ($espacios as $item)
+                              <option value="{{ $item->id }}">{{ $item->name }}</option>
+                            @endforeach
+                          </select>
+
+                        </div>
+
+                        <div class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-10 md:items-center">
+                          <label for="habitaciones" class="text__label md:max-w-[50%] ">
+                            Elige una combinacion
+                          </label>
+                          <select required name="distribucion" type="number" id="distribucion"
+                            class="selectpicker w-full">
+                            <option value="">Elige combinacion</option>
+
+                          </select>
+                        </div>
+
+
+                      </div>
+
+                      <div class="flex gap-5 flex-col 2lg:flex-row justify-between items-center text-center">
+
+
+                        <div class="w-full 2lg:w-auto">
+                          <button id="btnSiguiente1"
+                            class="firstNext next cursor-pointer flex gap-2 lg:basis-4/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
+                            <span>Siguiente</span>
+                            <div>
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.8333 7.625L17 12M17 12L12.8333 16.375M17 12L7 12" stroke="white"
+                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page">
+                  <div class="px-10 h-full flex flex-col justify-start md:justify-center">
+                    <div class="text-textAzul flex flex-col gap-10 ">
+                      <div>
+                        <button class="prev-1 prev">
+                          <span class="button-previo"></span>
+                        </button>
+                      </div>
+
+                      <p class="text__cotizar leading-none md:leading-tight font-airbnb_700">
+                        Calcula el precio de limpieza de tu Airbnb
+                      </p>
+                      <div class="flex flex-col gap-5 font-airbnb_500">
+                        <div class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-10 md:items-center">
+                          <label for="metros" class="text__label">
+                            ¿Cuántas m2 tiene tu departamento?
+                          </label>
+                          <select id="metros" name="metros" class="selectpicker md:w-1/2">
+                            <option value=""> Selecciona una opcion</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="flex gap-5 flex-col 2lg:flex-row justify-between items-center text-center">
+
+                        <div class="w-full 2lg:w-auto">
+                          <button
+                            class="next-1 next disabled  cursor-pointer flex gap-2 lg:basis-4/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
+                            <span>Siguiente</span>
+                            <div>
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.8333 7.625L17 12M17 12L12.8333 16.375M17 12L7 12" stroke="white"
+                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page">
+                  <div class="px-10 h-full flex flex-col justify-start md:justify-center">
+                    <div class="text-textAzul flex flex-col gap-7">
+                      <div>
+                        <button class="prev-2 prev">
+                          <span class="button-previo"></span>
+                        </button>
+                      </div>
+                      <p class="text__cotizar leading-none md:leading-tight font-airbnb_700">
+                        Calcula el precio de limpieza de tu Airbnb
+                      </p>
+                      <div class="flex flex-col gap-6">
+                        <div class="flex flex-col justify-between gap-5 font-airbnb_500">
+
+                          <label for="habitaciones" class="text__label">
+                            Déjanos tu dirección
+                          </label>
+                          <input required name="direction" type="text" id="direction"
+                            class="text__input font-airbnb_500" placeholder="Avenida, Calle, Jiron, Pasaje..." />
+                        </div>
+                        <div class="flex flex-col justify-between gap-5 font-airbnb_500 md:flex-row">
+                          <div class="flex flex-col justify-between md:w-1/2">
+                            <label for="habitaciones" class="text__label">
+                              Teléfono
+                            </label>
+                            <input required name="telefono" type="text" id="telefono"
+                              class="text__input font-airbnb_500 w-3/4" placeholder="123456789" />
+                          </div>
+                          <div class="flex flex-col justify-between">
+                            <label for="habitaciones" class="text__label">
+                              Correo @
+                            </label>
+                            <input required name="correo" type="text" id="correo"
+                              class="text__input font-airbnb_500" placeholder="tucorreo@dominio.com" />
+
+                          </div>
+
+                        </div>
+
+                        <div class="flex flex-col justify-between gap-5 font-airbnb_500 ">
+
+
+                        </div>
+
+                      </div>
+
+                      <div class="flex gap-5 flex-col 2xl:flex-row justify-between items-center text-center">
+
+
+                        <div class="w-full 2xl:w-auto">
+                          <button
+                            class="next-2 next cursor-pointer flex gap-2 w-full 2xl:basis-5/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center">
+                            <span>Enviar mi solicitud</span>
+                            <div>
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.8333 7.625L17 12M17 12L12.8333 16.375M17 12L7 12" stroke="white"
+                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page">
+                  <div class="h-full flex flex-col justify-center relative">
+                    <div class="text-textAzul flex flex-col gap-5 px-10">
+                      <div class="flex flex-col gap-5 justify-center items-center text-center">
+                        <div>
+                          <img src="{{ asset('images/img/image_8.png') }}" alt="limpieza"
+                            class="w-24 h-24 md:w-36 md:h-36">
+
+                        </div>
+                        <p class=" text-text32 md:text-text40 font-airbnb_700">
+                          ¡Éxito! Hemos recibido tu información
+                        </p>
+                        <p class="font-airbnb_400 text-text16 md:text-text24">
+                          Basándonos en la información proporcionada, tu
+                          estimación de precio inicial es...
+                        </p>
+
+                        <div>
+                          <p class="font-airbnb_700 text-text48 md:text-text52" id="preciofinal">
+                            S/
+                          </p>
+                        </div>
+
+
+                        <div id="containerBntService">
+                          <button id="btnAdquirirServicio"
+                            class="submit cursor-pointer flex gap-2 basis-4/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center"
+                            type="submit">
+                            <span>Adquirir el servicio</span>
+                            <div>
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.8333 7.625L17 12M17 12L12.8333 16.375M17 12L7 12" stroke="white"
+                                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </div>
+                          </button>
+                        </div>
+
+                        <div>
+                          <img src="{{ asset('images/img/imagen_22.png') }}" alt="limpia bnb"
+                            class="absolute bottom-[5%] left-0">
+
+                          <img src="{{ asset('images/img/imagen_23.png') }}" alt="limpia bnb"
+                            class="absolute bottom-1/2 right-0">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+
+            <div class="absolute top-0 hidden corona-top">
+              <img src="./images/img/imagen_28.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="servicios" data-aos="fade-up" data-aos-offset="150">
