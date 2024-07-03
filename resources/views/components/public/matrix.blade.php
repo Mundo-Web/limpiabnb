@@ -162,7 +162,7 @@
     }
 
     .swiper-button-next {
-      background-color: #D1ECF8;
+      /* background-color: #D1ECF8; */
       background-repeat: no-repeat;
       background-position: center;
       width: 60px !important;
@@ -184,7 +184,7 @@
     }
 
     .swiper-button-prev {
-      background-color: #D1ECF8;
+      /* background-color: #D1ECF8; */
       background-repeat: no-repeat;
       background-position: center;
       width: 60px;

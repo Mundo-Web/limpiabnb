@@ -80,7 +80,7 @@
                 </p>
 
                 <h1
-                  class="font-airbnb_700 text-text32 md:text-text60 leading-none md:leading-tight [text-shadow:_0_0_4px_rgb(0_0_0_/_40%)]">
+                  class="font-airbnb_700 text-center text-text32 md:text-text60 md:text-left leading-none md:leading-tight [text-shadow:_0_0_4px_rgb(0_0_0_/_40%)]">
                   {{ $archivoObjeto->bienvenida['titulo'] }}
                 </h1>
 
@@ -139,7 +139,8 @@
 
                             </div>
 
-                            <div class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-10 md:items-center">
+                            <div class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-10 md:items-center"
+                              id="containerSelect2">
                               <label for="habitaciones" class="text__label md:max-w-[50%] ">
                                 Elige una combinacion
                               </label>
@@ -407,7 +408,7 @@
     <div class="   w-11/12  text-textWhite z-20   shadow-2xl" style="margin-left: 4.1%">
       <div class=" grid grid-cols-1 lg:grid-cols-2 ">
         <div class=" md:hidden">
-          <div class="contenedor bg-white rounded-lg py-10 mx-auto">
+          <div class="contenedor bg-white rounded-lg py-10 mx-auto h-[650px] md:h-full">
             <div class="progress-bar flex justify-between px-8">
               <div class="step">
                 <div class="bullet active"></div>
@@ -422,7 +423,7 @@
                 <div class="bullet"></div>
               </div>
             </div>
-            <div class="form-outer">
+            <div class="form-outer" id="formCotizacionMo">
               <form action="" id="formCotizacion">
                 @csrf
                 <div class="page slide-page">
@@ -446,7 +447,8 @@
 
                         </div>
 
-                        <div class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-10 md:items-center">
+                        <div class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-10 md:items-center"
+                          id="containerSelect2">
                           <label for="habitaciones" class="text__label md:max-w-[50%] ">
                             Elige una combinacion
                           </label>
@@ -670,8 +672,8 @@
                 <div class="py-12 md:w-5/6 md:mx-auto">
                   <div class="buttonSliderServicios">
                     @if ($services->count() > 1)
-                      <div class="swiper-button-next hover:bg-[#0071be]"></div>
-                      <div class="swiper-button-prev hover:bg-[#0071be]"></div>
+                      <div class="swiper-button-next bg-[#0071be] md:bg-[#D1ECF8] hover:bg-[#0071be]"></div>
+                      <div class="swiper-button-prev bg-[#0071be] md:bg-[#D1ECF8] hover:bg-[#0071be]"></div>
                     @endif
 
                   </div>
@@ -813,8 +815,14 @@
 
         <div class="flex items-center justify-start w-full h-full">
           <a {{-- href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}" --}} href="{{ $archivoPasoaPaso->PasoApaso['enlacebtn'] }}"
-            class="cursor-pointer flex gap-2 button__base font-airbnb_500 bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center leading-none">
+            class="hidden cursor-pointer md:flex gap-2 button__base font-airbnb_500 bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center leading-none">
             {{ $archivoPasoaPaso->PasoApaso['textoBtn'] }}
+
+
+            <a href="#formCotizacionMo"
+              class="md:hidden cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center font-airbnb_500 leading-none">
+              {{ $archivoPasoaPaso->PasoApaso['textoBtn'] }}
+            </a>
           </a>
         </div>
       </div>
@@ -876,8 +884,8 @@
 
             <div class="flex justify-end items-center buttonSliderTestimonios">
               @if ($testimonios->count() > 3)
-                <div class="swiper-button-next siguiente hover:bg-[#0071be]"></div>
-                <div class="swiper-button-prev anterior hover:bg-[#0071be]"></div>
+                <div class="swiper-button-next siguiente bg-[#0071be] md:bg-[#D1ECF8] hover:bg-[#0071be]"></div>
+                <div class="swiper-button-prev anterior bg-[#0071be] md:bg-[#D1ECF8] hover:bg-[#0071be]"></div>
               @endif
 
             </div>
@@ -888,7 +896,11 @@
         <div class="flex items-center justify-end w-full h-full">
           {{-- <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}" --}}
           <a href="#formCotizacion"
-            class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center font-airbnb_500 leading-none">
+            class="hidden  cursor-pointer md:flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center font-airbnb_500 leading-none">
+            {{ $archivoTesti->testimonios['textoBtn'] }}
+          </a>
+          <a href="#formCotizacionMo"
+            class="md:hidden cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto md:text-text16 text-center font-airbnb_500 leading-none">
             {{ $archivoTesti->testimonios['textoBtn'] }}
           </a>
         </div>
@@ -1352,8 +1364,9 @@
       nextBtnFirst.on("click", function(event) {
         event.preventDefault();
 
-        const habitaciones = $('input[name="habitaciones"]:visible').val();
-        const arrayValuePageOne = [habitaciones];
+        const habitaciones = $('[id="habitaciones"]:visible').val();
+        const distribucion = $('[id="distribucion"]:visible').val();
+        const arrayValuePageOne = [habitaciones, distribucion];
 
         if (arrayValuePageOne.includes("")) {
           alerta("Por favor, asegurese de completar todos los campos");
@@ -1372,6 +1385,19 @@
 
       nextBtnSec.on("click", function(event) {
         event.preventDefault();
+
+        //quitar clase h-650px al div con clase contenedor
+        const contenedor = $('.contenedor:visible');
+        contenedor.removeClass("h-[650px]");
+
+
+        const metros = $('[id="metros"]:visible').val();
+        const arrayValuePageOne = [metros];
+        if (arrayValuePageOne.includes("")) {
+          alerta("Por favor, asegurese de indicar los m2");
+          return;
+        }
+
 
         slidePage.css('marginLeft', '-50%');
         bullet.eq(current - 1).addClass("active");
@@ -1476,6 +1502,7 @@
         }
       }).done(function(res) {
 
+        $('[id="containerSelect2"]').show()
         const distribuciones = $('[id="distribucion"]:visible')
         distribuciones.empty();
         distribuciones.append(
@@ -1532,6 +1559,10 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('.selectpicker').select2();
+
+      $('[id="containerSelect2"]:visible').hide()
+
+
     });
 
     $('#formContactos').submit(function(e) {
