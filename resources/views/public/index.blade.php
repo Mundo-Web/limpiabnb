@@ -127,7 +127,8 @@
                           <div class="flex flex-col gap-5 font-airbnb_500">
                             <div class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-10 md:items-center">
                               <label for="habitaciones" class="text__label md:max-w-[50%] ">
-                                ¿Cuántas habitaciones tienes?
+                                ¿Cuántas habitaciones tienes? Tengo…
+
                               </label>
                               <select required name="habitaciones" type="number" id="habitaciones"
                                 class="selectpicker block appearance-none w-full bg-white border border-gray-300 hover:border-gray-400 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
@@ -435,7 +436,8 @@
                       <div class="flex flex-col gap-5 font-airbnb_500">
                         <div class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-10 md:items-center">
                           <label for="habitaciones" class="text__label md:max-w-[50%] ">
-                            ¿Cuántas habitaciones tienes?
+                            ¿Cuántas habitaciones tienes? Tengo…
+
                           </label>
                           <select required name="habitaciones" type="number" id="habitaciones"
                             class="selectpicker block appearance-none w-full bg-white border border-gray-300 hover:border-gray-400 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
@@ -681,7 +683,7 @@
 
                 <div class="text-textAzul flex flex-col gap-5 md:w-5/6 mx-auto" data-aos="fade-up"
                   data-aos-offset="150">
-                  <h2 class="font-airbnb_700 text-text32 2md:text-text52 leading-none md:leading-tight">
+                  <h2 class="font-airbnb_700 text-text32 2md:text-text36 leading-none md:leading-tight">
                     Servicios
                   </h2>
                   <h2 class="font-airbnb_700 text-text32 2md:text-text52 leading-none md:leading-tight">
@@ -699,7 +701,7 @@
                   <div class="flex flex-col md:flex-row items-center">
                     <a href="https://api.whatsapp.com/send?phone={{ $generales->whatsapp }}&text={{ $generales->mensaje_whatsapp }}"
                       class="cursor-pointer flex gap-2 button__base bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full md:w-auto font-airbnb_500 leading-none">
-                      Solicitar servicio
+                      ¡Quiero este servicio!
                     </a>
                   </div>
                 </div>
@@ -999,15 +1001,17 @@
         <div class="basis-1/2 flex flex-col gap-8">
 
           <h3 class="font-airbnb_700 text-text32 2md:text-text40 leading-none 2md:leading-tight">
-            ¿Listo para brindar a tus huéspedes una experiencia inolvidable?
+            ¡Llevemos tu experiencia Airbnb al siguiente nivel!
+
           </h3>
 
           <p class="font-airbnb_400 text-text16 2md:text-text20">
-            Comienza ahora y descubre el valor de nuestros servicios.
+            Descubramos juntos cómo podemos agregar
+            valor a tu propiedad con nuestros servicios.
           </p>
 
           <p class="font-airbnb_700 text-text32 2md:text-text40 leading-none 2md:leading-tight">
-            Déjanos tus datos y consulta
+            Déjanos tus datos y cualquier pregunta.
           </p>
 
           <form id="formContactos">
