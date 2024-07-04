@@ -1221,6 +1221,7 @@
       });
 
       var mainServicios = new Swiper(".servicios__principales", {
+        autoHeight: true,
         slidesPerView: 1,
         spaceBetween: 0,
         loop: true,
