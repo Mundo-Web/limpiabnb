@@ -9,7 +9,9 @@
       <p class="font-bold text-text28 2md:text-text36">LimpiaBnB</p>
 
       <p class="font-airbnb_400 text-text16 2md:text-text20 w-full md:w-1/2">
-        Contrata nuestros servicios de limpieza y asegura la mejor experiencia para tus huéspedes.
+        Resolvemos la limpieza integral de tus espacios
+        para asegurar la mejor experiencia para tus
+        huéspedes.
       </p>
 
       <div class="flex gap-5">
