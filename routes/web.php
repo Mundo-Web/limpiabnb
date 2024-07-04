@@ -20,6 +20,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\TestimonyController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\LogosClientController;
 
 use App\Http\Controllers\IndexController;
@@ -153,6 +154,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
          
          Route::resource('/pasopaso', PasopasoController::class);
          Route::post('/pasopaso/updateJson', [PasopasoController::class, 'updateJson'])->name('pasopaso.updateJson');
+
+        //  contacto
+         Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto.index');
+         Route::post('/updateJson', [ContactoController::class, 'updateJson'])->name('contacto.updateJson');
+
 
  
 

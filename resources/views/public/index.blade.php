@@ -57,6 +57,16 @@
   $archivoTesti = (object) $archivoArrayTest;
 
 @endphp
+@php
+
+  $routeContact = resource_path('views/pages/contacto/contacto.json');
+  $fileContacto = file_get_contents($routeContact);
+  $archivoArrayConctac = json_decode($fileContacto, true);
+
+  // Convertir el array en un objeto
+  $archivoContacto = (object) $archivoArrayConctac;
+
+@endphp
 
 
 @section('content')
@@ -993,7 +1003,7 @@
     <div class="w-11/12 mx-auto text-textAzul my-12">
       <div class="before__underline before__underline-contacto mb-8">
         <p class="text-text18 2md:text-text24 font-airbnb_500 text-textCeleste">
-          Contacto
+          {{ $archivoContacto->Contacto['preTitulo'] }}
         </p>
       </div>
       <div class="flex flex-col lg:flex-row gap-12 lg:gap-32">
@@ -1001,17 +1011,16 @@
         <div class="basis-1/2 flex flex-col gap-8">
 
           <h3 class="font-airbnb_700 text-text32 2md:text-text40 leading-none 2md:leading-tight">
-            ¡Llevemos tu experiencia Airbnb al siguiente nivel!
+            {{ $archivoContacto->Contacto['titulo'] }}
 
           </h3>
 
           <p class="font-airbnb_400 text-text16 2md:text-text20">
-            Descubramos juntos cómo podemos agregar
-            valor a tu propiedad con nuestros servicios.
+            {{ $archivoContacto->Contacto['extractoIzq'] }}
           </p>
 
           <p class="font-airbnb_700 text-text32 2md:text-text40 leading-none 2md:leading-tight">
-            Déjanos tus datos y cualquier pregunta.
+            {{ $archivoContacto->Contacto['tituloForm'] }}
           </p>
 
           <form id="formContactos">
@@ -1081,12 +1090,10 @@
         <div class="basis-1/2">
           <div class="flex flex-col h-full  gap-10">
             <h4 class="font-airbnb_700 text-text32 2md:text-text40 leading-none 2md:leading-tight">
-              Contáctate con Nosotros
+              {{ $archivoContacto->Contacto['tituloDerech'] }}
             </h4>
             <p class="text-text16 font-airbnb_400 2md:text-text20 text-[#004472]">
-              Estamos aquí para responder a tus preguntas y personalizar
-              nuestros servicios según tus necesidades. ¡Contáctanos hoy
-              para llevar tu experiencia Airbnb al siguiente nivel!
+              {{ $archivoContacto->Contacto['ExtractoDerech'] }}
             </p>
 
             <div class="flex flex-col gap-5 text-colorSubtitleLittle">
