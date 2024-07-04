@@ -938,7 +938,7 @@
             </h2>
 
             <p class="font-airbnb_400 text-text16 2md:text-text20">
-              {{ $nosotros->descripcion }}
+              {!! $nosotros->descripcion !!}
 
               {{-- Limpia BnB nace de Ventura BnB, una empresa de administración de
             departamentos a corto plazo, la cual creó y calibró un equipo de
