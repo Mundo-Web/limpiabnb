@@ -137,12 +137,12 @@
                           <div class="flex flex-col gap-5 font-airbnb_500">
                             <div class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-10 md:items-center">
                               <label for="habitaciones" class="text__label md:max-w-[50%] ">
-                                ¿Cuántas habitaciones tienes? Tengo…
+                                ¿Cuántas habitaciones tienes?
 
                               </label>
                               <select required name="habitaciones" type="number" id="habitaciones"
                                 class="selectpicker block appearance-none w-full bg-white border border-gray-300 hover:border-gray-400 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-                                <option value="">Elige el n° de Habitaciones</option>
+                                <option value="">Tengo... </option>
                                 @foreach ($espacios as $item)
                                   <option value="{{ $item->id }}">{{ $item->name }}</option>
                                 @endforeach
@@ -391,7 +391,7 @@
             @foreach ($sliders as $imagen)
               <div class="swiper-slide">
                 <img src="{{ asset($imagen->url_image . $imagen->name_image) }}" alt=""
-                  class="object-cover w-full " style="min-height: 550px;">
+                  class="object-cover w-full " style="min-height: 600px;">
                 <div class=" bg-cover bg-center bg-no-repeat sm:w-full h-full"
                   style="background: url('{{ asset($imagen->url_image . $imagen->name_image) }}') ; background-repeat: no-repeat; background-size:cover">
 
@@ -446,12 +446,12 @@
                       <div class="flex flex-col gap-5 font-airbnb_500">
                         <div class="flex flex-col md:flex-row md:justify-between gap-4 md:gap-10 md:items-center">
                           <label for="habitaciones" class="text__label md:max-w-[50%] ">
-                            ¿Cuántas habitaciones tienes? Tengo…
+                            ¿Cuántas habitaciones tienes?
 
                           </label>
                           <select required name="habitaciones" type="number" id="habitaciones"
                             class="selectpicker block appearance-none w-full bg-white border border-gray-300 hover:border-gray-400 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-                            <option value="">Elige el n° de Habitaciones</option>
+                            <option value="">Tengo... </option>
                             @foreach ($espacios as $item)
                               <option value="{{ $item->id }}">{{ $item->name }}</option>
                             @endforeach
@@ -479,7 +479,7 @@
 
                         <div class="w-full 2lg:w-auto">
                           <button id="btnSiguiente1"
-                            class="firstNext next cursor-pointer flex gap-2 lg:basis-4/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
+                            class="firstNext next cursor-pointer opacity-50 flex gap-2 lg:basis-4/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
                             <span>Siguiente</span>
                             <div>
                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -1176,11 +1176,11 @@
     centeredSlides: false,
     initialSlide: 0,
     allowTouchMove: true,
-    autoplay: {
+    /* autoplay: {
       delay: 3500,
       disableOnInteraction: false,
       pauseOnMouseEnter: true
-    },
+    }, */
   });
 </script>
 
