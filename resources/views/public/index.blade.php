@@ -1176,11 +1176,11 @@
     centeredSlides: false,
     initialSlide: 0,
     allowTouchMove: true,
-    /* autoplay: {
+    autoplay: {
       delay: 3500,
       disableOnInteraction: false,
       pauseOnMouseEnter: true
-    }, */
+    },
   });
 </script>
 
