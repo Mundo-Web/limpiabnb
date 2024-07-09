@@ -391,7 +391,7 @@
             @foreach ($sliders as $imagen)
               <div class="swiper-slide">
                 <img src="{{ asset($imagen->url_image . $imagen->name_image) }}" alt=""
-                  class="object-cover w-full " style="min-height: 600px;">
+                  class="object-cover w-full " style="min-height: 650px;">
                 <div class=" bg-cover bg-center bg-no-repeat sm:w-full h-full"
                   style="background: url('{{ asset($imagen->url_image . $imagen->name_image) }}') ; background-repeat: no-repeat; background-size:cover">
 
@@ -479,7 +479,7 @@
 
                         <div class="w-full 2lg:w-auto">
                           <button id="btnSiguiente1"
-                            class="firstNext next cursor-pointer opacity-50 flex gap-2 lg:basis-4/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
+                            class="firstNext next cursor-pointer flex gap-2 lg:basis-4/12 button__base button__base-form bg-bgButtonBaseAzul hover:bg-blue-500 md:duration-500 justify-center items-center w-full">
                             <span>Siguiente</span>
                             <div>
                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -1236,8 +1236,8 @@
         //allowSlidePrev: false,  //Bloquea el deslizamiento hacia el slide anterior
 
         autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
+          delay: 7000,
+          disableOnInteraction: true,
           pauseOnMouseEnter: true
         },
         pagination: {
@@ -1503,7 +1503,7 @@
       let habitaciones = $(this).val();
 
       const btnSiguiente = $('[id="btnSiguiente1"]:visible')
-      btnSiguiente.addClass('opacity-50 cursor-not-allowed').prop('disabled', true);
+      btnSiguiente.addClass('cursor-not-allowed').prop('disabled', true);
       //ejecutamos el ajax
       $.ajax({
         url: "{{ route('buscarHabitaciones') }}",
