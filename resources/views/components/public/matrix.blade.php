@@ -15,7 +15,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-  <link rel="icon" href="{{ asset('images\img\image_2.png') }}" type="image/x-icon">
+  <link rel="icon" href="{{ asset('images\img\limpia.svg') }}" type="image/x-icon">
   @yield('meta_keywords')
 
 
