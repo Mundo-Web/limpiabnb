@@ -359,7 +359,7 @@
 
           </div>
 
-          <div class="" data-aos="fade-up" data-aos-offset="150">
+          <div class="mt-6" data-aos="fade-up" data-aos-offset="150">
             <div class="swiper servicios__header">
               <div class="swiper-wrapper ">
                 @foreach ($beneficios as $beneficio)
@@ -680,7 +680,14 @@
                   class="w-full h-full object-cover">
 
               </div>
+
               <div class="flex flex-col md:gap-5 basis-1/2 order-1 md:order-2 md:p-12 w-11/12 md:w-full mx-auto">
+                <div class="before__underline before__underline-step">
+                  <p class="text-[#BFDE8E] text-text18 2md:text-text24 font-airbnb_500">
+
+                    Servicios
+                  </p>
+                </div>
                 <div class="py-12 md:w-5/6 md:mx-auto">
                   <div class="buttonSliderServicios">
                     @if ($services->count() > 1)
@@ -693,9 +700,7 @@
 
                 <div class="text-textAzul flex flex-col gap-5 md:w-5/6 mx-auto" data-aos="fade-up"
                   data-aos-offset="150">
-                  <h2 class="font-airbnb_700 text-text32 2md:text-text36 leading-none md:leading-tight">
-                    Servicios
-                  </h2>
+
                   <h2 class="font-airbnb_700 text-text32 2md:text-text52 leading-none md:leading-tight">
                     {{-- Limpieza y lavandería de airbnbs con reposición de
                                         ammenities hoteleros --}}
@@ -1190,9 +1195,10 @@
     document.addEventListener("DOMContentLoaded", () => {
       var headerServices = new Swiper(".servicios__header", {
         slidesPerView: 3,
-        spaceBetween: 0,
+
         loop: false,
         centeredSlides: false,
+
         initialSlide: 0, // Empieza en el cuarto slide (índice 3) */
         /* pagination: {
           el: ".swiper-pagination-estadisticas",
@@ -1209,11 +1215,13 @@
 
         breakpoints: {
           0: {
+            spaceBetween: 0,
             slidesPerView: 1,
             centeredSlides: false,
             loop: true,
           },
           1024: {
+            spaceBetween: -15,
             slidesPerView: 3,
             centeredSlides: false,
 
