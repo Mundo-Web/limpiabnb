@@ -31,6 +31,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Limpia BnB</title>
 
+  <meta name="google-site-verification" content="_9JzwQMt-SlYf1GGiWISEYx6FSiUDdAQGZCqZLnkBqk" />
+
   <style>
     .before__underline {
       display: flex;
