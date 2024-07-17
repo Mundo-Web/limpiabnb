@@ -31,6 +31,19 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Limpia BnB</title>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-579FMZ2PQW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-579FMZ2PQW');
+  </script>
+
   <meta name="google-site-verification" content="_9JzwQMt-SlYf1GGiWISEYx6FSiUDdAQGZCqZLnkBqk" />
 
   <style>
