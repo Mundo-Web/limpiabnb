@@ -626,7 +626,7 @@
                         </div>
 
                         <p class="font-airbnb_400 text-text16 md:text-text20">
-                          No incluye IGV
+                          * No incluye IGV
                         </p>
 
                         <div id="containerBntService">
