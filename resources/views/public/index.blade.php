@@ -314,6 +314,9 @@
                               <p class="font-airbnb_700 text-text48 md:text-text52" id="preciofinal">
                                 S/
                               </p>
+                              <p class="font-airbnb_400 text-text16 md:text-text20 text-center">
+                                * No incluye IGV
+                              </p>
                             </div>
 
 
